@@ -172,8 +172,8 @@ for (var i = 1; i < hematomaBleedingType.length; i++) {
 	hematomaBleedingType[i] = String(nextBleedingTypeID);
 }
 
-var totalScoreInput = document.getElementsByName("fld10050_41450_44666");
-var totalScoreInputEnd = document.getElementsByName("fld10050_42512_45728");
+var totalScoreInput = document.getElementsByName("fld10050_139203_142828");
+var totalScoreInputEnd = document.getElementsByName("fld10050_140553_144178");
 
 $j(document).ready(function() {
 
