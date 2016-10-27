@@ -1,12 +1,15 @@
 var rowTotal = 10;
 var str = "_"
 
+	/***
 var epistaxisPrimary = document.getElementsByName("fld10050_139228_142853");
 var epistaxisHowMany = document.getElementsByName("fld10050_139234_142859");
 var epistaxisHowLong = document.getElementsByName("fld10050_139227_142852");
 var epistaxisSeekMedAttn = document.getElementsByName("fld10050_139233_142858");
 var epistaxisTreatedHow = document.getElementsByName("fld10050_139238_142863");
 var noseBleedTotalScore = document.getElementsByName("fld10050_139237_142862");
+
+***/
 
 var bruisingPrimary = document.getElementsByName("fld10050_41492_44708");
 var bruisingTrauma = document.getElementsByName("fld10050_41496_44712");
@@ -184,7 +187,7 @@ $j('.[class^="calculateBtn"]').click(function(event) {
 /***
 //SECTION 1:  Nose Bleeds (Epistaxis)
 ***/
-var noseBleedScore = 0;
+/***var noseBleedScore = 0;
 
 if (epistaxisPrimary[0].checked) {
 	for (var i=0; i<epistaxisHowMany.length; i++) {
@@ -223,7 +226,8 @@ if (epistaxisPrimary[0].checked) {
 // Nose Bleed (Epistaxis) score
 noseBleedTotalScore[0].value = noseBleedScore;
 
-
+***/
+	
 /***
 //SECTION 2:  Bruising
 ***/
