@@ -1,27 +1,6 @@
-var str = "_";
-var nextID;
-var fieldElements = [];
-var firstIncrement, secondIncrement;
-var toothExtractionExcessiveBleedingArray= new Array(toothExtractionSections);
-var toothExtractionTreatmentArray= new Array(toothExtractionSections);
-var toothExtractionTreatedHowArray= new Array(toothExtractionSections);
-var surgeryExcessiveBleedingArray= new Array(surgerySections);
-var surgeryTreatmentArray= new Array(surgerySections);
-var surgeryTreatedHowArray= new Array(surgerySections);
-var deliveryTreatmentArray= new Array(deliverySections);
-var deliveryTreatedHowArray= new Array(deliverySections);
-var deliveryHospitalArray= new Array(deliverySections);
-var cnsTreatmentArray= new Array(cnsSections);
-var cnsTreatedHowArray= new Array(cnsSections);
-var hemarthrosisTypeArray= new Array(hemarthrosisSections);
-var hemarthrosisTreatmentArray= new Array(hemarthrosisSections);
-var hemarthrosisTreatedHowArray= new Array(hemarthrosisSections);
-var hematomaTypeArray= new Array(hematomaSections);
-var hematomaTreatmentArray= new Array(hematomaSections);
-var hematomaTreatedHowArray= new Array(hematomaSections);
-
 function calcNoseBleed() {
 
+	//alert("Calculate nose Bleed!");
 	var noseBleedScore = 0;
 
 	var epistaxisPrimary = document
@@ -37,10 +16,12 @@ function calcNoseBleed() {
 	var epistaxisTotalScore = document
 			.getElementsByName(noseBleedVariables.epistaxisTotalScore);
 	
-	//Start scoring
-	if (epistaxisPrimary[0].checked) {
-		for (var i = 0; i < epistaxisHowMany.length; i++) {			
-			if (epistaxisHowMany[i].checked) {				
+		if (epistaxisPrimary[0].checked) {
+
+		for (var i = 0; i < epistaxisHowMany.length; i++) {
+			
+			if (epistaxisHowMany[i].checked) {
+				
 				var answer = epistaxisHowMany[i].value;
 				var answerValue = answer.split("|");
 				if (Number(answerValue[1]) > noseBleedScore)
@@ -49,7 +30,9 @@ function calcNoseBleed() {
 		}
 
 		for (var i = 0; i < epistaxisHowLong.length; i++) {
+
 			if (epistaxisHowLong[i].checked) {
+
 				var answer = epistaxisHowLong[i].value;
 				var answerValue = answer.split("|");
 				if (Number(answerValue[1]) > noseBleedScore)
@@ -58,8 +41,11 @@ function calcNoseBleed() {
 		}
 
 		if (epistaxisSeekMedAttn[0].checked) {
-			for (var i = 0; i < epistaxisTreatedHow.length; i++) {				
-				if (epistaxisTreatedHow[i].checked) {					
+
+			for (var i = 0; i < epistaxisTreatedHow.length; i++) {
+				
+				if (epistaxisTreatedHow[i].checked) {
+					
 					var answer = epistaxisTreatedHow[i].value;
 					var answerValue = answer.split("|");
 					if (Number(answerValue[1]) > noseBleedScore)
@@ -67,10 +53,15 @@ function calcNoseBleed() {
 				}
 			}
 		}
+
+	} else {
+		noseBleedScore = 0;
 	}
-	//Nose Bleed Score
-	epistaxisTotalScore[0].value = noseBleedScore;	
+	//alert("Nose Bleed Score = " + noseBleedScore);
+	epistaxisTotalScore[0].value = noseBleedScore;
+	
 	return noseBleedScore;
+
 }
 
 function calcCutaneous() {
@@ -90,9 +81,9 @@ function calcCutaneous() {
 	var bruisingTotalScore = document
 		.getElementsByName(cutaneousVariables.bruisingTotalScore);
 
-	//Start scoring
 	if (bruisingPrimary[0].checked) {
 		for (var i=0; i<bruisingTrauma.length; i++) {
+
 			if (bruisingTrauma[i].checked) {
 				var answer = bruisingTrauma[i].value;
 				var answerValue = answer.split("|");
@@ -100,8 +91,10 @@ function calcCutaneous() {
 					bruisingScore = Number(answerValue[1]);
 			}
 		}
+
 	  
 		for (var i=0; i<bruisingMedicalAttention.length; i++) {
+
 			if (bruisingMedicalAttention[i].checked) {
 				var answer = bruisingMedicalAttention[i].value;
 				var answerValue = answer.split("|");	
@@ -112,6 +105,7 @@ function calcCutaneous() {
 		
 		if (bruisingMedicalAttention[0].checked) {
 			for (var i=0; i<bruisingTreatedHow.length; i++) {
+
 				if (bruisingTreatedHow[i].checked) {
 					var answer = bruisingTreatedHow[i].value;
 					var answerValue = answer.split("|");
@@ -122,6 +116,7 @@ function calcCutaneous() {
 		}
 		
 		for (var i=0; i<bruisingMultiple.length; i++) {
+
 			if (bruisingMultiple[i].checked) {
 				var answer = bruisingMultiple[i].value;
 				var answerValue = answer.split("|");
@@ -152,9 +147,9 @@ function calcMinorWounds() {
 	var minorWoundsTotalScore = document
 		.getElementsByName(minorWoundsVariables.minorWoundsTotalScore);
 
-	//Start scoring
 	if (minorWoundsPrimary[0].checked) {
 		for (var i=0; i<minorWoundsHowMany.length; i++) {
+
 			if (minorWoundsHowMany[i].checked) {
 				var answer = minorWoundsHowMany[i].value;
 				var answerValue = answer.split("|");	
@@ -163,7 +158,9 @@ function calcMinorWounds() {
 			}
 		}
 
-	  	for (var i=0; i<minorWoundsHowLong.length; i++) {
+	  
+		for (var i=0; i<minorWoundsHowLong.length; i++) {
+
 			if (minorWoundsHowLong[i].checked) {
 				var answer = minorWoundsHowLong[i].value;
 				var answerValue = answer.split("|");	
@@ -174,6 +171,7 @@ function calcMinorWounds() {
 
 		if (minorWoundsSeekMedAttn[0].checked) {
 			for (var i=0; i<minorWoundsTreatedHow.length; i++) {
+
 				if (minorWoundsTreatedHow[i].checked) {
 					var answer = minorWoundsTreatedHow[i].value;
 					var answerValue = answer.split("|");
@@ -201,9 +199,9 @@ function calcOralCavity() {
 	var oralCavityTotalScore = document
 		.getElementsByName(oralCavityVariables.oralCavityTotalScore);
 
-	//Start scoring
 	if (oralCavityPrimary[0].checked) {
 		for (var i=0; i<oralCavityPrimary.length; i++) {
+
 			if (oralCavityPrimary[i].checked) {
 				var answer = oralCavityPrimary[i].value;
 				var answerValue = answer.split("|");
@@ -214,6 +212,7 @@ function calcOralCavity() {
 		
 		if (oralCavitySeekMedAttn[0].checked) {
 			for (var i=0; i<oralCavityTreatedHow.length; i++) {
+
 				if (oralCavityTreatedHow[i].checked) {
 					var answer = oralCavityTreatedHow[i].value;
 					var answerValue = answer.split("|");
@@ -243,9 +242,9 @@ function calcGIBleeding() {
 	var giBleedingTotalScore = document
 		.getElementsByName(giBleedingVariables.giBleedingTotalScore);
 
-	//Start scoring
 	if (giBleedingPrimary[0].checked) {
 		for (var i=0; i<giBleedingOtherIllness.length; i++) {
+
 			if (giBleedingOtherIllness[i].checked) {
 				var answer = giBleedingOtherIllness[i].value;
 				var answerValue = answer.split("|");	
@@ -256,6 +255,7 @@ function calcGIBleeding() {
 
 		if (giBleedingSeekMedAttn[0].checked) {
 			for (var i=0; i<giBleedingTreatedHow.length; i++) {
+
 				if (giBleedingTreatedHow[i].checked) {
 					var answer = giBleedingTreatedHow[i].value;
 					var answerValue = answer.split("|");
@@ -283,9 +283,9 @@ function calcHematuria() {
 	var hematuriaTotalScore = document
 		.getElementsByName(hematuriaVariables.hematuriaTotalScore);
 
-	//Start scoring
 	if (hematuriaPrimary[0].checked) {
 		for (var i=0; i<hematuriaPrimary.length; i++) {
+
 			if (hematuriaPrimary[i].checked) {
 				var answer = hematuriaPrimary[i].value;
 				var answerValue = answer.split("|");	
@@ -296,6 +296,7 @@ function calcHematuria() {
 
 		if (hematuriaSeekMedAttn[0].checked) {
 			for (var i=0; i<hematuriaTreatedHow.length; i++) {
+
 				if (hematuriaTreatedHow[i].checked) {
 					var answer = hematuriaTreatedHow[i].value;
 					var answerValue = answer.split("|");
@@ -341,7 +342,6 @@ function calcMenstrual() {
 	var menstrualTotalScore = document
 		.getElementsByName(menstrualVariables.menstrualTotalScore);
 
-	//Start scoring
 	if (menstrualPrimary[0].checked) {
 		var menstrualHowLongValue = menstrualHowLong[0].value;
 		if (menstrualHowLongValue.includes('-')) {
@@ -356,7 +356,9 @@ function calcMenstrual() {
 		if (menstrualHowLongValue > 7)
 			menstrualScore = menstrualScore + 1;
 	
+	
 		for (var i=0; i<menstrualPassClots.length; i++) {
+
 			if (menstrualPassClots[i].checked) {
 				var answer = menstrualPassClots[i].value;
 				var answerValue = answer.split("|");	
@@ -366,6 +368,7 @@ function calcMenstrual() {
 		}
 	
 		for (var i=0; i<menstrualHeaviestDay.length; i++) {
+
 			if (menstrualHeaviestDay[i].checked) {
 				var answer = menstrualHeaviestDay[i].value;
 				var answerValue = answer.split("|");	
@@ -376,6 +379,7 @@ function calcMenstrual() {
 	
 		if (menstrualExcessiveBleeding[0].checked) {
 			for (var i=0; i<menstrualHowLongExcessive.length; i++) {
+
 				if (menstrualHowLongExcessive[i].checked) {
 					var answer = menstrualHowLongExcessive[i].value;
 					var answerValue = answer.split("|");	
@@ -385,6 +389,7 @@ function calcMenstrual() {
 			}
 	
 			for (var i=0; i<menstrualMedicalAttention.length; i++) {
+
 				if (menstrualMedicalAttention[i].checked) {
 					var answer = menstrualMedicalAttention[i].value;
 					var answerValue = answer.split("|");	
@@ -395,6 +400,7 @@ function calcMenstrual() {
 	
 			if (menstrualMedicalAttention[0].checked && menstrualReceiveTreatment[0].checked) {
 				for (var i=0; i<menstrualTreatedHow.length; i++) {
+
 					if (menstrualTreatedHow[i].checked) {
 						var answer = menstrualTreatedHow[i].value;
 						var answerValue = answer.split("|");
@@ -406,6 +412,7 @@ function calcMenstrual() {
 		}
 	
 		for (var i=0; i<menstrualHospitalization.length; i++) {
+
 			if (menstrualHospitalization[i].checked) {
 				var answer = menstrualHospitalization[i].value;
 				var answerValue = answer.split("|");
@@ -415,6 +422,7 @@ function calcMenstrual() {
 		}
 	
 		for (var i=0; i<menstrualTimeOffWork.length; i++) {
+
 			if (menstrualTimeOffWork[i].checked) {
 				var answer = menstrualTimeOffWork[i].value;
 				var answerValue = answer.split("|");
@@ -430,7 +438,8 @@ function calcMenstrual() {
 		if (menstrualPictoralScoreValue > 100)
 			if (menstrualScore < 1)
 				menstrualScore = 1;
-	}	
+	}
+	
 	//Female Menstrual History score
 	menstrualTotalScore[0].value= menstrualScore;
 	return menstrualScore;
@@ -451,9 +460,9 @@ function calcOtherBleeding() {
 	var otherBleedingTotalScore = document
 		.getElementsByName(otherBleedingVariables.otherBleedingTotalScore);
 
-	//Start scoring
 	if (otherNeonatalExcessive[0].checked) {
 		for (var i=0; i<otherNeonatalType.length; i++) {
+
 			if (otherNeonatalType[i].checked) {
 				var answer = otherNeonatalType[i].value;
 				var answerValue = answer.split("|");	
@@ -464,6 +473,7 @@ function calcOtherBleeding() {
 
 		if (otherNeonatalTreatment[0].checked) {
 			for (var i=0; i<otherNeonatalTreatedHow.length; i++) {
+
 				if (otherNeonatalTreatedHow[i].checked) {
 					var answer = otherNeonatalTreatedHow[i].value;
 					var answerValue = answer.split("|");			
@@ -499,23 +509,43 @@ function calcToothExtraction() {
 	var toothExtractionTotalScore = document
 		.getElementsByName(toothExtractionVariables.toothExtractionTotalScore);
 	
-	//Creates field IDs for repeating tooth extraction sections
+	var str = "_";
+	var toothExtractionExcessiveBleedingArray= new Array(toothExtractionSections);
 	toothExtractionExcessiveBleedingArray[0] = toothExtractionVariables.toothExtractionExcessiveBleeding;
-	for (var i = 1; i < toothExtractionExcessiveBleedingArray.length; i++) {
-		toothExtractionExcessiveBleedingArray[i] = String(generateNextID(toothExtractionExcessiveBleedingArray[i-1]));
-	}
-	
-	toothExtractionTreatmentArray[0] = toothExtractionVariables.toothExtractionTreatment;
-	for (var i = 1; i < toothExtractionTreatmentArray.length; i++) {
-		toothExtractionTreatmentArray[i] = String(generateNextID(toothExtractionTreatmentArray[i-1]));
-	}
 
-	toothExtractionTreatedHowArray[0] = toothExtractionVariables.toothExtractionTreatedHow;
-	for (var i = 1; i < toothExtractionTreatedHowArray.length; i++) {
-		toothExtractionTreatedHowArray[i] = String(generateNextID(toothExtractionTreatedHowArray[i-1]));
+	for (var i = 1; i < toothExtractionExcessiveBleedingArray.length; i++) {
+		var field = toothExtractionExcessiveBleedingArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		toothExtractionExcessiveBleedingArray[i] = String(nextTreatedHowID);
 	}
 	
-	//Start Scoring
+	var toothExtractionTreatmentArray= new Array(toothExtractionSections);
+	toothExtractionTreatmentArray[0] = toothExtractionVariables.toothExtractionTreatment;
+
+	for (var i = 1; i < toothExtractionTreatmentArray.length; i++) {
+		var field = toothExtractionTreatmentArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		toothExtractionTreatmentArray[i] = String(nextTreatedHowID);
+	}
+	
+	var toothExtractionTreatedHowArray= new Array(toothExtractionSections);
+	toothExtractionTreatedHowArray[0] = toothExtractionVariables.toothExtractionTreatedHow;
+
+	for (var i = 1; i < toothExtractionTreatedHowArray.length; i++) {
+		var field = toothExtractionTreatedHowArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		toothExtractionTreatedHowArray[i] = String(nextTreatedHowID);
+	}
+	
 	if (toothExtractionPrimary[0].checked) {
 		var toothNoOfTimes = toothExtractionHowManyTimes[0].value;
 		if (toothNoOfTimes.includes(">")) {
@@ -529,6 +559,7 @@ function calcToothExtraction() {
 		}
 		
 		for (var i=0; i<toothExtractionExcessiveTimes.length; i++) {
+
 			if (toothExtractionExcessiveTimes[i].checked) {
 				if (i != toothExtractionExcessiveTimes.length-1) {
 					var answer = Number(toothExtractionExcessiveTimes[i].value);
@@ -555,7 +586,8 @@ function calcToothExtraction() {
 			var topLevelQuestion = document.getElementsByName(String(toothExtractionExcessiveBleedingArray[i]));
 			var secondLevelQuestion = document.getElementsByName(String(toothExtractionTreatmentArray[i]));
 			if (topLevelQuestion[0].checked && secondLevelQuestion[0].checked) {
-				for (var j=0; j<currentSection.length; j++) {	
+				for (var j=0; j<currentSection.length; j++) {
+	
 					if (currentSection[j].checked) {
 						var answer = currentSection[j].value;
 						var answerValue = answer.split("|");
@@ -565,7 +597,8 @@ function calcToothExtraction() {
 				}
 			}
 		}
-	}	
+	}
+	
 	//Tooth Extraction score
 	toothExtractionTotalScore[0].value= toothExtractionScore;
 	return toothExtractionScore;
@@ -591,23 +624,43 @@ function calcSurgery() {
 	var surgeryTotalScore = document
 		.getElementsByName(surgeryVariables.surgeryTotalScore);
 	
-	//Creates field IDs for repeating surgery sections
+	var str = "_";
+	var surgeryExcessiveBleedingArray= new Array(surgerySections);
 	surgeryExcessiveBleedingArray[0] = surgeryVariables.surgeryExcessiveBleeding;
+	
 	for (var i = 1; i < surgeryExcessiveBleedingArray.length; i++) {
-		surgeryExcessiveBleedingArray[i] = String(generateNextID(surgeryExcessiveBleedingArray[i-1]));
+		var field = surgeryExcessiveBleedingArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		surgeryExcessiveBleedingArray[i] = String(nextTreatedHowID);
 	}
 	
+	var surgeryTreatmentArray= new Array(surgerySections);
 	surgeryTreatmentArray[0] = surgeryVariables.surgeryTreatment;
+	
 	for (var i = 1; i < surgeryTreatmentArray.length; i++) {
-		surgeryTreatmentArray[i] = String(generateNextID(surgeryTreatmentArray[i-1]));
+		var field = surgeryTreatmentArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		surgeryTreatmentArray[i] = String(nextTreatedHowID);
 	}
 	
-	surgeryTreatedHowArray[0] = surgeryVariables.surgeryTreatedHow;	
+	var surgeryTreatedHowArray= new Array(surgerySections);
+	surgeryTreatedHowArray[0] = surgeryVariables.surgeryTreatedHow;
+	
 	for (var i = 1; i < surgeryTreatedHowArray.length; i++) {
-		surgeryTreatedHowArray[i] = String(generateNextID(surgeryTreatedHowArray[i-1]));
+		var field = surgeryTreatedHowArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		surgeryTreatedHowArray[i] = String(nextTreatedHowID);
 	}
 	
-	//Start Scoring
 	if (surgeryPrimary[0].checked) {
 		var noOfTimes = surgeryHowManyTimes[0].value;
 		if (noOfTimes.includes(">")) {
@@ -621,6 +674,7 @@ function calcSurgery() {
 		}
 		
 		for (var i=0; i<surgeryExcessiveTimes.length; i++) {
+
 			if (surgeryExcessiveTimes[i].checked) {
 				if (i != surgeryExcessiveTimes.length-1) {
 					var answer = Number(surgeryExcessiveTimes[i].value);
@@ -648,6 +702,7 @@ function calcSurgery() {
 			var secondLevelQuestion = document.getElementsByName(String(surgeryTreatmentArray[i]));
 			if (topLevelQuestion[0].checked && secondLevelQuestion[0].checked) {
 				for (var j=0; j<currentSection.length; j++) {
+
 					if (currentSection[j].checked) {
 						var answer = currentSection[j].value;
 						var answerValue = answer.split("|");
@@ -657,7 +712,8 @@ function calcSurgery() {
 				}
 			}
 		}
-	}	
+	}
+	
 	//Surgery score
 	surgeryTotalScore[0].value= surgeryScore;
 	return surgeryScore;
@@ -678,29 +734,50 @@ function calcDelivery() {
 	var deliveryTotalScore = document
 		.getElementsByName(deliveryVariables.deliveryTotalScore);
 	
-	//Creates field IDs for repeating delivery sections
-	deliveryTreatmentArray[0] = deliveryVariables.deliveryTreatment;	
+	var str = "_";
+	var deliveryTreatmentArray= new Array(deliverySections);
+	deliveryTreatmentArray[0] = deliveryVariables.deliveryTreatment;
+	
 	for (var i = 1; i < deliveryTreatmentArray.length; i++) {
-		deliveryTreatmentArray[i] = String(generateNextID(deliveryTreatmentArray[i-1]));
+		var field = deliveryTreatmentArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		deliveryTreatmentArray[i] = String(nextTreatedHowID);
 	}
 	
-	deliveryTreatedHowArray[0] = deliveryVariables.deliveryTreatedHow;	
+	var deliveryTreatedHowArray= new Array(deliverySections);
+	deliveryTreatedHowArray[0] = deliveryVariables.deliveryTreatedHow;
+	
 	for (var i = 1; i < deliveryTreatedHowArray.length; i++) {
-		deliveryTreatedHowArray[i] = String(generateNextID(deliveryTreatedHowArray[i-1]));
-	}
-
-	deliveryHospitalArray[0] = deliveryVariables.deliveryHospital;	
-	for (var i = 1; i < deliveryHospitalArray.length; i++) {
-		deliveryHospitalArray[i] = String(generateNextID(deliveryHospitalArray[i-1]));
+		var field = deliveryTreatedHowArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		deliveryTreatedHowArray[i] = String(nextTreatedHowID);
 	}
 	
-	//Start Scoring
+	var deliveryHospitalArray= new Array(deliverySections);
+	deliveryHospitalArray[0] = deliveryVariables.deliveryHospital;
+	
+	for (var i = 1; i < deliveryHospitalArray.length; i++) {
+		var field = deliveryHospitalArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		deliveryHospitalArray[i] = String(nextTreatedHowID);
+	}
+	
 	if (deliveryPrimary[0].checked) {
 		for (var i = 0; i<deliveryTreatedHowArray.length; i++) {
 			var currentSection = document.getElementsByName(String(deliveryTreatedHowArray[i]));
 			var topLevelQuestion = document.getElementsByName(String(deliveryTreatmentArray[i]));
 			if (topLevelQuestion[0].checked) {
 				for (var j=0; j<currentSection.length; j++) {
+
 					if (currentSection[j].checked) {
 						var answer = currentSection[j].value;
 						var answerValue = answer.split("|");
@@ -716,6 +793,7 @@ function calcDelivery() {
 			var topLevelQuestion = document.getElementsByName(String(deliveryTreatmentArray[i]));
 			if (topLevelQuestion[0].checked) {
 				for (var j=0; j<currentSection.length; j++) {
+
 					if (currentSection[j].checked) {
 						var answer = currentSection[j].value;
 						var answerValue = answer.split("|");
@@ -725,7 +803,8 @@ function calcDelivery() {
 				}
 			}
 		}
-	}	
+	}
+	
 	//Deliveries score
 	deliveryTotalScore[0].value= deliveryScore;
 	return deliveryScore;
@@ -744,24 +823,38 @@ function calcCNS() {
 	var cnsTotalScore = document
 		.getElementsByName(cnsVariables.cnsTotalScore);
 	
-	//Creates field IDs for repeating delivery sections
-	cnsTreatmentArray[0] = cnsVariables.cnsTreatment;	
+	var str = "_";
+	var cnsTreatmentArray= new Array(cnsSections);
+	cnsTreatmentArray[0] = cnsVariables.cnsTreatment;
+	
 	for (var i = 1; i < cnsTreatmentArray.length; i++) {
-		cnsTreatmentArray[i] = String(generateNextID(cnsTreatmentArray[i-1]));
-	}
-
-	cnsTreatedHowArray[0] = cnsVariables.cnsTreatedHow;	
-	for (var i = 1; i < cnsTreatedHowArray.length; i++) {
-		cnsTreatedHowArray[i] = String(generateNextID(cnsTreatedHowArray[i-1]));
+		var field = cnsTreatmentArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		cnsTreatmentArray[i] = String(nextTreatedHowID);
 	}
 	
-	//Start scoring
+	var cnsTreatedHowArray= new Array(cnsSections);
+	cnsTreatedHowArray[0] = cnsVariables.cnsTreatedHow;
+	
+	for (var i = 1; i < cnsTreatedHowArray.length; i++) {
+		var field = cnsTreatedHowArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		cnsTreatedHowArray[i] = String(nextTreatedHowID);
+	}
+	
 	if (cnsPrimary[0].checked) {
 		for (var i = 0; i<cnsTreatedHowArray.length; i++) {
 			var currentSection = document.getElementsByName(String(cnsTreatedHowArray[i]));
 			var topLevelQuestion = document.getElementsByName(String(cnsTreatmentArray[i]));
 			if (topLevelQuestion[0].checked) {
 				for (var j=0; j<currentSection.length; j++) {
+
 					if (currentSection[j].checked) {
 						var answer = currentSection[j].value;
 						var answerValue = answer.split("|");
@@ -784,8 +877,8 @@ function calcHemarthrosis() {
 	
 	var hemarthrosisPrimary = document
 		.getElementsByName(hemarthrosisVariables.hemarthrosisPrimary);
-	var hemarthrosisType = document
-		.getElementsByName(hemarthrosisVariables.hemarthrosisType);
+	var hemarthrosisBleedingType = document
+		.getElementsByName(hemarthrosisVariables.hemarthrosisBleedingType);
 	var hemarthrosisTreatment = document
 		.getElementsByName(hemarthrosisVariables.hemarthrosisTreatment);
 	var hemarthrosisTreatedHow = document
@@ -793,27 +886,47 @@ function calcHemarthrosis() {
 	var hemarthrosisTotalScore = document
 		.getElementsByName(hemarthrosisVariables.hemarthrosisTotalScore);
 	
-	//Creates field IDs for repeating delivery sections
-	hemarthrosisTypeArray[0] = hemarthrosisVariables.hemarthrosisType;	
-	for (var i = 1; i < hemarthrosisTypeArray.length; i++) {
-		hemarthrosisTypeArray[i] = String(generateNextID(hemarthrosisTypeArray[i-1]));
-	}
-
-	hemarthrosisTreatmentArray[0] = hemarthrosisVariables.hemarthrosisTreatment;	
-	for (var i = 1; i < hemarthrosisTreatmentArray.length; i++) {
-		hemarthrosisTreatmentArray[i] = String(generateNextID(hemarthrosisTreatmentArray[i-1]));
-	}
-
-	hemarthrosisTreatedHowArray[0] = hemarthrosisVariables.hemarthrosisTreatedHow;	
-	for (var i = 1; i < hemarthrosisTreatedHowArray.length; i++) {
-		hemarthrosisTreatedHowArray[i] = String(generateNextID(hemarthrosisTreatedHowArray[i-1]));
+	var str = "_";
+	var hemarthrosisBleedingTypeArray= new Array(hemarthrosisSections);
+	hemarthrosisBleedingTypeArray[0] = hemarthrosisVariables.hemarthrosisBleedingType;
+	
+	for (var i = 1; i < hemarthrosisBleedingTypeArray.length; i++) {
+		var field = hemarthrosisBleedingTypeArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		hemarthrosisBleedingTypeArray[i] = String(nextTreatedHowID);
 	}
 	
-	//Start scoring
+	var hemarthrosisTreatmentArray= new Array(hemarthrosisSections);
+	hemarthrosisTreatmentArray[0] = hemarthrosisVariables.hemarthrosisTreatment;
+	
+	for (var i = 1; i < hemarthrosisTreatmentArray.length; i++) {
+		var field = hemarthrosisTreatmentArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		hemarthrosisTreatmentArray[i] = String(nextTreatedHowID);
+	}
+	var hemarthrosisTreatedHowArray= new Array(hemarthrosisSections);
+	hemarthrosisTreatedHowArray[0] = hemarthrosisVariables.hemarthrosisTreatedHow;
+	
+	for (var i = 1; i < hemarthrosisTreatedHowArray.length; i++) {
+		var field = hemarthrosisTreatedHowArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		hemarthrosisTreatedHowArray[i] = String(nextTreatedHowID);
+	}
+	
 	if (hemarthrosisPrimary[0].checked) {
-		for (var i = 0; i<hemarthrosisTypeArray.length; i++) {
-			var currentSection = document.getElementsByName(String(hemarthrosisTypeArray[i]));
+		for (var i = 0; i<hemarthrosisBleedingTypeArray.length; i++) {
+			var currentSection = document.getElementsByName(String(hemarthrosisBleedingTypeArray[i]));
 			for (var j=0; j<currentSection.length; j++) {
+
 				if (currentSection[j].checked) {
 					var answer = currentSection[j].value;
 					var answerValue = answer.split("|");
@@ -828,6 +941,7 @@ function calcHemarthrosis() {
 			var topLevelQuestion = document.getElementsByName(String(hemarthrosisTreatmentArray[i]));
 			if (topLevelQuestion[0].checked) {
 				for (var j=0; j<currentSection.length; j++) {
+
 					if (currentSection[j].checked) {
 						var answer = currentSection[j].value;
 						var answerValue = answer.split("|");
@@ -850,8 +964,8 @@ function calcHematoma() {
 	
 	var hematomaPrimary = document
 		.getElementsByName(hematomaVariables.hematomaPrimary);
-	var hematomaType = document
-		.getElementsByName(hematomaVariables.hematomaType);
+	var hematomaBleedingType = document
+		.getElementsByName(hematomaVariables.hematomaBleedingType);
 	var hematomaTreatment = document
 		.getElementsByName(hematomaVariables.hematomaTreatment);
 	var hematomaTreatedHow = document
@@ -859,27 +973,47 @@ function calcHematoma() {
 	var hematomaTotalScore = document
 		.getElementsByName(hematomaVariables.hematomaTotalScore);
 	
-	//Creates field IDs for repeating delivery sections
-	hematomaTypeArray[0] = hematomaVariables.hematomaType;	
-	for (var i = 1; i < hematomaTypeArray.length; i++) {
-		hematomaTypeArray[i] = String(generateNextID(hematomaTypeArray[i-1]));
-	}
-
-	hematomaTreatmentArray[0] = hematomaVariables.hematomaTreatment;	
-	for (var i = 1; i < hematomaTreatmentArray.length; i++) {
-		hematomaTreatmentArray[i] = String(generateNextID(hematomaTreatmentArray[i-1]));
-	}
-
-	hematomaTreatedHowArray[0] = hematomaVariables.hematomaTreatedHow;	
-	for (var i = 1; i < hematomaTreatedHowArray.length; i++) {
-		hematomaTreatedHowArray[i] = String(generateNextID(hematomaTreatedHowArray[i-1]));
+	var str = "_";
+	var hematomaBleedingTypeArray= new Array(hematomaSections);
+	hematomaBleedingTypeArray[0] = hematomaVariables.hematomaBleedingType;
+	
+	for (var i = 1; i < hematomaBleedingTypeArray.length; i++) {
+		var field = hematomaBleedingTypeArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		hematomaBleedingTypeArray[i] = String(nextTreatedHowID);
 	}
 	
-	//Start scoring
+	var hematomaTreatmentArray= new Array(hematomaSections);
+	hematomaTreatmentArray[0] = hematomaVariables.hematomaTreatment;
+	
+	for (var i = 1; i < hematomaTreatmentArray.length; i++) {
+		var field = hematomaTreatmentArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		hematomaTreatmentArray[i] = String(nextTreatedHowID);
+	}
+	var hematomaTreatedHowArray= new Array(hematomaSections);
+	hematomaTreatedHowArray[0] = hematomaVariables.hematomaTreatedHow;
+	
+	for (var i = 1; i < hematomaTreatedHowArray.length; i++) {
+		var field = hematomaTreatedHowArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		hematomaTreatedHowArray[i] = String(nextTreatedHowID);
+	}
+	
 	if (hematomaPrimary[0].checked) {
-		for (var i = 0; i<hematomaTypeArray.length; i++) {
-			var currentSection = document.getElementsByName(String(hematomaTypeArray[i]));
+		for (var i = 0; i<hematomaBleedingTypeArray.length; i++) {
+			var currentSection = document.getElementsByName(String(hematomaBleedingTypeArray[i]));
 			for (var j=0; j<currentSection.length; j++) {
+
 				if (currentSection[j].checked) {
 					var answer = currentSection[j].value;
 					var answerValue = answer.split("|");
@@ -894,6 +1028,7 @@ function calcHematoma() {
 			var topLevelQuestion = document.getElementsByName(String(hematomaTreatmentArray[i]));
 			if (topLevelQuestion[0].checked) {
 				for (var j=0; j<currentSection.length; j++) {
+
 					if (currentSection[j].checked) {
 						var answer = currentSection[j].value;
 						var answerValue = answer.split("|");
@@ -933,14 +1068,6 @@ function calcTotalScore() {
 	
 	totalScoreTop[0].value = totalScore;
 	totalScoreBottom[0].value = totalScore;
-}
-
-function generateNextID(currentID) {
-	fieldElements = currentID.split("_");
-	firstIncrement = Number(fieldElements[1]) + 1;
-	secondIncrement = Number(fieldElements[2]) + 1;
-	nextID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
-	return nextID;
 }
 
 function testMapping() {
@@ -1004,56 +1131,39 @@ function testMapping() {
 	document.getElementById(toothExtractionVariables.toothExtractionPrimary + "_id").style.color = "red";
 	document.getElementById(toothExtractionVariables.toothExtractionHowManyTimes + "_id").style.color = "red";
 	document.getElementById(toothExtractionVariables.toothExtractionExcessiveTimes + "_id").style.color = "red";
-	for (var i = 0; i < toothExtractionExcessiveBleedingArray.length; i++)
-		document.getElementById(toothExtractionExcessiveBleedingArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < toothExtractionTreatmentArray.length; i++)
-		document.getElementById(toothExtractionTreatmentArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < toothExtractionTreatedHowArray.length; i++)
-		document.getElementById(toothExtractionTreatedHowArray[i] + "_id").style.color = "red";
+	document.getElementById(toothExtractionVariables.toothExtractionExcessiveBleeding + "_id").style.color = "red";
+	document.getElementById(toothExtractionVariables.toothExtractionTreatment + "_id").style.color = "red";
+	document.getElementById(toothExtractionVariables.toothExtractionTreatedHow + "_id").style.color = "red";
 	document.getElementById(toothExtractionVariables.toothExtractionTotalScore + "_id").style.color = "red";
 	
 	document.getElementById(surgeryVariables.surgeryPrimary + "_id").style.color = "red";
 	document.getElementById(surgeryVariables.surgeryHowManyTimes + "_id").style.color = "red";
 	document.getElementById(surgeryVariables.surgeryExcessiveTimes + "_id").style.color = "red";
-	for (var i = 0; i < surgeryExcessiveBleedingArray.length; i++)
-		document.getElementById(surgeryExcessiveBleedingArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < surgeryTreatmentArray.length; i++)
-		document.getElementById(surgeryTreatmentArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < surgeryTreatedHowArray.length; i++)
-		document.getElementById(surgeryTreatedHowArray[i] + "_id").style.color = "red";
+	document.getElementById(surgeryVariables.surgeryExcessiveBleeding + "_id").style.color = "red";
+	document.getElementById(surgeryVariables.surgeryTreatment + "_id").style.color = "red";
+	document.getElementById(surgeryVariables.surgeryTreatedHow + "_id").style.color = "red";
 	document.getElementById(surgeryVariables.surgeryTotalScore + "_id").style.color = "red";
 	
 	document.getElementById(deliveryVariables.deliveryPrimary + "_id").style.color = "red";
-	for (var i = 0; i < deliveryTreatmentArray.length; i++)
-		document.getElementById(deliveryTreatmentArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < deliveryTreatedHowArray.length; i++)
-		document.getElementById(deliveryTreatedHowArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < deliveryHospitalArray.length; i++)
-		document.getElementById(deliveryHospitalArray[i] + "_id").style.color = "red";
+	document.getElementById(deliveryVariables.deliveryTreatment + "_id").style.color = "red";
+	document.getElementById(deliveryVariables.deliveryTreatedHow + "_id").style.color = "red";
+	document.getElementById(deliveryVariables.deliveryHospital + "_id").style.color = "red";
 	document.getElementById(deliveryVariables.deliveryTotalScore + "_id").style.color = "red";
 	
 	document.getElementById(cnsVariables.cnsPrimary + "_id").style.color = "red";
-	for (var i = 0; i < cnsTreatmentArray.length; i++)
-		document.getElementById(cnsTreatmentArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < cnsTreatedHowArray.length; i++)
-		document.getElementById(cnsTreatedHowArray[i] + "_id").style.color = "red";
+	document.getElementById(cnsVariables.cnsTreatment + "_id").style.color = "red";
+	document.getElementById(cnsVariables.cnsTreatedHow + "_id").style.color = "red";
 	document.getElementById(cnsVariables.cnsTotalScore + "_id").style.color = "red";
 	
 	document.getElementById(hemarthrosisVariables.hemarthrosisPrimary + "_id").style.color = "red";
-	for (var i = 0; i < hemarthrosisTypeArray.length; i++)
-		document.getElementById(hemarthrosisTypeArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < hemarthrosisTreatmentArray.length; i++)
-		document.getElementById(hemarthrosisTreatmentArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < hemarthrosisTreatedHowArray.length; i++)
-		document.getElementById(hemarthrosisTreatedHowArray[i] + "_id").style.color = "red";
+	document.getElementById(hemarthrosisVariables.hemarthrosisBleedingType + "_id").style.color = "red";
+	document.getElementById(hemarthrosisVariables.hemarthrosisTreatment + "_id").style.color = "red";
+	document.getElementById(hemarthrosisVariables.hemarthrosisTreatedHow + "_id").style.color = "red";
 	document.getElementById(hemarthrosisVariables.hemarthrosisTotalScore + "_id").style.color = "red";
 	
 	document.getElementById(hematomaVariables.hematomaPrimary + "_id").style.color = "red";
-	for (var i = 0; i < hematomaTypeArray.length; i++)
-		document.getElementById(hematomaTypeArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < hematomaTreatmentArray.length; i++)
-		document.getElementById(hematomaTreatmentArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < hematomaTreatedHowArray.length; i++)
-		document.getElementById(hematomaTreatedHowArray[i] + "_id").style.color = "red";
+	document.getElementById(hematomaVariables.hematomaBleedingType + "_id").style.color = "red";
+	document.getElementById(hematomaVariables.hematomaTreatment + "_id").style.color = "red";
+	document.getElementById(hematomaVariables.hematomaTreatedHow + "_id").style.color = "red";
 	document.getElementById(hematomaVariables.hematomaTotalScore + "_id").style.color = "red";
 }
