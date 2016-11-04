@@ -189,7 +189,7 @@ function calcMinorWounds() {
 }
 
 function calcOralCavity() {
-	alert("Hello");
+	
 	var oralCavityScore = 0;
 	
 	var oralCavityPrimary = document
@@ -437,7 +437,7 @@ function calcMenstrual() {
 }
 
 function calcOtherBleeding() {
-	
+	alert("Hello");
 	var otherBleedingScore = 0;
 	
 	var otherNeonatalExcessive = document
