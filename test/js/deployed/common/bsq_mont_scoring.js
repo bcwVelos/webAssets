@@ -2,23 +2,6 @@ var str = "_";
 var nextID;
 var fieldElements = [];
 var firstIncrement, secondIncrement;
-var toothExtractionExcessiveBleedingArray= new Array(toothExtractionSections);
-var toothExtractionTreatmentArray= new Array(toothExtractionSections);
-var toothExtractionTreatedHowArray= new Array(toothExtractionSections);
-var surgeryExcessiveBleedingArray= new Array(surgerySections);
-var surgeryTreatmentArray= new Array(surgerySections);
-var surgeryTreatedHowArray= new Array(surgerySections);
-var deliveryTreatmentArray= new Array(deliverySections);
-var deliveryTreatedHowArray= new Array(deliverySections);
-var deliveryHospitalArray= new Array(deliverySections);
-var cnsTreatmentArray= new Array(cnsSections);
-var cnsTreatedHowArray= new Array(cnsSections);
-var hemarthrosisTypeArray= new Array(hemarthrosisSections);
-var hemarthrosisTreatmentArray= new Array(hemarthrosisSections);
-var hemarthrosisTreatedHowArray= new Array(hemarthrosisSections);
-var hematomaTypeArray= new Array(hematomaSections);
-var hematomaTreatmentArray= new Array(hematomaSections);
-var hematomaTreatedHowArray= new Array(hematomaSections);
 
 function calcNoseBleed() {
 
@@ -500,13 +483,11 @@ function calcToothExtraction() {
 		.getElementsByName(toothExtractionVariables.toothExtractionTotalScore);
 	
 	//Creates field IDs for repeating tooth extraction sections
-	//var toothExtractionExcessiveBleedingArray= new Array(toothExtractionSections);
 	toothExtractionExcessiveBleedingArray[0] = toothExtractionVariables.toothExtractionExcessiveBleeding;
 	for (var i = 1; i < toothExtractionExcessiveBleedingArray.length; i++) {
 		toothExtractionExcessiveBleedingArray[i] = String(generateNextID(toothExtractionExcessiveBleedingArray[i-1]));
 	}
 	
-	//var toothExtractionTreatmentArray= new Array(toothExtractionSections);
 	toothExtractionTreatmentArray[0] = toothExtractionVariables.toothExtractionTreatment;
 	for (var i = 1; i < toothExtractionTreatmentArray.length; i++) {
 		var field = toothExtractionTreatmentArray[i-1];
@@ -517,7 +498,6 @@ function calcToothExtraction() {
 		toothExtractionTreatmentArray[i] = String(nextTreatedHowID);
 	}
 	
-	//var toothExtractionTreatedHowArray= new Array(toothExtractionSections);
 	toothExtractionTreatedHowArray[0] = toothExtractionVariables.toothExtractionTreatedHow;
 	for (var i = 1; i < toothExtractionTreatedHowArray.length; i++) {
 		var field = toothExtractionTreatedHowArray[i-1];
