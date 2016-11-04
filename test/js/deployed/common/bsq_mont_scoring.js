@@ -919,7 +919,7 @@ function calcTotalScore() {
 					+ calcGIBleeding()
 					+ calcHematuria()
 					//+ calcSurgery()
-					+ calcMenstrual()
+					//+ calcMenstrual()
 					//+ calcDelivery()
 					+ calcOtherBleeding();
 					//+ calcCNS()
