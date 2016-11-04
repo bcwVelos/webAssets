@@ -915,7 +915,7 @@ function calcTotalScore() {
 					+ calcCutaneous()
 					+ calcMinorWounds()
 					+ calcOralCavity()
-					//+ calcToothExtraction()
+					+ calcToothExtraction()
 					+ calcGIBleeding()
 					+ calcHematuria()
 					//+ calcSurgery()
