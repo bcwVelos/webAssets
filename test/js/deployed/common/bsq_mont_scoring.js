@@ -503,12 +503,7 @@ function calcToothExtraction() {
 	var toothExtractionExcessiveBleedingArray= new Array(toothExtractionSections);
 	toothExtractionExcessiveBleedingArray[0] = toothExtractionVariables.toothExtractionExcessiveBleeding;
 	for (var i = 1; i < toothExtractionExcessiveBleedingArray.length; i++) {
-		var field = toothExtractionExcessiveBleedingArray[i-1];
-		var fieldElements = field.split("_");
-		var firstIncrement = Number(fieldElements[1]) + 1;
-		var secondIncrement = Number(fieldElements[2]) + 1;
-		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
-		toothExtractionExcessiveBleedingArray[i] = String(nextTreatedHowID);
+		toothExtractionExcessiveBleedingArray[i] = String(generateNextID(toothExtractionExcessiveBleedingArray[i-1]));
 	}
 	
 	var toothExtractionTreatmentArray= new Array(toothExtractionSections);
