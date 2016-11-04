@@ -189,7 +189,7 @@ function calcMinorWounds() {
 }
 
 function calcOralCavity() {
-	
+	alert("Hello");
 	var oralCavityScore = 0;
 	
 	var oralCavityPrimary = document
