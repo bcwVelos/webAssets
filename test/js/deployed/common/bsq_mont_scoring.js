@@ -498,7 +498,7 @@ function calcToothExtraction() {
 		.getElementsByName(toothExtractionVariables.toothExtractionTreatedHow);
 	var toothExtractionTotalScore = document
 		.getElementsByName(toothExtractionVariables.toothExtractionTotalScore);
-	alert("Hello");
+	
 	//Creates field IDs for repeating tooth extraction sections
 	toothExtractionExcessiveBleedingArray[0] = toothExtractionVariables.toothExtractionExcessiveBleeding;
 	for (var i = 1; i < toothExtractionExcessiveBleedingArray.length; i++) {
@@ -509,7 +509,7 @@ function calcToothExtraction() {
 		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
 		toothExtractionExcessiveBleedingArray[i] = String(nextTreatedHowID);
 	}
-	
+	alert("Hello");
 	toothExtractionTreatmentArray[0] = toothExtractionVariables.toothExtractionTreatment;
 	for (var i = 1; i < toothExtractionTreatmentArray.length; i++) {
 		var field = toothExtractionTreatmentArray[i-1];
