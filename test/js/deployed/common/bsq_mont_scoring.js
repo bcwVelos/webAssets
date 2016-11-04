@@ -509,15 +509,25 @@ function calcToothExtraction() {
 		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
 		toothExtractionExcessiveBleedingArray[i] = String(nextTreatedHowID);
 	}
-	alert("Hello");
+	
 	toothExtractionTreatmentArray[0] = toothExtractionVariables.toothExtractionTreatment;
 	for (var i = 1; i < toothExtractionTreatmentArray.length; i++) {
-		toothExtractionTreatmentArray[i] = String(generateNextID(toothExtractionTreatmentArray[i-1]));
+		var field = toothExtractionTreatmentArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		toothExtractionTreatmentArray[i] = String(nextTreatedHowID);
 	}
-
+	
 	toothExtractionTreatedHowArray[0] = toothExtractionVariables.toothExtractionTreatedHow;
 	for (var i = 1; i < toothExtractionTreatedHowArray.length; i++) {
-		toothExtractionTreatedHowArray[i] = String(generateNextID(toothExtractionTreatedHowArray[i-1]));
+		var field = toothExtractionTreatedHowArray[i-1];
+		var fieldElements = field.split("_");
+		var firstIncrement = Number(fieldElements[1]) + 1;
+		var secondIncrement = Number(fieldElements[2]) + 1;
+		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
+		toothExtractionTreatedHowArray[i] = String(nextTreatedHowID);
 	}
 	
 	//Start Scoring
