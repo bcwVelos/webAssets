@@ -914,7 +914,7 @@ function calcTotalScore() {
 					+ calcSurgery()
 					+ calcMenstrual()
 					+ calcDelivery()
-					+ calcOtherBleeding();
+					+ calcOtherBleeding()
 					+ calcCNS()
 					+ calcHemarthrosis()
 					+ calcHematoma();
