@@ -500,6 +500,7 @@ function calcToothExtraction() {
 		.getElementsByName(toothExtractionVariables.toothExtractionTotalScore);
 	
 	//Creates field IDs for repeating tooth extraction sections
+	var toothExtractionExcessiveBleedingArray= new Array(toothExtractionSections);
 	toothExtractionExcessiveBleedingArray[0] = toothExtractionVariables.toothExtractionExcessiveBleeding;
 	for (var i = 1; i < toothExtractionExcessiveBleedingArray.length; i++) {
 		var field = toothExtractionExcessiveBleedingArray[i-1];
