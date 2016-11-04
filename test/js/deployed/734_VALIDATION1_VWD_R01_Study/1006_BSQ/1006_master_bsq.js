@@ -7,6 +7,23 @@ var deliverySections = 10;
 var cnsSections = 10;
 var hemarthrosisSections = 20;
 var hematomaSections = 10;
+var toothExtractionExcessiveBleedingArray= new Array(toothExtractionSections);
+var toothExtractionTreatmentArray= new Array(toothExtractionSections);
+var toothExtractionTreatedHowArray= new Array(toothExtractionSections);
+var surgeryExcessiveBleedingArray= new Array(surgerySections);
+var surgeryTreatmentArray= new Array(surgerySections);
+var surgeryTreatedHowArray= new Array(surgerySections);
+var deliveryTreatmentArray= new Array(deliverySections);
+var deliveryTreatedHowArray= new Array(deliverySections);
+var deliveryHospitalArray= new Array(deliverySections);
+var cnsTreatmentArray= new Array(cnsSections);
+var cnsTreatedHowArray= new Array(cnsSections);
+var hemarthrosisTypeArray= new Array(hemarthrosisSections);
+var hemarthrosisTreatmentArray= new Array(hemarthrosisSections);
+var hemarthrosisTreatedHowArray= new Array(hemarthrosisSections);
+var hematomaTypeArray= new Array(hematomaSections);
+var hematomaTreatmentArray= new Array(hematomaSections);
+var hematomaTreatedHowArray= new Array(hematomaSections);
 
 noseBleedVariables = {
 	epistaxisPrimary: 'fld10050_137846_141470',
@@ -46,9 +63,19 @@ toothExtractionVariables = {
 	toothExtractionPrimary: 'fld10050_137902_141526',
 	toothExtractionHowManyTimes: 'fld10050_137905_141529',
 	toothExtractionExcessiveTimes: 'fld10050_137911_141535',
+	toothExtractionComment: 'fld10050_137901_141525',
+	toothExtractionAddComment: 'fld10050_137900_141524',
+	toothExtractionHeading: 'fld10050_137922_141546',
+	toothExtractionAge: 'fld10050_137942_141566',
+	toothExtractionWhatTeeth: 'fld10050_137952_141576',
+	toothExtractionTreatmentGiven: 'fld10050_137932_141556',
+	toothExtractionTreatmentPrevention: 'fld10050_137912_141536',
 	toothExtractionExcessiveBleeding: 'fld10050_137962_141586',
+	toothExtractionLength: 'fld10050_137972_141596',
 	toothExtractionTreatment: 'fld10050_138002_141626',
 	toothExtractionTreatedHow: 'fld10050_137982_141606',
+	toothExtractionAddBtn: 'fld10050_138052_141676',
+	toothExtractionDeleteBtn: 'fld10050_138062_141686',
 	toothExtractionTotalScore: 'fld10050_137909_141533'
 }
 
@@ -71,9 +98,19 @@ surgeryVariables = {
 	surgeryPrimary: 'fld10050_138101_141725',
 	surgeryHowManyTimes: 'fld10050_138102_141726',
 	surgeryExcessiveTimes: 'fld10050_138100_141724',
+	surgeryAddComment: 'fld10050_138103_141727',
+	surgeryHeading: 'fld10050_138306_141930',
+	surgeryAge : 'fld10050_138106_141730',
+	surgeryType : 'fld10050_138166_141790',
+	surgeryTypeDescribe : 'fld10050_138126_141750',
+	surgeryTreatmentGiven : 'fld10050_138186_141810',
+	surgeryTreatmentPrevention : 'fld10050_138206_141830',
 	surgeryExcessiveBleeding: 'fld10050_138146_141770',
+	surgeryTime : 'fld10050_138226_141850',
 	surgeryTreatment: 'fld10050_138246_141870',
 	surgeryTreatedHow: 'fld10050_138266_141890',
+	surgeryAddBtn : 'fld10050_138426_142050',
+	surgeryDeleteBtn : 'fld10050_138366_141990',
 	surgeryTotalScore: 'fld10050_138104_141728'
 }
 
@@ -95,9 +132,19 @@ menstrualVariables = {
 
 deliveryVariables = {
 	deliveryPrimary: 'fld10050_138503_142127',
+	deliveryAddComment: 'fld10050_138505_142129',
+	deliveryHeading: 'fld10050_138608_142232',
+	deliveryAge: 'fld10050_138508_142132',
+	deliveryType: 'fld10050_138578_142202',
+	deliveryTreatmentGiven: 'fld10050_138588_142212',
+	deliveryTreatmentPrevention: 'fld10050_138598_142222',
+	deliveryExcessiveBleeding: 'fld10050_138538_142162',
+	deliveryTime: 'fld10050_138548_142172',
 	deliveryTreatment: 'fld10050_138518_142142',
 	deliveryTreatedHow: 'fld10050_138528_142152',
 	deliveryHospital: 'fld10050_138558_142182',
+	deliveryAddBtn : 'fld10050_138668_142292',
+	deliveryDeleteBtn : 'fld10050_138678_142302',
 	deliveryTotalScore: 'fld10050_138506_142130'
 }
 
@@ -111,24 +158,43 @@ otherBleedingVariables = {
 
 cnsVariables = {
 	cnsPrimary: 'fld10050_138709_142333',
+	cnsAddComment: 'fld10050_138708_142332',
+	cnsHeading: 'fld10050_138752_142376',
+	cnsAge: 'fld10050_138772_142396',
 	cnsTreatment: 'fld10050_138783_142407',
 	cnsTreatedHow: 'fld10050_138763_142387',
+	cnsAddBtn: 'fld10050_138722_142346',
+	cnsDeleteBtn: 'fld10050_138732_142356',
 	cnsTotalScore: 'fld10050_138710_142334'
 }
 
 hemarthrosisVariables = {
 	hemarthrosisPrimary: 'fld10050_138794_142418',
-	hemarthrosisBleedingType: 'fld10050_138878_142502',
+	hemarthrosisAddComment: 'fld10050_138793_142417',
+	hemarthrosisHeading: 'fld10050_138798_142422',
+	hemarthrosisAge: 'fld10050_138818_142442',
+	hemarthrosisType: 'fld10050_138878_142502',
+	hemarthrosisTypeOther: 'fld10050_138938_142562',
+	hemarthrosisLocation: 'fld10050_138898_142522',
 	hemarthrosisTreatment: 'fld10050_138838_142462',
 	hemarthrosisTreatedHow: 'fld10050_138858_142482',
+	hemarthrosisAddBtn: 'fld10050_139018_142642',
+	hemarthrosisDeleteBtn: 'fld10050_138978_142602',
 	hemarthrosisTotalScore: 'fld10050_138796_142420'
 }
 
 hematomaVariables = {
 	hematomaPrimary: 'fld10050_139040_142664',
-	hematomaBleedingType: 'fld10050_139054_142678',
+	hematomaAddComment: 'fld10050_139039_142663',
+	hematomaHeading: 'fld10050_139154_142778',
+	hematomaAge: 'fld10050_139084_142708',
+	hematomaType: 'fld10050_139054_142678',
+	hematomaTypeOther: 'fld10050_139094_142718',
+	hematomaLocation: 'fld10050_139064_142688',
 	hematomaTreatment: 'fld10050_139074_142698',
 	hematomaTreatedHow: 'fld10050_139044_142668',
+	hematomaAddBtn: 'fld10050_139134_142758',
+	hematomaDeleteBtn: 'fld10050_139104_142728',
 	hematomaTotalScore: 'fld10050_139042_142666'
 }
 
@@ -137,12 +203,13 @@ totalScoreVariables = {
 	totalScoreBottom: 'fld10050_139171_142795'
 }
 
+var formStatus = document.getElementsByName('er_def_formstat');
+
 $j(document).ready(function() {
 	
-	testMapping();
-	
 	$j('.[class^="calculateBtn"]').click(function(event) {
-		
+		if (formStatus[0].value == '16036')
+			testMapping();
 		calcTotalScore();
 	});
 });
