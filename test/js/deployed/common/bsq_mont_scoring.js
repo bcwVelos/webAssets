@@ -437,7 +437,7 @@ function calcMenstrual() {
 }
 
 function calcOtherBleeding() {
-	alert("Hello");
+	
 	var otherBleedingScore = 0;
 	
 	var otherNeonatalExcessive = document
