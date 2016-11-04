@@ -529,7 +529,7 @@ function calcToothExtraction() {
 		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
 		toothExtractionTreatedHowArray[i] = String(nextTreatedHowID);
 	}
-	
+	alert("Hello");
 	//Start Scoring
 	if (toothExtractionPrimary[0].checked) {
 		var toothNoOfTimes = toothExtractionHowManyTimes[0].value;
