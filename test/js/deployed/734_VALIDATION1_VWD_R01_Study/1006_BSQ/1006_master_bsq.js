@@ -161,8 +161,8 @@ cnsVariables = {
 	cnsAddComment: 'fld10050_138708_142332',
 	cnsHeading: 'fld10050_138752_142376',
 	cnsAge: 'fld10050_138772_142396',
-	cnsTreatment: 'fld10050_138783_142407',
-	cnsTreatedHow: 'fld10050_138763_142387',
+	cnsTreatment: 'fld10050_138782_142406',
+	cnsTreatedHow: 'fld10050_138762_142386',
 	cnsAddBtn: 'fld10050_138722_142346',
 	cnsDeleteBtn: 'fld10050_138732_142356',
 	cnsTotalScore: 'fld10050_138710_142334'
