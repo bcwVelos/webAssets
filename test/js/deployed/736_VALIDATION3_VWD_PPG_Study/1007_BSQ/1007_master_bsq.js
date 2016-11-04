@@ -7,6 +7,23 @@ var deliverySections = 10;
 var cnsSections = 10;
 var hemarthrosisSections = 20;
 var hematomaSections = 10;
+var toothExtractionExcessiveBleedingArray= new Array(toothExtractionSections);
+var toothExtractionTreatmentArray= new Array(toothExtractionSections);
+var toothExtractionTreatedHowArray= new Array(toothExtractionSections);
+var surgeryExcessiveBleedingArray= new Array(surgerySections);
+var surgeryTreatmentArray= new Array(surgerySections);
+var surgeryTreatedHowArray= new Array(surgerySections);
+var deliveryTreatmentArray= new Array(deliverySections);
+var deliveryTreatedHowArray= new Array(deliverySections);
+var deliveryHospitalArray= new Array(deliverySections);
+var cnsTreatmentArray= new Array(cnsSections);
+var cnsTreatedHowArray= new Array(cnsSections);
+var hemarthrosisTypeArray= new Array(hemarthrosisSections);
+var hemarthrosisTreatmentArray= new Array(hemarthrosisSections);
+var hemarthrosisTreatedHowArray= new Array(hemarthrosisSections);
+var hematomaTypeArray= new Array(hematomaSections);
+var hematomaTreatmentArray= new Array(hematomaSections);
+var hematomaTreatedHowArray= new Array(hematomaSections);
 
 noseBleedVariables = {
 	epistaxisPrimary: 'fld10050_139228_142853',
