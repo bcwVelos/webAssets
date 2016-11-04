@@ -911,13 +911,13 @@ function calcTotalScore() {
 					+ calcToothExtraction()
 					+ calcGIBleeding()
 					+ calcHematuria()
-					//+ calcSurgery()
-					//+ calcMenstrual()
-					//+ calcDelivery()
+					+ calcSurgery()
+					+ calcMenstrual()
+					+ calcDelivery()
 					+ calcOtherBleeding();
-					//+ calcCNS()
-					//+ calcHemarthrosis()
-					//+ calcHematoma();
+					+ calcCNS()
+					+ calcHemarthrosis()
+					+ calcHematoma();
 	
 	var totalScoreTop = document
 		.getElementsByName(totalScoreVariables.totalScoreTop);
