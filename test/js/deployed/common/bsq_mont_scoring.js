@@ -330,6 +330,7 @@ function calcMenstrual() {
 		if (menstrualHowLongValue.includes('-')) {
 				var menstrualElements = menstrualHowLongValue.split("-");
 				menstrualHowLongValue = (Number(menstrualElements[0]) + Number(menstrualElements[1])) / 2;
+				menstrualHowLong[0].value = menstrualHowLongValue;
 		}
 		if (isNaN(menstrualHowLongValue)) {
 			alert ("Menorrhagia Section:  Please enter a number or number range separated by a hypen (w/no spaces)" +
