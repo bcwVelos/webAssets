@@ -329,7 +329,7 @@ function calcMenstrual() {
 		var menstrualHowLongValue = menstrualHowLong[0].value;
 		if (menstrualHowLongValue.includes('-')) {
 				var menstrualElements = menstrualHowLongValue.split("-");
-				menstrualHowLongValue = (menstrualElements[0]+menstrualElements[1])/2;
+				menstrualHowLongValue = (Number(menstrualElements[0]) + Number(menstrualElements[1])) / 2;
 		}
 		if (isNaN(menstrualHowLongValue)) {
 			alert ("Menorrhagia Section:  Please enter a number or number range separated by a hypen (w/no spaces)" +
@@ -488,24 +488,14 @@ function calcToothExtraction() {
 		toothExtractionExcessiveBleedingArray[i] = String(generateNextID(toothExtractionExcessiveBleedingArray[i-1]));
 	}
 	
-	toothExtractionTreatmentArray[0] = toothExtractionVariables.toothExtractionTreatment;
-	for (var i = 1; i < toothExtractionTreatmentArray.length; i++) {
-		var field = toothExtractionTreatmentArray[i-1];
-		var fieldElements = field.split("_");
-		var firstIncrement = Number(fieldElements[1]) + 1;
-		var secondIncrement = Number(fieldElements[2]) + 1;
-		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
-		toothExtractionTreatmentArray[i] = String(nextTreatedHowID);
+	toothExtractionExcessiveBleedingArray[0] = toothExtractionVariables.toothExtractionExcessiveBleeding;
+	for (var i = 1; i < toothExtractionExcessiveBleedingArray.length; i++) {
+		toothExtractionExcessiveBleedingArray[i] = String(generateNextID(toothExtractionExcessiveBleedingArray[i-1]));
 	}
 	
-	toothExtractionTreatedHowArray[0] = toothExtractionVariables.toothExtractionTreatedHow;
-	for (var i = 1; i < toothExtractionTreatedHowArray.length; i++) {
-		var field = toothExtractionTreatedHowArray[i-1];
-		var fieldElements = field.split("_");
-		var firstIncrement = Number(fieldElements[1]) + 1;
-		var secondIncrement = Number(fieldElements[2]) + 1;
-		var nextTreatedHowID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
-		toothExtractionTreatedHowArray[i] = String(nextTreatedHowID);
+	toothExtractionTreatmentArray[0] = toothExtractionVariables.toothExtractionTreatment;
+	for (var i = 1; i < toothExtractionTreatmentArray.length; i++) {
+		toothExtractionTreatmentArray[i] = String(generateNextID(toothExtractionTreatmentArray[i-1]));
 	}
 
 	//Start Scoring
