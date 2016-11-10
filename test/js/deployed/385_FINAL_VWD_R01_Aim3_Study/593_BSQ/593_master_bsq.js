@@ -2,10 +2,10 @@
  * 
  */
 var toothExtractionSections = 10;
-var surgerySections = 20;
+var surgerySections = 10;
 var deliverySections = 10;
 var cnsSections = 10;
-var hemarthrosisSections = 20;
+var hemarthrosisSections = 10;
 var hematomaSections = 10;
 var toothExtractionExcessiveBleedingArray= new Array(toothExtractionSections);
 var toothExtractionTreatmentArray= new Array(toothExtractionSections);
