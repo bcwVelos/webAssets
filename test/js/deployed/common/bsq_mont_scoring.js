@@ -928,6 +928,9 @@ function generateNextID(currentID) {
 }
 
 function testMapping() {
+	document.getElementById(totalScoreVariables.totalScoreTop + "_id").style.color = "red";
+	document.getElementById(totalScoreVariables.totalScoreBottom + "_id").style.color = "red";
+	
 	document.getElementById(noseBleedVariables.epistaxisPrimary + "_id").style.color = "red";
 	document.getElementById(noseBleedVariables.epistaxisHowMany + "_id").style.color = "red";
 	document.getElementById(noseBleedVariables.epistaxisHowLong + "_id").style.color = "red";
