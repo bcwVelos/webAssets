@@ -326,8 +326,8 @@ function calcMenstrual() {
 
 	//Start scoring
 	if (menstrualPrimary[0].checked) {
-		var menstrualHowLongValue = menstrualHowLong[0].value;
-		if (menstrualHowLongValue.includes('-')) {
+		var menstrualHowLongValue = String(menstrualHowLong[0].value);
+		if (menstrualHowLongValue.indexOf('-') > 0) {
 				var menstrualElements = menstrualHowLongValue.split("-");
 				menstrualHowLongValue = (Number(menstrualElements[0]) + Number(menstrualElements[1])) / 2;
 				menstrualHowLong[0].value = menstrualHowLongValue;
@@ -501,8 +501,8 @@ function calcToothExtraction() {
 
 	//Start Scoring
 	if (toothExtractionPrimary[0].checked) {
-		var toothNoOfTimes = toothExtractionHowManyTimes[0].value;
-		if (toothNoOfTimes.includes(">")) {
+		var toothNoOfTimes = String(toothExtractionHowManyTimes[0].value);
+		if (toothNoOfTimes.indexOf(">") >= 0) {
 			var tempNoOfTeeth = toothNoOfTimes.split(">");
 			toothNoOfTimes = Number(tempNoOfTeeth[1]);
 		}
@@ -593,8 +593,8 @@ function calcSurgery() {
 	
 	//Start Scoring
 	if (surgeryPrimary[0].checked) {
-		var noOfTimes = surgeryHowManyTimes[0].value;
-		if (noOfTimes.includes(">")) {
+		var noOfTimes = String(surgeryHowManyTimes[0].value);
+		if (noOfTimes.indexOf(">") >= 0) {
 			var tempNoOfSurgeries = noOfTimes.split(">");
 			noOfTimes = Number(tempNoOfSurgeries[1]);
 		}
