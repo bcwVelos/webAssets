@@ -212,4 +212,8 @@ $j(document).ready(function() {
 			testMapping();
 		calcTotalScore();
 	});
+	
+	$j('.[id^="eSign"]').focus(function(event) {
+		calcTotalScore();
+	});
 });
