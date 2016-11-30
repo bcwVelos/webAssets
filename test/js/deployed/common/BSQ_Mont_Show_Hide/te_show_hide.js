@@ -165,6 +165,9 @@ $j(document).ready(function() {
 //				$j("#" + toothExtractionSectionsObj[i+1].toothExtractionBleedingTreatmentGiven).closest("table").show();
 //				$j("#" + toothExtractionSectionsObj[i+1].toothExtractionBleedingTreatmentGiven).parents("table").show();
 				$j("#" + toothExtractionSectionsObj[i+1].addSectionBtn).closest("table").show();
+				if((i+1) === (toothExtractionSectionsObj.length -1)) {
+					$j("#" + toothExtractionSectionsObj[i+1].addSectionBtn).hide();
+				}
 			} 
 				i++;
 		}

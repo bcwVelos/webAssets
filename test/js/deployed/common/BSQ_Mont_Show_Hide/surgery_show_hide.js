@@ -166,6 +166,9 @@ $j(document).ready(function() {
 //				$j("#" + surgerySectionsObj[i+1].surgeryBleedingTreatmentGiven).closest("table").show();
 //				$j("#" + surgerySectionsObj[i+1].surgeryBleedingTreatmentGiven).parents("table").show();
 				$j("#" + surgerySectionsObj[i+1].addSectionBtn).closest("table").show();
+				if((i+1) === (surgerySectionsObj.length -1)) {
+					$j("#" + surgerySectionsObj[i+1].addSectionBtn).hide();
+				}
 			} 
 				i++;
 		}
