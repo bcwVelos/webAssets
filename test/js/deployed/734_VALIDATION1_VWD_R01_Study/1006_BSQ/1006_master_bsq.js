@@ -208,8 +208,10 @@ var formStatus = document.getElementsByName('er_def_formstat');
 $j(document).ready(function() {
 	
 	$j('.[class^="calculateBtn"]').click(function(event) {
-		if (formStatus[0].value == '16036')
-			testMapping();
-		calcTotalScore();
+		calcScore();
+	});
+	
+	$j('.[id^="eSign"]').focus(function(event) {
+		calcScore();
 	});
 });

@@ -3,6 +3,37 @@ var nextID;
 var fieldElements = [];
 var firstIncrement, secondIncrement;
 
+function calcScore() {
+	calcTotalScore();
+	if (formStatus[0].value == '16036')
+		testMapping();
+}
+
+function calcTotalScore() {	
+	var totalScore = calcNoseBleed()
+					+ calcCutaneous()
+					+ calcMinorWounds()
+					+ calcOralCavity()
+					+ calcToothExtraction()
+					+ calcGIBleeding()
+					+ calcHematuria()
+					+ calcSurgery()
+					+ calcMenstrual()
+					+ calcDelivery()
+					+ calcOtherBleeding()
+					+ calcCNS()
+					+ calcHemarthrosis()
+					+ calcHematoma();
+	
+	var totalScoreTop = document
+		.getElementsByName(totalScoreVariables.totalScoreTop);
+	var totalScoreBottom = document
+		.getElementsByName(totalScoreVariables.totalScoreBottom);
+	
+	totalScoreTop[0].value = totalScore;
+	totalScoreBottom[0].value = totalScore;
+}
+
 function calcNoseBleed() {
 
 	var noseBleedScore = 0;
@@ -892,31 +923,6 @@ function calcHematoma() {
 	//hematoma score
 	hematomaTotalScore[0].value= hematomaScore;
 	return hematomaScore;
-}
-
-function calcTotalScore() {	
-	var totalScore = calcNoseBleed()
-					+ calcCutaneous()
-					+ calcMinorWounds()
-					+ calcOralCavity()
-					+ calcToothExtraction()
-					+ calcGIBleeding()
-					+ calcHematuria()
-					+ calcSurgery()
-					+ calcMenstrual()
-					+ calcDelivery()
-					+ calcOtherBleeding()
-					+ calcCNS()
-					+ calcHemarthrosis()
-					+ calcHematoma();
-	
-	var totalScoreTop = document
-		.getElementsByName(totalScoreVariables.totalScoreTop);
-	var totalScoreBottom = document
-		.getElementsByName(totalScoreVariables.totalScoreBottom);
-	
-	totalScoreTop[0].value = totalScore;
-	totalScoreBottom[0].value = totalScore;
 }
 
 function generateNextID(currentID) {
