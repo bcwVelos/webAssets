@@ -146,6 +146,9 @@ $j(document).ready(function() {
 				$j("#" + hematomaSectionsObj[i+1].hematomaTreatment).closest("table").show();
 				$j("#" + hematomaSectionsObj[i+1].hematomaTreatment).parents("table").show();
 				$j("#" + hematomaSectionsObj[i+1].addSectionBtn).closest("table").show();
+				if((i+1) === (hematomaSectionsObj.length -1)) {
+					$j("#" + hematomaSectionsObj[i+1].addSectionBtn).hide();
+				}
 			} 
 				i++;
 		}

@@ -131,6 +131,9 @@ $j(document).ready(function() {
 				$j("#" + cnsSectionsObj[i+1].cnsTreatment).closest("table").show();
 				$j("#" + cnsSectionsObj[i+1].cnsTreatment).parents("table").show();
 				$j("#" + cnsSectionsObj[i+1].addSectionBtn).closest("table").show();
+				if((i+1) === (cnsSectionsObj.length -1)) {
+					$j("#" + cnsSectionsObj[i+1].addSectionBtn).hide();
+				}
 			} 
 				i++;
 		}

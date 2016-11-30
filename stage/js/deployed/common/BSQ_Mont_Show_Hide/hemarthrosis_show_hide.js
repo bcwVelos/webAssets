@@ -146,6 +146,9 @@ $j(document).ready(function() {
 				$j("#" + hemarthrosisSectionsObj[i+1].hemarthrosisTreatment).closest("table").show();
 				$j("#" + hemarthrosisSectionsObj[i+1].hemarthrosisTreatment).parents("table").show();
 				$j("#" + hemarthrosisSectionsObj[i+1].addSectionBtn).closest("table").show();
+				if((i+1) === (hemarthrosisSectionsObj.length -1)) {
+					$j("#" + hemarthrosisSectionsObj[i+1].addSectionBtn).hide();
+				}
 			} 
 				i++;
 		}
