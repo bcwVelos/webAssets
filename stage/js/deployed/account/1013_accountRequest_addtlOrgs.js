@@ -4,8 +4,8 @@ var addtlOrgsRows = new Array(totalRows);
 addtlOrgsRows[0] = {
 	addtlOrgs : "fld10050_117593_122039_span",  
 	accessLevel : "fld10050_117694_122140_span",
-	addRowBtn : "fld10050_117492_121938_id",
-	delRowBtn : "fld10050_117290_121736_id"
+	addRowBtn : ""fld10050_117391_121837_id",
+	delRowBtn : "fld10050_117492_121938_id"
 }
 
 for (var i = 1; i < totalRows; i++) {
