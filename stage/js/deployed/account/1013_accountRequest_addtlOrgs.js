@@ -1,4 +1,4 @@
-var totalRows = 100;
+var totalRows = 10;
 var addtlOrgsRows = new Array(totalRows);
 
 addtlOrgsRows[0] = {
