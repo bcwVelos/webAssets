@@ -1,6 +1,7 @@
 var totalRows = 10;
 var addtlOrgsRows = new Array(totalRows);
 
+alert("Hello");
 addtlOrgsRows[0] = {
 	addtlOrgs : 'fld10050_117593_122039_span',  
 	accessLevel : 'fld10050_117694_122140_span',
