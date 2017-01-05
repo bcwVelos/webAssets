@@ -10,10 +10,10 @@ addtlOrgsRows[0] = {
 
 for (var i = 1; i < totalRows; i++) {
 	addtlOrgsRows[i] = {
-		addtlOrgs : String(generateNextID(addtlOrgsRows[i-1].addtlOrgs).concat("_span")),
-		accessLevel : String(generateNextID(addtlOrgsRows[i-1].accessLevel.concat("_span")),
-		addRowBtn : String(generateNextID(addtlOrgsRows[i-1].addRowBtn).concat("_id")),
-		delRowBtn : String(generateNextID(addtlOrgsRows[i-1].delRowBtn).concat("_id"))
+		addtlOrgs : String(generateNextID(addtlOrgsRows[i-1].addtlOrgs)).concat("_span"),
+		accessLevel : String(generateNextID(addtlOrgsRows[i-1].accessLevel)).concat("_span"),
+		addRowBtn : String(generateNextID(addtlOrgsRows[i-1].addRowBtn)).concat("_id"),
+		delRowBtn : String(generateNextID(addtlOrgsRows[i-1].delRowBtn)).concat("_id")
 	}
 }
 
