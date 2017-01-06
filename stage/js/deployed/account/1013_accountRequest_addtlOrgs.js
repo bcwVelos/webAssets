@@ -1,3 +1,5 @@
+alert("hello");
+
 var str = "_";
 var nextID;
 var fieldElements = [];
@@ -5,7 +7,6 @@ var firstIncrement, secondIncrement;
 var totalRows = 10;
 var addtlOrgsRows = new Array(totalRows);
 
-alert("Hello");
 addtlOrgsRows[0] = {
 	addtlOrgs : 'fld10050_117593_122039_span',  
 	accessLevel : 'fld10050_117694_122140_span',
@@ -32,7 +33,6 @@ function generateNextID(currentID) {
 
 $j(document).ready(function() {
 	
-		alert("hello");
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
 	
