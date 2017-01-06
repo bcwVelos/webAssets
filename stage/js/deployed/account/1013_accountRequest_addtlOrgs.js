@@ -1,5 +1,3 @@
-alert("hello");
-
 var str = "_";
 var nextID;
 var fieldElements = [];
@@ -33,6 +31,11 @@ function generateNextID(currentID) {
 
 $j(document).ready(function() {
 	
+		$j("#" + addtlOrgsRows[0].addtlOrgs.substring(0, 20)).val("123456");
+		$j("#" + addtlOrgsRows[0].accessLevel[0].checked;
+		$j("#" + addtlOrgsRows[1].addtlOrgs.substring(0, 20)).val("456789");
+		$j("#" + addtlOrgsRows[1].accessLevel.[2].checked;
+	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
 		$j('td:contains("Space Break")').hide();
@@ -56,8 +59,7 @@ $j(document).ready(function() {
 		//Check if the addtlOrgs dropdown has an option selected OR
 		//Check if the Brand Name has data in it
 		//If either of these are True - assume that there are values for all columns and check the next row.
-		if ($j("#" + addtlOrgsRows[i].addtlOrgs.substring(0, a) + " option:selected").text() != "Select an Option") //||
-		//$j("#" + addtlOrgsRows[i].accessLevel.substring(0, b)).val() != "")
+		if ($j("#" + addtlOrgsRows[i].addtlOrgs.substring(0, a) + " option:selected").text() != "Select an Option")
 		{
 			//Hide the add button in the previous row. 
 			$j("#" + addtlOrgsRows[i-1].addRowBtn).hide();
@@ -137,7 +139,9 @@ $j(".deleteBtn").click(function() {
 			$j("#" + addtlOrgsRows[i].addtlOrgs).siblings().hide();
 
 			var b = addtlOrgsRows[i].accessLevel.indexOf("_span");
-			$j("#" + addtlOrgsRows[i].accessLevel.substring(0, b)).val("");
+			var listUncheck = document.getElementsByName(addtlOrgsRows[i].accessLevel.substring(0, b));
+			for (var j = 0 ; j < listUncheck.length; j++)
+				listUncheck[j].checked = false;
 			$j("#" + addtlOrgsRows[i].accessLevel).hide();
 
 			$j("#" + addtlOrgsRows[i].addtlOrgs).closest("tr").hide();
