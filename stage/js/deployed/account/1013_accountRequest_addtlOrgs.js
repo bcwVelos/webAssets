@@ -31,10 +31,10 @@ function generateNextID(currentID) {
 
 $j(document).ready(function() {
 	
-		$j("#" + addtlOrgsRows[0].addtlOrgs.substring(0, 20)).val("123456");
-		$j("#" + addtlOrgsRows[0].accessLevel[0].checked;
-		$j("#" + addtlOrgsRows[1].addtlOrgs.substring(0, 20)).val("456789");
-		$j("#" + addtlOrgsRows[1].accessLevel.[2].checked;
+		$j("#" + addtlOrgsRows[0].addtlOrgs.substring(0, 20)).val("Cornell University");
+		//$j("#" + addtlOrgsRows[0].accessLevel[0].checked;
+		//$j("#" + addtlOrgsRows[1].addtlOrgs.substring(0, 20)).val("456789");
+		//$j("#" + addtlOrgsRows[1].accessLevel.[2].checked;
 	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
