@@ -35,6 +35,7 @@ $j(document).ready(function() {
 	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
+		$j('td:contains("Space Break")').hide();
 	
 		//Check to see how many medications are available for the page
 		var rowTotal = addtlOrgsRows.length;
@@ -55,8 +56,8 @@ $j(document).ready(function() {
 		//Check if the addtlOrgs dropdown has an option selected OR
 		//Check if the Brand Name has data in it
 		//If either of these are True - assume that there are values for all columns and check the next row.
-		if ($j("#" + addtlOrgsRows[i].addtlOrgs.substring(0, a) + " option:selected").text() != "Select an Option" ||
-		$j("#" + addtlOrgsRows[i].accessLevel.substring(0, b)).val() != "")
+		if ($j("#" + addtlOrgsRows[i].addtlOrgs.substring(0, a) + " option:selected").text() != "Select an Option") //||
+		//$j("#" + addtlOrgsRows[i].accessLevel.substring(0, b)).val() != "")
 		{
 			//Hide the add button in the previous row. 
 			$j("#" + addtlOrgsRows[i-1].addRowBtn).hide();
