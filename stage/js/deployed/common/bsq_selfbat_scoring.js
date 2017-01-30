@@ -5,8 +5,8 @@ function calcScore() {
 }
 
 function calcTotalScore() {
-	var totalScore = calcNoseBleed()
-					+ calcCutaneous();
+	var totalScore = calcNoseBleed();
+//					+ calcCutaneous()
 //					+ calcMinorWounds()
 //					+ calcHematuria()
 //					+ calcGIBleeding()
