@@ -6,19 +6,19 @@ function calcScore() {
 
 function calcTotalScore() {
 	var totalScore = calcNoseBleed()
-					+ calcCutaneous()
-					+ calcMinorWounds()
-					+ calcHematuria()
-					+ calcGIBleeding()
-					+ calcOralCavity()
-					+ calcToothExtraction()
-					+ calcSurgery()
-					+ calcMenstrual()
-					+ calcDelivery()
-					+ calcHematoma()
-					+ calcHemarthrosis()
-					+ calcCNS()
-					+ calcOtherBleeding();
+					+ calcCutaneous();
+//					+ calcMinorWounds()
+//					+ calcHematuria()
+//					+ calcGIBleeding()
+//					+ calcOralCavity()
+//					+ calcToothExtraction()
+//					+ calcSurgery()
+//					+ calcMenstrual()
+//					+ calcDelivery()
+//					+ calcHematoma()
+//					+ calcHemarthrosis()
+//					+ calcCNS()
+//					+ calcOtherBleeding();
 
 	var totalScoreTop = document
 		.getElementsByName(totalScoreVariables.totalScoreTop);
