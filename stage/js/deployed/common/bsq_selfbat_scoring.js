@@ -1,8 +1,3 @@
-var str = "_";
-var nextID;
-var fieldElements = [];
-var firstIncrement, secondIncrement;
-
 function calcScore() {
 	calcTotalScore();
 	if (formStatus[0].value == '15736')
@@ -91,7 +86,7 @@ function calcMinorWounds() {
 
 	//Start scoring
 	for (var i=0; i < minorWoundsPrimary.length; i++) {
-		if minorWoundsPrimary [i].checked) {
+		if (minorWoundsPrimary [i].checked) {
 			var answer = minorWoundsPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > minorWoundsScore)
@@ -114,7 +109,7 @@ function calcHematuria() {
 
 	//Start scoring
 	for (var i=0; i < hematuriaPrimary.length; i++) {
-		if hematuriaPrimary [i].checked) {
+		if (hematuriaPrimary [i].checked) {
 			var answer = hematuriaPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > hematuriaScore)
@@ -137,7 +132,7 @@ function calcGIBleeding() {
 
 	//Start scoring
 	for (var i=0; i < giBleedingPrimary.length; i++) {
-		if giBleedingPrimary [i].checked) {
+		if (giBleedingPrimary [i].checked) {
 			var answer = giBleedingPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > giBleedingScore)
@@ -160,7 +155,7 @@ function calcOralCavity() {
 
 	//Start scoring
 	for (var i=0; i < oralCavityPrimary.length; i++) {
-		if oralCavityPrimary [i].checked) {
+		if (oralCavityPrimary [i].checked) {
 			var answer = oralCavityPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > oralCavityScore)
@@ -183,7 +178,7 @@ function calcMenstrual() {
 
 	//Start scoring
 	for (var i=0; i < menstrualPrimary.length; i++) {
-		if menstrualPrimary [i].checked) {
+		if (menstrualPrimary [i].checked) {
 			var answer = menstrualPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > menstrualScore)
@@ -206,7 +201,7 @@ function calcDelivery() {
 	
 	//Start Scoring
 	for (var i=0; i < deliveryPrimary.length; i++) {
-		if deliveryPrimary [i].checked) {
+		if (deliveryPrimary [i].checked) {
 			var answer = deliveryPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > deliveryScore)
@@ -229,7 +224,7 @@ function calcHematoma() {
 	
 	//Start scoring
 	for (var i=0; i < hematomaPrimary.length; i++) {
-		if hematomaPrimary [i].checked) {
+		if (hematomaPrimary [i].checked) {
 			var answer = hematomaPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > hematomaScore)
@@ -252,7 +247,7 @@ function calcHemarthrosis() {
 		
 	//Start scoring
 	for (var i=0; i < hemarthrosisPrimary.length; i++) {
-		if hemarthrosisPrimary [i].checked) {
+		if (hemarthrosisPrimary [i].checked) {
 			var answer = hemarthrosisPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > hemarthrosisScore)
@@ -275,7 +270,7 @@ function calcCNS() {
 	
 	//Start scoring
 	for (var i=0; i < cnsPrimary.length; i++) {
-		if cnsPrimary [i].checked) {
+		if (cnsPrimary [i].checked) {
 			var answer = cnsPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > cnsScore)
@@ -298,7 +293,7 @@ function calcOtherBleeding() {
 
 	//Start scoring
 	for (var i=0; i < otherBleedingPrimary.length; i++) {
-		if otherBleedingPrimary [i].checked) {
+		if (otherBleedingPrimary [i].checked) {
 			var answer = otherBleedingPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > otherBleedingScore)
@@ -321,7 +316,7 @@ function calcToothExtraction() {
 	
 	//Start Scoring
 	for (var i=0; i < toothExtractionPrimary.length; i++) {
-		if toothExtractionPrimary [i].checked) {
+		if (toothExtractionPrimary [i].checked) {
 			var answer = toothExtractionPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > toothExtractionScore)
@@ -344,7 +339,7 @@ function calcSurgery() {
 	
 	//Start Scoring
 	for (var i=0; i < surgeryPrimary.length; i++) {
-		if surgeryPrimary [i].checked) {
+		if (surgeryPrimary [i].checked) {
 			var answer = surgeryPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > surgeryScore)
@@ -354,14 +349,6 @@ function calcSurgery() {
 	//Surgery score
 	surgeryTotalScore[0].value= surgeryScore;
 	return surgeryScore;
-}
-
-function generateNextID(currentID) {
-	fieldElements = currentID.split("_");
-	firstIncrement = Number(fieldElements[1]) + 1;
-	secondIncrement = Number(fieldElements[2]) + 1;
-	nextID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
-	return nextID;
 }
 
 function testMapping() {
