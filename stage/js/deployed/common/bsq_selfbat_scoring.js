@@ -64,7 +64,7 @@ function calcCutaneous() {
 	//Start scoring
 	for (var i=0; i < bruisingPrimary.length; i++) {
 		if (bruisingPrimary[i].checked) {
-			var answer = (bruisingPrimary[i].value;
+			var answer = bruisingPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > bruisingScore)
 				bruisingScore = Number(answerValue[1]);
@@ -87,7 +87,7 @@ function calcMinorWounds() {
 	//Start scoring
 	for (var i=0; i < minorWoundsPrimary.length; i++) {
 		if (minorWoundsPrimary [i].checked) {
-			var answer = minorWoundsPrimary [i].value;
+			var answer = minorWoundsPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > minorWoundsScore)
 				minorWoundsScore = Number(answerValue[1]);
@@ -110,7 +110,7 @@ function calcHematuria() {
 	//Start scoring
 	for (var i=0; i < hematuriaPrimary.length; i++) {
 		if (hematuriaPrimary [i].checked) {
-			var answer = hematuriaPrimary [i].value;
+			var answer = hematuriaPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > hematuriaScore)
 				hematuriaScore = Number(answerValue[1]);
@@ -133,7 +133,7 @@ function calcGIBleeding() {
 	//Start scoring
 	for (var i=0; i < giBleedingPrimary.length; i++) {
 		if (giBleedingPrimary [i].checked) {
-			var answer = giBleedingPrimary [i].value;
+			var answer = giBleedingPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > giBleedingScore)
 				giBleedingScore = Number(answerValue[1]);
@@ -156,7 +156,7 @@ function calcOralCavity() {
 	//Start scoring
 	for (var i=0; i < oralCavityPrimary.length; i++) {
 		if (oralCavityPrimary [i].checked) {
-			var answer = oralCavityPrimary [i].value;
+			var answer = oralCavityPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > oralCavityScore)
 				oralCavityScore = Number(answerValue[1]);
@@ -179,7 +179,7 @@ function calcMenstrual() {
 	//Start scoring
 	for (var i=0; i < menstrualPrimary.length; i++) {
 		if (menstrualPrimary [i].checked) {
-			var answer = menstrualPrimary [i].value;
+			var answer = menstrualPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > menstrualScore)
 				menstrualScore = Number(answerValue[1]);
@@ -202,7 +202,7 @@ function calcDelivery() {
 	//Start Scoring
 	for (var i=0; i < deliveryPrimary.length; i++) {
 		if (deliveryPrimary [i].checked) {
-			var answer = deliveryPrimary [i].value;
+			var answer = deliveryPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > deliveryScore)
 				deliveryScore = Number(answerValue[1]);
