@@ -5,20 +5,20 @@ function calcScore() {
 }
 
 function calcTotalScore() {
-	var totalScore = calcNoseBleed();
-//					+ calcCutaneous()
-//					+ calcMinorWounds()
-//					+ calcHematuria()
-//					+ calcGIBleeding()
-//					+ calcOralCavity()
-//					+ calcToothExtraction()
-//					+ calcSurgery()
-//					+ calcMenstrual()
-//					+ calcDelivery()
-//					+ calcHematoma()
-//					+ calcHemarthrosis()
-//					+ calcCNS()
-//					+ calcOtherBleeding();
+	var totalScore = calcNoseBleed()
+					+ calcCutaneous()
+					+ calcMinorWounds()
+					+ calcHematuria()
+					+ calcGIBleeding()
+					+ calcOralCavity()
+					+ calcToothExtraction()
+					+ calcSurgery()
+					+ calcMenstrual()
+					+ calcDelivery()
+					+ calcHematoma()
+					+ calcHemarthrosis()
+					+ calcCNS()
+					+ calcOtherBleeding();
 
 	var totalScoreTop = document
 		.getElementsByName(totalScoreVariables.totalScoreTop);
@@ -51,7 +51,7 @@ function calcNoseBleed() {
 	epistaxisTotalScore[0].value = noseBleedScore;	
 	return noseBleedScore;
 }
-/*
+
 function calcCutaneous() {
 	
 	var bruisingScore = 0;
@@ -350,7 +350,7 @@ function calcSurgery() {
 	surgeryTotalScore[0].value= surgeryScore;
 	return surgeryScore;
 }
-*/
+
 function testMapping() {
 	document.getElementById(totalScoreVariables.totalScoreTop + "_id").style.color = "red";
 	document.getElementById(totalScoreVariables.totalScoreBottom + "_id").style.color = "red";
