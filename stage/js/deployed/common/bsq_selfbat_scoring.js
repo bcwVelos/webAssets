@@ -347,8 +347,8 @@ function calcSurgery() {
 		if surgeryPrimary [i].checked) {
 			var answer = surgeryPrimary [i].value;
 			var answerValue = answer.split("|");
-			if (Number(answerValue[1]) > toothExtractionScore)
-				toothExtractionScore = Number(answerValue[1]);
+			if (Number(answerValue[1]) > surgeryScore)
+				surgeryScore = Number(answerValue[1]);
 		}
 	}	
 	//Surgery score
@@ -386,11 +386,11 @@ function testMapping() {
 	document.getElementById(oralCavityVariables.oralCavityTotalScore + "_id").style.color = "red";
 	document.getElementById(oralCavityVariables.oralCavityPrimary + "_id").style.color = "red";
 	
+	document.getElementById(toothExtractionVariables.toothExtractionTotalScore + "_id").style.color = "red";
 	document.getElementById(toothExtractionVariables.toothExtractionPrimary + "_id").style.color = "red";
-	document.getElementById(toothExtractionVariables.toothExtractionHowManyTimes + "_id").style.color = "red";
 	
+	document.getElementById(surgeryVariables.surgeryTotalScore + "_id").style.color = "red";
 	document.getElementById(surgeryVariables.surgeryPrimary + "_id").style.color = "red";
-	document.getElementById(surgeryVariables.surgeryHowManyTimes + "_id").style.color = "red";
 
 	document.getElementById(menstrualVariables.menstrualTotalScore + "_id").style.color = "red";
 	document.getElementById(menstrualVariables.menstrualPrimary + "_id").style.color = "red";
