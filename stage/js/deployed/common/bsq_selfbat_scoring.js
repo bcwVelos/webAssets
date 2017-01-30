@@ -312,87 +312,22 @@ function calcOtherBleeding() {
 
 function calcToothExtraction() {
 	
-	var toothNoOfTimesExcessive = 0;
 	var toothExtractionScore = 0;
 
 	var toothExtractionTotalScore = document
 		.getElementsByName(toothExtractionVariables.toothExtractionTotalScore);
 	var toothExtractionPrimary = document
 		.getElementsByName(toothExtractionVariables.toothExtractionPrimary);
-	var toothExtractionHowManyTimes = document
-		.getElementsByName(toothExtractionVariables.toothExtractionHowManyTimes);
-	var toothExtractionExcessiveTimes = document
-		.getElementsByName(toothExtractionVariables.toothExtractionExcessiveTimes);
-	var toothExtractionExcessiveBleeding = document
-		.getElementsByName(toothExtractionVariables.toothExtractionExcessiveBleeding);
-	var toothExtractionTreatment = document
-		.getElementsByName(toothExtractionVariables.toothExtractionTreatment);
-	var toothExtractionTreatedHow = document
-		.getElementsByName(toothExtractionVariables.toothExtractionTreatedHow);
-	
-	//Creates field IDs for repeating tooth extraction sections
-	toothExtractionExcessiveBleedingArray[0] = toothExtractionVariables.toothExtractionExcessiveBleeding;
-	for (var i = 1; i < toothExtractionExcessiveBleedingArray.length; i++) {
-		toothExtractionExcessiveBleedingArray[i] = String(generateNextID(toothExtractionExcessiveBleedingArray[i-1]));
-	}
-	
-	toothExtractionTreatmentArray[0] = toothExtractionVariables.toothExtractionTreatment;
-	for (var i = 1; i < toothExtractionTreatmentArray.length; i++) {
-		toothExtractionTreatmentArray[i] = String(generateNextID(toothExtractionTreatmentArray[i-1]));
-	}
-	
-	toothExtractionTreatedHowArray[0] = toothExtractionVariables.toothExtractionTreatedHow;
-	for (var i = 1; i < toothExtractionTreatedHowArray.length; i++) {
-		toothExtractionTreatedHowArray[i] = String(generateNextID(toothExtractionTreatedHowArray[i-1]));
-	}
 	
 	//Start Scoring
-	if (toothExtractionPrimary[0].checked) {
-		var toothNoOfTimes = toothExtractionHowManyTimes[0].value;
-		
-		if (isNaN(toothNoOfTimes)) {
-			alert ("Tooth Extraction Section:  Please enter a number in the How many times have you had tooth (teeth) extracted? field.  " +
-			"Score cannot be calculated accurately!");
+	for (var i=0; i < toothExtractionPrimary.length; i++) {
+		if toothExtractionPrimary [i].checked) {
+			var answer = toothExtractionPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > toothExtractionScore)
+				toothExtractionScore = Number(answerValue[1]);
 		}
-		
-		for (var i=0; i<toothExtractionExcessiveTimes.length; i++) {
-			if (toothExtractionExcessiveTimes[i].checked) {
-				if (i != toothExtractionExcessiveTimes.length-1) {
-					var answer = Number(toothExtractionExcessiveTimes[i].value);
-					toothNoOfTimesExcessive = Number(answer);
-				} else {
-					if (toothNoOfTimes == 0) {
-						toothNoOfTimes = 5;
-						toothNoOfTimesExcessive = 5;
-					} else
-						toothNoOfTimesExcessive = toothNoOfTimes;
-				}
-			}
-		}
-		
-		if (toothNoOfTimesExcessive == 0)
-			toothExtractionScore = 0;
-		else if ((toothNoOfTimesExcessive/toothNoOfTimes)*100 < 25)
-			toothExtractionScore = toothExtractionScore + 1;
-		else if ((toothNoOfTimesExcessive/toothNoOfTimes)*100 >= 25)
-			toothExtractionScore = toothExtractionScore + 2;
-
-		for (var i = 0; i<toothExtractionTreatedHowArray.length; i++) {
-			var currentSection = document.getElementsByName(String(toothExtractionTreatedHowArray[i]));
-			var topLevelQuestion = document.getElementsByName(String(toothExtractionExcessiveBleedingArray[i]));
-			var secondLevelQuestion = document.getElementsByName(String(toothExtractionTreatmentArray[i]));
-			if (topLevelQuestion[0].checked && secondLevelQuestion[0].checked) {
-				for (var j=0; j<currentSection.length; j++) {	
-					if (currentSection[j].checked) {
-						var answer = currentSection[j].value;
-						var answerValue = answer.split("|");
-						if (Number(answerValue[1]) > toothExtractionScore)
-							toothExtractionScore = Number(answerValue[1]);
-					}
-				}
-			}
-		}
-	}	
+	}
 	//Tooth Extraction score
 	toothExtractionTotalScore[0].value= toothExtractionScore;
 	return toothExtractionScore;
@@ -400,85 +335,20 @@ function calcToothExtraction() {
 
 function calcSurgery() {
 	
-	var noOfTimesExcessive = 0;
 	var surgeryScore = 0;
 	
-	var surgeryPrimary = document
-		.getElementsByName(surgeryVariables.surgeryPrimary);
-	var surgeryHowManyTimes = document
-		.getElementsByName(surgeryVariables.surgeryHowManyTimes);
-	var surgeryExcessiveTimes = document
-		.getElementsByName(surgeryVariables.surgeryExcessiveTimes);
-	var surgeryExcessiveBleeding = document
-		.getElementsByName(surgeryVariables.surgeryExcessiveBleeding);
-	var surgeryTreatment = document
-		.getElementsByName(surgeryVariables.surgeryTreatment);
-	var surgeryTreatedHow = document
-		.getElementsByName(surgeryVariables.surgeryTreatedHow);
 	var surgeryTotalScore = document
 		.getElementsByName(surgeryVariables.surgeryTotalScore);
-	
-	//Creates field IDs for repeating surgery sections
-	surgeryExcessiveBleedingArray[0] = surgeryVariables.surgeryExcessiveBleeding;
-	for (var i = 1; i < surgeryExcessiveBleedingArray.length; i++) {
-		surgeryExcessiveBleedingArray[i] = String(generateNextID(surgeryExcessiveBleedingArray[i-1]));
-	}
-	
-	surgeryTreatmentArray[0] = surgeryVariables.surgeryTreatment;
-	for (var i = 1; i < surgeryTreatmentArray.length; i++) {
-		surgeryTreatmentArray[i] = String(generateNextID(surgeryTreatmentArray[i-1]));
-	}
-	
-	surgeryTreatedHowArray[0] = surgeryVariables.surgeryTreatedHow;	
-	for (var i = 1; i < surgeryTreatedHowArray.length; i++) {
-		surgeryTreatedHowArray[i] = String(generateNextID(surgeryTreatedHowArray[i-1]));
-	}
+	var surgeryPrimary = document
+		.getElementsByName(surgeryVariables.surgeryPrimary);
 	
 	//Start Scoring
-	if (surgeryPrimary[0].checked) {
-		var noOfTimes = surgeryHowManyTimes[0].value;
-		
-		if (isNaN(noOfTimes)) {
-			alert ("Surgery Section:  Please enter a number in the How many surgeries have you had? field.  " +
-			"Score cannot be calculated!");
-		}
-		
-		for (var i=0; i<surgeryExcessiveTimes.length; i++) {
-			if (surgeryExcessiveTimes[i].checked) {
-				if (i != surgeryExcessiveTimes.length-1) {
-					var answer = Number(surgeryExcessiveTimes[i].value);
-					noOfTimesExcessive = Number(answer);
-				} else {
-					if (noOfTimes == 0) {
-						noOfTimes = 5;
-						noOfTimesExcessive = 5;
-					} else
-						noOfTimesExcessive = noOfTimes;
-				}
-			}
-		}
-
-		if (noOfTimesExcessive == 0 || noOfTimes == 0)
-			surgeryScore = 0;
-		else if ((noOfTimesExcessive/noOfTimes)*100 < 25)
-			surgeryScore = surgeryScore + 1;
-		else if ((noOfTimesExcessive/noOfTimes)*100 >= 25)
-			surgeryScore = surgeryScore + 2;
-
-		for (var i = 0; i<surgeryTreatedHowArray.length; i++) {
-			var currentSection = document.getElementsByName(String(surgeryTreatedHowArray[i]));
-			var topLevelQuestion = document.getElementsByName(String(surgeryExcessiveBleedingArray[i]));
-			var secondLevelQuestion = document.getElementsByName(String(surgeryTreatmentArray[i]));
-			if (topLevelQuestion[0].checked && secondLevelQuestion[0].checked) {
-				for (var j=0; j<currentSection.length; j++) {
-					if (currentSection[j].checked) {
-						var answer = currentSection[j].value;
-						var answerValue = answer.split("|");
-						if (Number(answerValue[1]) > surgeryScore)
-							surgeryScore = Number(answerValue[1]);
-					}
-				}
-			}
+	for (var i=0; i < surgeryPrimary.length; i++) {
+		if surgeryPrimary [i].checked) {
+			var answer = surgeryPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > toothExtractionScore)
+				toothExtractionScore = Number(answerValue[1]);
 		}
 	}	
 	//Surgery score
@@ -500,105 +370,43 @@ function testMapping() {
 	
 	document.getElementById(noseBleedVariables.epistaxisTotalScore + "_id").style.color = "red";
 	document.getElementById(noseBleedVariables.epistaxisPrimary + "_id").style.color = "red";
-	document.getElementById(noseBleedVariables.epistaxisSeekMedAttn + "_id").style.color = "red";
-	document.getElementById(noseBleedVariables.epistaxisTreatedHow + "_id").style.color = "red";
-	document.getElementById(noseBleedVariables.epistaxisHowMany + "_id").style.color = "red";
-	document.getElementById(noseBleedVariables.epistaxisHowLong + "_id").style.color = "red";
 
 	document.getElementById(cutaneousVariables.bruisingTotalScore + "_id").style.color = "red";
 	document.getElementById(cutaneousVariables.bruisingPrimary + "_id").style.color = "red";
-	document.getElementById(cutaneousVariables.bruisingMedicalAttention + "_id").style.color = "red";
-	document.getElementById(cutaneousVariables.bruisingTreatedHow + "_id").style.color = "red";
-	document.getElementById(cutaneousVariables.bruisingTrauma + "_id").style.color = "red";
-	document.getElementById(cutaneousVariables.bruisingSize + "_id").style.color = "red";
-	document.getElementById(cutaneousVariables.bruisingMultiple + "_id").style.color = "red";
 
 	document.getElementById(minorWoundsVariables.minorWoundsTotalScore + "_id").style.color = "red";
 	document.getElementById(minorWoundsVariables.minorWoundsPrimary + "_id").style.color = "red";
-	document.getElementById(minorWoundsVariables.minorWoundsSeekMedAttn + "_id").style.color = "red";
-	document.getElementById(minorWoundsVariables.minorWoundsTreatedHow + "_id").style.color = "red";
-	document.getElementById(minorWoundsVariables.minorWoundsHowMany + "_id").style.color = "red";
-	document.getElementById(minorWoundsVariables.minorWoundsHowLong + "_id").style.color = "red";
 
 	document.getElementById(hematuriaVariables.hematuriaTotalScore + "_id").style.color = "red";
 	document.getElementById(hematuriaVariables.hematuriaPrimary + "_id").style.color = "red";
-	document.getElementById(hematuriaVariables.hematuriaOtherIllness + "_id").style.color = "red";
-	document.getElementById(hematuriaVariables.hematuriaSeekMedAttn + "_id").style.color = "red";
-	document.getElementById(hematuriaVariables.hematuriaTreatedHow + "_id").style.color = "red";
 
 	document.getElementById(giBleedingVariables.giBleedingTotalScore + "_id").style.color = "red";
 	document.getElementById(giBleedingVariables.giBleedingPrimary + "_id").style.color = "red";
-	document.getElementById(giBleedingVariables.giBleedingOtherIllness + "_id").style.color = "red";
-	document.getElementById(giBleedingVariables.giBleedingSeekMedAttn + "_id").style.color = "red";
-	document.getElementById(giBleedingVariables.giBleedingTreatedHow + "_id").style.color = "red";
 
 	document.getElementById(oralCavityVariables.oralCavityTotalScore + "_id").style.color = "red";
 	document.getElementById(oralCavityVariables.oralCavityPrimary + "_id").style.color = "red";
-	document.getElementById(oralCavityVariables.oralCavitySeekMedAttn + "_id").style.color = "red";
-	document.getElementById(oralCavityVariables.oralCavityTreatedHow + "_id").style.color = "red";
-	document.getElementById(oralCavityVariables.oralCavityHowLong + "_id").style.color = "red";
 	
 	document.getElementById(toothExtractionVariables.toothExtractionPrimary + "_id").style.color = "red";
 	document.getElementById(toothExtractionVariables.toothExtractionHowManyTimes + "_id").style.color = "red";
-	document.getElementById(toothExtractionVariables.toothExtractionExcessiveTimes + "_id").style.color = "red";
-	for (var i = 0; i < toothExtractionExcessiveBleedingArray.length; i++)
-		document.getElementById(toothExtractionExcessiveBleedingArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < toothExtractionTreatmentArray.length; i++)
-		document.getElementById(toothExtractionTreatmentArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < toothExtractionTreatedHowArray.length; i++)
-		document.getElementById(toothExtractionTreatedHowArray[i] + "_id").style.color = "red";
-	document.getElementById(toothExtractionVariables.toothExtractionTotalScore + "_id").style.color = "red";
 	
 	document.getElementById(surgeryVariables.surgeryPrimary + "_id").style.color = "red";
 	document.getElementById(surgeryVariables.surgeryHowManyTimes + "_id").style.color = "red";
-	document.getElementById(surgeryVariables.surgeryExcessiveTimes + "_id").style.color = "red";
-	for (var i = 0; i < surgeryExcessiveBleedingArray.length; i++)
-		document.getElementById(surgeryExcessiveBleedingArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < surgeryTreatmentArray.length; i++)
-		document.getElementById(surgeryTreatmentArray[i] + "_id").style.color = "red";
-	for (var i = 0; i < surgeryTreatedHowArray.length; i++)
-		document.getElementById(surgeryTreatedHowArray[i] + "_id").style.color = "red";
-	document.getElementById(surgeryVariables.surgeryTotalScore + "_id").style.color = "red";
 
 	document.getElementById(menstrualVariables.menstrualTotalScore + "_id").style.color = "red";
 	document.getElementById(menstrualVariables.menstrualPrimary + "_id").style.color = "red";
-	document.getElementById(menstrualVariables.menstrualSpecify + "_id").style.color = "red";
-	document.getElementById(menstrualVariables.menstrualMedicalAttention + "_id").style.color = "red";
-	document.getElementById(menstrualVariables.menstrualTreatedHow + "_id").style.color = "red";
-	document.getElementById(menstrualVariables.menstrualTimeOffWork + "_id").style.color = "red";
-	document.getElementById(menstrualVariables.menstrualHowLong + "_id").style.color = "red";
-	document.getElementById(menstrualVariables.menstrualHospitalization + "_id").style.color = "red";
-	document.getElementById(menstrualVariables.menstrualPictoralScore + "_id").style.color = "red";
 
 	document.getElementById(deliveryVariables.deliveryTotalScore + "_id").style.color = "red";
 	document.getElementById(deliveryVariables.deliveryPrimary + "_id").style.color = "red";
-	document.getElementById(deliveryVariables.deliveryHowLong + "_id").style.color = "red";
-	document.getElementById(deliveryVariables.deliveryChangingPads + "_id").style.color = "red";
-	document.getElementById(deliveryVariables.deliveryHospital + "_id").style.color = "red";
-	document.getElementById(deliveryVariables.deliveryTreatment + "_id").style.color = "red";
-	document.getElementById(deliveryVariables.deliveryTreatedHow + "_id").style.color = "red";
 
 	document.getElementById(hematomaVariables.hematomaTotalScore + "_id").style.color = "red";
 	document.getElementById(hematomaVariables.hematomaPrimary + "_id").style.color = "red";
-	document.getElementById(hematomaVariables.hematomaType + "_id").style.color = "red";
-	document.getElementById(hematomaVariables.hematomaTreatment + "_id").style.color = "red";
-	document.getElementById(hematomaVariables.hematomaTreatedHow + "_id").style.color = "red";
 
 	document.getElementById(hemarthrosisVariables.hemarthrosisTotalScore + "_id").style.color = "red";
 	document.getElementById(hemarthrosisVariables.hemarthrosisPrimary + "_id").style.color = "red";
-	document.getElementById(hemarthrosisVariables.hemarthrosisType + "_id").style.color = "red";
-	document.getElementById(hemarthrosisVariables.hemarthrosisTreatment + "_id").style.color = "red";
-	document.getElementById(hemarthrosisVariables.hemarthrosisTreatedHow + "_id").style.color = "red";
 
 	document.getElementById(cnsVariables.cnsTotalScore + "_id").style.color = "red";
 	document.getElementById(cnsVariables.cnsPrimary + "_id").style.color = "red";
-	document.getElementById(cnsVariables.cnsType + "_id").style.color = "red";
-	document.getElementById(cnsVariables.cnsSpecify + "_id").style.color = "red";
-	document.getElementById(cnsVariables.cnsTreatment + "_id").style.color = "red";
-	document.getElementById(cnsVariables.cnsTreatedHow + "_id").style.color = "red";
 
 	document.getElementById(otherBleedingVariables.otherBleedingTotalScore + "_id").style.color = "red";
-	document.getElementById(otherBleedingVariables.otherBleedingType + "_id").style.color = "red";
-	document.getElementById(otherBleedingVariables.otherBleedingTreatment + "_id").style.color = "red";
-	document.getElementById(otherBleedingVariables.otherBleedingTreatedHow + "_id").style.color = "red";
+	document.getElementById(otherBleedingVariables.otherBleedingPrimary + "_id").style.color = "red";
 }
