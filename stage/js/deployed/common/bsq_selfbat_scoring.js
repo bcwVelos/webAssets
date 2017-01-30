@@ -51,8 +51,7 @@ function calcNoseBleed() {
 			if (Number(answerValue[1]) > noseBleedScore)
 				noseBleedScore = Number(answerValue[1]);
 		}
-	}
-	
+	}	
 	//Nose Bleed Score
 	epistaxisTotalScore[0].value = noseBleedScore;	
 	return noseBleedScore;
@@ -66,64 +65,14 @@ function calcCutaneous() {
 		.getElementsByName(cutaneousVariables.bruisingTotalScore);
 	var bruisingPrimary = document
 		.getElementsByName(cutaneousVariables.bruisingPrimary);
-	var bruisingMedicalAttention = document
-		.getElementsByName(cutaneousVariables.bruisingMedicalAttention);
-	var bruisingTreatedHow = document
-		.getElementsByName(cutaneousVariables.bruisingTreatedHow);
-	var bruisingTrauma = document
-		.getElementsByName(cutaneousVariables.bruisingTrauma);
-	var bruisingSize = document
-		.getElementsByName(cutaneousVariables.bruisingSize);
-	var bruisingMultiple = document
-		.getElementsByName(cutaneousVariables.bruisingMultiple);
 
 	//Start scoring
-	if (bruisingPrimary[0].checked) {	
-		for (var i=0; i<bruisingMedicalAttention.length; i++) {
-			if (bruisingMedicalAttention[i].checked) {
-				var answer = bruisingMedicalAttention[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > bruisingScore)
-					bruisingScore = Number(answerValue[1]);
-			}
-		}
-		
-		if (bruisingMedicalAttention[0].checked) {
-			for (var i=0; i<bruisingTreatedHow.length; i++) {
-				if (bruisingTreatedHow[i].checked) {
-					var answer = bruisingTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > bruisingScore)
-						bruisingScore = Number(answerValue[1]);
-				}
-			}
-		}
-		
-		for (var i=0; i<bruisingTrauma.length; i++) {
-			if (bruisingTrauma[i].checked) {
-				var answer = bruisingTrauma[i].value;
-				var answerValue = answer.split("|");
-				if (Number(answerValue[1]) > bruisingScore)
-					bruisingScore = Number(answerValue[1]);
-			}
-		}
-		
-		for (var i=0; i<bruisingSize.length; i++) {
-			if (bruisingSize[i].checked) {
-				var answer = bruisingSize[i].value;
-				var answerValue = answer.split("|");
-				if (Number(answerValue[1]) > bruisingScore)
-					bruisingScore = Number(answerValue[1]);
-			}
-		}
-	  
-		for (var i=0; i<bruisingMultiple.length; i++) {
-			if (bruisingMultiple[i].checked) {
-				var answer = bruisingMultiple[i].value;
-				var answerValue = answer.split("|");
-				if (Number(answerValue[1]) > bruisingScore)
-					bruisingScore = Number(answerValue[1]);
-			}
+	for (var i=0; i < bruisingPrimary.length; i++) {
+		if (bruisingPrimary[i].checked) {
+			var answer = (bruisingPrimary[i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > bruisingScore)
+				bruisingScore = Number(answerValue[1]);
 		}
 	}	
 	//Bruising score
@@ -139,44 +88,14 @@ function calcMinorWounds() {
 		.getElementsByName(minorWoundsVariables.minorWoundsTotalScore);
 	var minorWoundsPrimary = document
 		.getElementsByName(minorWoundsVariables.minorWoundsPrimary);
-	var minorWoundsSeekMedAttn = document
-		.getElementsByName(minorWoundsVariables.minorWoundsSeekMedAttn);
-	var minorWoundsTreatedHow = document
-		.getElementsByName(minorWoundsVariables.minorWoundsTreatedHow);
-	var minorWoundsHowMany = document
-		.getElementsByName(minorWoundsVariables.minorWoundsHowMany);
-	var minorWoundsHowLong = document
-		.getElementsByName(minorWoundsVariables.minorWoundsHowLong);
 
 	//Start scoring
-	if (minorWoundsPrimary[0].checked) {
-		if (minorWoundsSeekMedAttn[0].checked) {
-			for (var i=0; i<minorWoundsTreatedHow.length; i++) {
-				if (minorWoundsTreatedHow[i].checked) {
-					var answer = minorWoundsTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > minorWoundsScore)
-						minorWoundsScore = Number(answerValue[1]);
-				}
-			}
-		}
-		
-		for (var i=0; i<minorWoundsHowMany.length; i++) {
-			if (minorWoundsHowMany[i].checked) {
-				var answer = minorWoundsHowMany[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > minorWoundsScore)
-					minorWoundsScore = Number(answerValue[1]);
-			}
-		}
-
-	  	for (var i=0; i<minorWoundsHowLong.length; i++) {
-			if (minorWoundsHowLong[i].checked) {
-				var answer = minorWoundsHowLong[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > minorWoundsScore)
+	for (var i=0; i < minorWoundsPrimary.length; i++) {
+		if minorWoundsPrimary [i].checked) {
+			var answer = minorWoundsPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > minorWoundsScore)
 				minorWoundsScore = Number(answerValue[1]);
-			}
 		}
 	}
 	//Minor Wounds score
@@ -192,33 +111,14 @@ function calcHematuria() {
 		.getElementsByName(hematuriaVariables.hematuriaTotalScore);
 	var hematuriaPrimary = document
 		.getElementsByName(hematuriaVariables.hematuriaPrimary);
-	var hematuriaOtherIllness = document
-		.getElementsByName(hematuriaVariables.hematuriaOtherIllness);
-	var hematuriaSeekMedAttn = document
-		.getElementsByName(hematuriaVariables.hematuriaSeekMedAttn);
-	var hematuriaTreatedHow = document
-		.getElementsByName(hematuriaVariables.hematuriaTreatedHow);
 
 	//Start scoring
-	if (hematuriaPrimary[0].checked) {		
-		for (var i=0; i<hematuriaOtherIllness.length; i++) {
-			if (hematuriaOtherIllness[i].checked) {
-				var answer = hematuriaOtherIllness[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > hematuriaScore)
-					hematuriaScore = Number(answerValue[1]);
-			}
-		}
-
-		if (hematuriaSeekMedAttn[0].checked) {
-			for (var i=0; i<hematuriaTreatedHow.length; i++) {
-				if (hematuriaTreatedHow[i].checked) {
-					var answer = hematuriaTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > hematuriaScore)
-						hematuriaScore = Number(answerValue[1]);
-				}
-			}
+	for (var i=0; i < hematuriaPrimary.length; i++) {
+		if hematuriaPrimary [i].checked) {
+			var answer = hematuriaPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > hematuriaScore)
+				hematuriaScore = Number(answerValue[1]);
 		}
 	}
 	//Hematuria score
@@ -234,33 +134,14 @@ function calcGIBleeding() {
 		.getElementsByName(giBleedingVariables.giBleedingTotalScore);
 	var giBleedingPrimary = document
 		.getElementsByName(giBleedingVariables.giBleedingPrimary);
-	var giBleedingOtherIllness = document
-		.getElementsByName(giBleedingVariables.giBleedingOtherIllness);
-	var giBleedingSeekMedAttn = document
-		.getElementsByName(giBleedingVariables.giBleedingSeekMedAttn);
-	var giBleedingTreatedHow = document
-		.getElementsByName(giBleedingVariables.giBleedingTreatedHow);
 
 	//Start scoring
-	if (giBleedingPrimary[0].checked) {
-		for (var i=0; i<giBleedingOtherIllness.length; i++) {
-			if (giBleedingOtherIllness[i].checked) {
-				var answer = giBleedingOtherIllness[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > giBleedingScore)
-					giBleedingScore = Number(answerValue[1]);
-			}
-		}
-
-		if (giBleedingSeekMedAttn[0].checked) {
-			for (var i=0; i<giBleedingTreatedHow.length; i++) {
-				if (giBleedingTreatedHow[i].checked) {
-					var answer = giBleedingTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > giBleedingScore)
-						giBleedingScore = Number(answerValue[1]);
-				}
-			}
+	for (var i=0; i < giBleedingPrimary.length; i++) {
+		if giBleedingPrimary [i].checked) {
+			var answer = giBleedingPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > giBleedingScore)
+				giBleedingScore = Number(answerValue[1]);
 		}
 	}
 	//GI Bleeding score
@@ -276,42 +157,14 @@ function calcOralCavity() {
 		.getElementsByName(oralCavityVariables.oralCavityTotalScore);
 	var oralCavityPrimary = document
 		.getElementsByName(oralCavityVariables.oralCavityPrimary);
-	var oralCavitySeekMedAttn = document
-		.getElementsByName(oralCavityVariables.oralCavitySeekMedAttn);
-	var oralCavityTreatedHow = document
-		.getElementsByName(oralCavityVariables.oralCavityTreatedHow);
-	var oralCavityHowLong = document
-	.getElementsByName(oralCavityVariables.oralCavityHowLong);
 
 	//Start scoring
-	if (oralCavityPrimary[0].checked) {
-		for (var i=0; i<oralCavityPrimary.length; i++) {
-			if (oralCavityPrimary[i].checked) {
-				var answer = oralCavityPrimary[i].value;
-				var answerValue = answer.split("|");
-				if (Number(answerValue[1]) > oralCavityScore)
-					oralCavityScore = Number(answerValue[1]);
-			}
-		}
-		
-		if (oralCavitySeekMedAttn[0].checked) {
-			for (var i=0; i<oralCavityTreatedHow.length; i++) {
-				if (oralCavityTreatedHow[i].checked) {
-					var answer = oralCavityTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > oralCavityScore)
-						oralCavityScore = Number(answerValue[1]);
-				}
-			}
-		}
-		
-		for (var i=0; i<oralCavityHowLong.length; i++) {
-			if (oralCavityHowLong[i].checked) {
-				var answer = oralCavityHowLong[i].value;
-				var answerValue = answer.split("|");
-				if (Number(answerValue[1]) > oralCavityScore)
-					oralCavityScore = Number(answerValue[1]);
-			}
+	for (var i=0; i < oralCavityPrimary.length; i++) {
+		if oralCavityPrimary [i].checked) {
+			var answer = oralCavityPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > oralCavityScore)
+				oralCavityScore = Number(answerValue[1]);
 		}
 	}
 	//Oral Cavity score
@@ -327,87 +180,16 @@ function calcMenstrual() {
 		.getElementsByName(menstrualVariables.menstrualTotalScore);
 	var menstrualPrimary = document
 		.getElementsByName(menstrualVariables.menstrualPrimary);
-	var menstrualSpecify = document
-		.getElementsByName(menstrualVariables.menstrualSpecify);
-	var menstrualMedicalAttention = document
-		.getElementsByName(menstrualVariables.menstrualMedicalAttention);
-	var menstrualTreatedHow = document
-		.getElementsByName(menstrualVariables.menstrualTreatedHow);
-	var menstrualTimeOffWork = document
-		.getElementsByName(menstrualVariables.menstrualTimeOffWork);
-	var menstrualHowLong = document
-		.getElementsByName(menstrualVariables.menstrualHowLong);
-	var menstrualHospitalization = document
-		.getElementsByName(menstrualVariables.menstrualHospitalization);
-	var menstrualPictoralScore = document
-		.getElementsByName(menstrualVariables.menstrualPictoralScore);
 
 	//Start scoring
-	if (menstrualPrimary[0].checked) {	
-		for (var i=0; i<menstrualSpecify.length; i++) {
-			if (menstrualSpecify[i].checked) {
-				var answer = menstrualSpecify[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > menstrualScore)
-					menstrualScore = Number(answerValue[1]);
-			}
+	for (var i=0; i < menstrualPrimary.length; i++) {
+		if menstrualPrimary [i].checked) {
+			var answer = menstrualPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > menstrualScore)
+				menstrualScore = Number(answerValue[1]);
 		}
-	
-		for (var i=0; i<menstrualMedicalAttention.length; i++) {
-			if (menstrualMedicalAttention[i].checked) {
-				var answer = menstrualMedicalAttention[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > menstrualScore)
-					menstrualScore = Number(answerValue[1]);
-			}
-		}
-	
-		if (menstrualMedicalAttention[0].checked) {
-			for (var i=0; i<menstrualTreatedHow.length; i++) {
-				if (menstrualTreatedHow[i].checked) {
-					var answer = menstrualTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > menstrualScore)
-						menstrualScore = Number(answerValue[1]);
-				}
-			}
-		}
-	
-		for (var i=0; i<menstrualTimeOffWork.length; i++) {
-			if (menstrualTimeOffWork[i].checked) {
-				var answer = menstrualTimeOffWork[i].value;
-				var answerValue = answer.split("|");
-				if (Number(answerValue[1]) > menstrualScore)
-					menstrualScore = Number(answerValue[1]);
-			}
-		}
-		
-		for (var i=0; i<menstrualHowLong.length; i++) {
-			if (menstrualHowLong[i].checked) {
-				var answer = menstrualHowLong[i].value;
-				var answerValue = answer.split("|");
-				if (Number(answerValue[1]) > menstrualScore)
-					menstrualScore = Number(answerValue[1]);
-			}
-		}
-	
-		for (var i=0; i<menstrualHospitalization.length; i++) {
-			if (menstrualHospitalization[i].checked) {
-				var answer = menstrualHospitalization[i].value;
-				var answerValue = answer.split("|");
-				if (Number(answerValue[1]) > menstrualScore)
-					menstrualScore = Number(answerValue[1]);
-			}
-		}
-		
-		menstrualPictoralScoreValue = menstrualPictoralScore[0].value
-		if (isNaN(menstrualPictoralScoreValue))
-			alert ("Menorrhagia Section:  Please enter a number )" +
-			" in the Pictoral Bleeding Score Assessment field.")
-		if (menstrualPictoralScoreValue > 100)
-			if (menstrualScore < 1)
-				menstrualScore = 1;
-	}	
+	}
 	//Female Menstrual History score
 	menstrualTotalScore[0].value= menstrualScore;
 	return menstrualScore;
@@ -421,66 +203,16 @@ function calcDelivery() {
 		.getElementsByName(deliveryVariables.deliveryTotalScore);
 	var deliveryPrimary = document
 		.getElementsByName(deliveryVariables.deliveryPrimary);
-	var deliveryHowLong = document
-		.getElementsByName(deliveryVariables.deliveryHowLong);
-	var deliveryChangingPads = document
-		.getElementsByName(deliveryVariables.deliveryChangingPads);
-	var deliveryHospital = document
-		.getElementsByName(deliveryVariables.deliveryHospital);
-	var deliveryTreatment = document
-		.getElementsByName(deliveryVariables.deliveryTreatment);
-	var deliveryTreatedHow = document
-		.getElementsByName(deliveryVariables.deliveryTreatedHow);
 	
 	//Start Scoring
-	if (deliveryPrimary[0].checked) {
-		for (var i=0; i<deliveryHowLong.length; i++) {
-			if (deliveryHowLong[i].checked) {
-				var answer = deliveryHowLong[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > deliveryScore)
-					deliveryScore = Number(answerValue[1]);
-			}
+	for (var i=0; i < deliveryPrimary.length; i++) {
+		if deliveryPrimary [i].checked) {
+			var answer = deliveryPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > deliveryScore)
+				deliveryScore = Number(answerValue[1]);
 		}
-		
-		for (var i=0; i<deliveryChangingPads.length; i++) {
-			if (deliveryChangingPads[i].checked) {
-				var answer = deliveryChangingPads[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > deliveryScore)
-					deliveryScore = Number(answerValue[1]);
-			}
-		}
-		
-		for (var i=0; i<deliveryHospital.length; i++) {
-			if (deliveryHospital[i].checked) {
-				var answer = deliveryHospital[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > deliveryScore)
-					deliveryScore = Number(answerValue[1]);
-			}
-		}
-		
-		for (var i=0; i<deliveryTreatment.length; i++) {
-			if (deliveryTreatment[i].checked) {
-				var answer = deliveryTreatment[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > deliveryScore)
-					deliveryScore = Number(answerValue[1]);
-			}
-		}
-	
-		if (deliveryTreatment[0].checked) {
-			for (var i=0; i<deliveryTreatedHow.length; i++) {
-				if (deliveryTreatedHow[i].checked) {
-					var answer = deliveryTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > deliveryScore)
-						deliveryScore = Number(answerValue[1]);
-				}
-			}
-		}
-	}	
+	}
 	//Deliveries score
 	deliveryTotalScore[0].value= deliveryScore;
 	return deliveryScore;
@@ -494,36 +226,16 @@ function calcHematoma() {
 		.getElementsByName(hematomaVariables.hematomaTotalScore);
 	var hematomaPrimary = document
 		.getElementsByName(hematomaVariables.hematomaPrimary);
-	var hematomaType = document
-		.getElementsByName(hematomaVariables.hematomaType);
-	var hematomaTreatment = document
-		.getElementsByName(hematomaVariables.hematomaTreatment);
-	var hematomaTreatedHow = document
-		.getElementsByName(hematomaVariables.hematomaTreatedHow);
 	
 	//Start scoring
-	if (hematomaPrimary[0].checked) {
-		for (var i=0; i<hematomaType.length; i++) {
-			if (hematomaType[i].checked) {
-				var answer = hematomaType[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > hematomaScore)
-					hematomaScore = Number(answerValue[1]);
-			}
-		}
-	
-		if (hematomaTreatment[0].checked) {
-			for (var i=0; i<hematomaTreatedHow.length; i++) {
-				if (hematomaTreatedHow[i].checked) {
-					var answer = hematomaTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > hematomaScore)
-						hematomaScore = Number(answerValue[1]);
-				}
-			}
+	for (var i=0; i < hematomaPrimary.length; i++) {
+		if hematomaPrimary [i].checked) {
+			var answer = hematomaPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > hematomaScore)
+				hematomaScore = Number(answerValue[1]);
 		}
 	}	
-	
 	//hematoma score
 	hematomaTotalScore[0].value= hematomaScore;
 	return hematomaScore;
@@ -537,36 +249,16 @@ function calcHemarthrosis() {
 		.getElementsByName(hemarthrosisVariables.hemarthrosisTotalScore);
 	var hemarthrosisPrimary = document
 		.getElementsByName(hemarthrosisVariables.hemarthrosisPrimary);
-	var hemarthrosisType = document
-		.getElementsByName(hemarthrosisVariables.hemarthrosisType);
-	var hemarthrosisTreatment = document
-		.getElementsByName(hemarthrosisVariables.hemarthrosisTreatment);
-	var hemarthrosisTreatedHow = document
-		.getElementsByName(hemarthrosisVariables.hemarthrosisTreatedHow);
 		
 	//Start scoring
-	if (hemarthrosisPrimary[0].checked) {
-		for (var i=0; i<hemarthrosisType.length; i++) {
-			if (hemarthrosisType[i].checked) {
-				var answer = hemarthrosisType[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > hemarthrosisScore)
-					hemarthrosisScore = Number(answerValue[1]);
-			}
+	for (var i=0; i < hemarthrosisPrimary.length; i++) {
+		if hemarthrosisPrimary [i].checked) {
+			var answer = hemarthrosisPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > hemarthrosisScore)
+				hemarthrosisScore = Number(answerValue[1]);
 		}
-	
-		if (hemarthrosisTreatment[0].checked) {
-			for (var i=0; i<hemarthrosisTreatedHow.length; i++) {
-				if (hemarthrosisTreatedHow[i].checked) {
-					var answer = hemarthrosisTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > hemarthrosisScore)
-						hemarthrosisScore = Number(answerValue[1]);
-				}
-			}
-		}
-	}
-	
+	}		
 	//Hemarthrosis score
 	hemarthrosisTotalScore[0].value= hemarthrosisScore;
 	return hemarthrosisScore;
@@ -580,40 +272,16 @@ function calcCNS() {
 		.getElementsByName(cnsVariables.cnsTotalScore);
 	var cnsPrimary = document
 		.getElementsByName(cnsVariables.cnsPrimary);
-	var cnsType = document
-		.getElementsByName(cnsVariables.cnsType);
-	var cnsSpecify = document
-		.getElementsByName(cnsVariables.cnsSpecify);
-	var cnsTreatment = document
-		.getElementsByName(cnsVariables.cnsTreatment);
-	var cnsTreatedHow = document
-		.getElementsByName(cnsVariables.cnsTreatedHow);
 	
 	//Start scoring
-	if (cnsPrimary[0].checked) {
-		if (cnsType[0].checked) {
-			for (var i=0; i<cnsSpecify.length; i++) {
-				if (cnsSpecify[i].checked) {
-					var answer = cnsSpecify[i].value;
-					var answerValue = answer.split("|");	
-					if (Number(answerValue[1]) > cnsScore)
-						cnsScore = Number(answerValue[1]);
-				}
-			}
+	for (var i=0; i < cnsPrimary.length; i++) {
+		if cnsPrimary [i].checked) {
+			var answer = cnsPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > cnsScore)
+				cnsScore = Number(answerValue[1]);
 		}
-	
-		if (cnsTreatment[0].checked) {
-			for (var i=0; i<cnsTreatedHow.length; i++) {
-				if (cnsTreatedHow[i].checked) {
-					var answer = cnsTreatedHow[i].value;
-					var answerValue = answer.split("|");
-					if (Number(answerValue[1]) > cnsScore)
-						cnsScore = Number(answerValue[1]);
-				}
-			}
-		}
-	}
-	
+	}	
 	//CNS Bleeding score
 	cnsTotalScore[0].value= cnsScore;
 	return cnsScore;
@@ -625,46 +293,18 @@ function calcOtherBleeding() {
 
 	var otherBleedingTotalScore = document
 		.getElementsByName(otherBleedingVariables.otherBleedingTotalScore);
-	var otherBleedingType = document
-		.getElementsByName(otherBleedingVariables.otherBleedingType);
-	var otherBleedingTreatment = document
-		.getElementsByName(otherBleedingVariables.otherBleedingTreatment);
-	var otherBleedingTreatedHow = document
-		.getElementsByName(otherBleedingVariables.otherBleedingTreatedHow);
+	var otherBleedingPrimary = document
+		.getElementsByName(otherBleedingVariables.otherBleedingPrimary);
 
 	//Start scoring
-	for (var i=0; i<otherBleedingType.length; i++) {
-		if (otherBleedingType[i].checked) {
-			var answer = otherBleedingType[i].value;
-			var answerValue = answer.split("|");	
+	for (var i=0; i < otherBleedingPrimary.length; i++) {
+		if otherBleedingPrimary [i].checked) {
+			var answer = otherBleedingPrimary [i].value;
+			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > otherBleedingScore)
 				otherBleedingScore = Number(answerValue[1]);
 		}
 	}
-	
-	if (otherBleedingType[0].checked || otherBleedingType[1].checked || otherBleedingType[2].checked || otherBleedingType[3].checked ||
-			otherBleedingType[4].checked || otherBleedingType[5].checked || otherBleedingType[6].checked) {
-		for (var i=0; i<otherBleedingTreatment.length; i++) {
-			if (otherBleedingTreatment[i].checked) {
-				var answer = otherBleedingTreatment[i].value;
-				var answerValue = answer.split("|");	
-				if (Number(answerValue[1]) > otherBleedingScore)
-					otherBleedingScore = Number(answerValue[1]);
-			}
-		}
-	
-		if (otherBleedingTreatment[0].checked) {
-			for (var i=0; i<otherBleedingTreatedHow.length; i++) {
-				if (otherBleedingTreatedHow[i].checked) {
-					var answer = otherBleedingTreatedHow[i].value;
-					var answerValue = answer.split("|");			
-					if (Number(answerValue[1]) > otherBleedingScore)
-						otherBleedingScore = Number(answerValue[1]);
-				}
-			}
-		}
-	}
-
 	//Other Bleeding Section score
 	otherBleedingTotalScore[0].value= otherBleedingScore;
 	return otherBleedingScore;
