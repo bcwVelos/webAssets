@@ -52,6 +52,11 @@ function calcNoseBleed() {
 			.getElementsByName(noseBleedVariables.epistaxisHowLong);
 	
 	//Start scoring
+	if (epistaxisPrimary[1].checked) {
+		epistaxisTotalScore[0].value = noseBleedScore;
+		return noseBleedScore;
+	}
+	
 	if (epistaxisPrimary[0].checked) {
 		if (epistaxisSeekMedAttn[0].checked) {
 			for (var i = 0; i < epistaxisTreatedHow.length; i++) {				
@@ -80,9 +85,11 @@ function calcNoseBleed() {
 					noseBleedScore = Number(answerValue[1]);
 			}
 		}
+		epistaxisTotalScore[0].value = noseBleedScore;
+		return noseBleedScore;
 	}
 	//Nose Bleed Score
-	epistaxisTotalScore[0].value = noseBleedScore;
+	epistaxisTotalScore[0].value = "";
 	return noseBleedScore;
 }
 
