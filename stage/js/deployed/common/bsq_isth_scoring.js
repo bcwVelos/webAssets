@@ -86,8 +86,9 @@ function calcNoseBleed() {
 			}
 		}
 		epistaxisTotalScore[0].value = noseBleedScore;
+		return noseBleedScore
 	}
-	//Nose Bleed Score
+	epistaxisTotalScore[0].value = NULL;
 	return noseBleedScore;
 }
 
