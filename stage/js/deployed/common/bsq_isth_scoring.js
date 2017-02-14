@@ -677,6 +677,11 @@ function calcOtherBleeding() {
 		}
 	}
 	
+	if (otherBleedingScore == 0) {
+		otherBleedingTotalScore[0].value= "";
+		return otherBleedingScore;
+	}
+	
 	if (otherBleedingType[0].checked || otherBleedingType[1].checked || otherBleedingType[2].checked || otherBleedingType[3].checked ||
 			otherBleedingType[4].checked || otherBleedingType[5].checked || otherBleedingType[6].checked) {
 		for (var i=0; i<otherBleedingTreatment.length; i++) {
