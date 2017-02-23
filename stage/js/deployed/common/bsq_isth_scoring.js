@@ -87,8 +87,7 @@ function calcNoseBleed() {
 		}
 		epistaxisTotalScore[0].value = noseBleedScore;
 		return noseBleedScore;
-	}
-	//Nose Bleed Score
+	}	
 	epistaxisTotalScore[0].value = "";
 	return noseBleedScore;
 }
@@ -113,6 +112,11 @@ function calcCutaneous() {
 		.getElementsByName(cutaneousVariables.bruisingMultiple);
 
 	//Start scoring
+	if (bruisingPrimary[1].checked) {
+		bruisingTotalScore[0].value = bruisingScore;
+		return bruisingScore;
+	}
+	
 	if (bruisingPrimary[0].checked) {	
 		for (var i=0; i<bruisingMedicalAttention.length; i++) {
 			if (bruisingMedicalAttention[i].checked) {
@@ -160,9 +164,10 @@ function calcCutaneous() {
 					bruisingScore = Number(answerValue[1]);
 			}
 		}
+		bruisingTotalScore[0].value = bruisingScore;
+		return bruisingScore;
 	}	
-	//Bruising score
-	bruisingTotalScore[0].value= bruisingScore;
+	bruisingTotalScore[0].value = "";
 	return bruisingScore;
 }
 
@@ -184,6 +189,11 @@ function calcMinorWounds() {
 		.getElementsByName(minorWoundsVariables.minorWoundsHowLong);
 
 	//Start scoring
+	if (minorWoundsPrimary[1].checked) {
+		minorWoundsTotalScore[0].value = minorWoundsScore;
+		return minorWoundsScore;
+	}
+	
 	if (minorWoundsPrimary[0].checked) {
 		if (minorWoundsSeekMedAttn[0].checked) {
 			for (var i=0; i<minorWoundsTreatedHow.length; i++) {
@@ -213,9 +223,12 @@ function calcMinorWounds() {
 				minorWoundsScore = Number(answerValue[1]);
 			}
 		}
+		minorWoundsTotalScore[0].value= minorWoundsScore;
+		return minorWoundsScore;
 	}
+	
 	//Minor Wounds score
-	minorWoundsTotalScore[0].value= minorWoundsScore;
+	minorWoundsTotalScore[0].value = "";
 	return minorWoundsScore;
 }
 
@@ -235,6 +248,11 @@ function calcHematuria() {
 		.getElementsByName(hematuriaVariables.hematuriaTreatedHow);
 
 	//Start scoring
+	if (hematuriaPrimary[1].checked) {
+		hematuriaTotalScore[0].value = hematuriaScore;
+		return hematuriaScore;
+	}
+	
 	if (hematuriaPrimary[0].checked) {		
 		for (var i=0; i<hematuriaOtherIllness.length; i++) {
 			if (hematuriaOtherIllness[i].checked) {
@@ -255,9 +273,11 @@ function calcHematuria() {
 				}
 			}
 		}
+		hematuriaTotalScore[0].value= hematuriaScore;
+		return hematuriaScore;
 	}
 	//Hematuria score
-	hematuriaTotalScore[0].value= hematuriaScore;
+	hematuriaTotalScore[0].value = "";
 	return hematuriaScore;
 }
 
@@ -277,6 +297,11 @@ function calcGIBleeding() {
 		.getElementsByName(giBleedingVariables.giBleedingTreatedHow);
 
 	//Start scoring
+	if (giBleedingPrimary[1].checked) {
+		giBleedingTotalScore[0].value = giBleedingScore;
+		return giBleedingScore;
+	}
+	
 	if (giBleedingPrimary[0].checked) {
 		for (var i=0; i<giBleedingOtherIllness.length; i++) {
 			if (giBleedingOtherIllness[i].checked) {
@@ -297,9 +322,11 @@ function calcGIBleeding() {
 				}
 			}
 		}
+		giBleedingTotalScore[0].value= giBleedingScore;
+		return giBleedingScore;
 	}
 	//GI Bleeding score
-	giBleedingTotalScore[0].value= giBleedingScore;
+	giBleedingTotalScore[0].value = "";
 	return giBleedingScore;
 }
 
@@ -319,6 +346,11 @@ function calcOralCavity() {
 	.getElementsByName(oralCavityVariables.oralCavityHowLong);
 
 	//Start scoring
+	if (oralCavityPrimary[1].checked) {
+		oralCavityTotalScore[0].value = oralCavityScore;
+		return oralCavityScore;
+	}
+	
 	if (oralCavityPrimary[0].checked) {
 		for (var i=0; i<oralCavityPrimary.length; i++) {
 			if (oralCavityPrimary[i].checked) {
@@ -348,9 +380,11 @@ function calcOralCavity() {
 					oralCavityScore = Number(answerValue[1]);
 			}
 		}
+		oralCavityTotalScore[0].value= oralCavityScore;
+		return oralCavityScore;
 	}
 	//Oral Cavity score
-	oralCavityTotalScore[0].value= oralCavityScore;
+	oralCavityTotalScore[0].value = "";
 	return oralCavityScore;
 }
 
@@ -378,6 +412,11 @@ function calcMenstrual() {
 		.getElementsByName(menstrualVariables.menstrualPictoralScore);
 
 	//Start scoring
+	if (menstrualPrimary[1].checked) {
+		menstrualTotalScore[0].value = menstrualScore;
+		return menstrualScore;
+	}
+	
 	if (menstrualPrimary[0].checked) {	
 		for (var i=0; i<menstrualSpecify.length; i++) {
 			if (menstrualSpecify[i].checked) {
@@ -442,9 +481,12 @@ function calcMenstrual() {
 		if (menstrualPictoralScoreValue > 100)
 			if (menstrualScore < 1)
 				menstrualScore = 1;
+			
+		menstrualTotalScore[0].value = menstrualScore;
+		return menstrualScore;
 	}	
 	//Female Menstrual History score
-	menstrualTotalScore[0].value= menstrualScore;
+	menstrualTotalScore[0].value = "";
 	return menstrualScore;
 }
 
@@ -468,6 +510,11 @@ function calcDelivery() {
 		.getElementsByName(deliveryVariables.deliveryTreatedHow);
 	
 	//Start Scoring
+	if (deliveryPrimary[1].checked) {
+		deliveryTotalScore[0].value = deliveryScore;
+		return deliveryScore;
+	}
+	
 	if (deliveryPrimary[0].checked) {
 		for (var i=0; i<deliveryHowLong.length; i++) {
 			if (deliveryHowLong[i].checked) {
@@ -515,9 +562,11 @@ function calcDelivery() {
 				}
 			}
 		}
+		deliveryTotalScore[0].value= deliveryScore;
+		return deliveryScore;
 	}	
 	//Deliveries score
-	deliveryTotalScore[0].value= deliveryScore;
+	deliveryTotalScore[0].value = "";
 	return deliveryScore;
 }
 
@@ -537,6 +586,11 @@ function calcHematoma() {
 		.getElementsByName(hematomaVariables.hematomaTreatedHow);
 	
 	//Start scoring
+	if (hematomaPrimary[1].checked) {
+		hematomaTotalScore[0].value = hematomaScore;
+		return hematomaScore;
+	}
+	
 	if (hematomaPrimary[0].checked) {
 		for (var i=0; i<hematomaType.length; i++) {
 			if (hematomaType[i].checked) {
@@ -557,10 +611,11 @@ function calcHematoma() {
 				}
 			}
 		}
+		hematomaTotalScore[0].value = hematomaScore;
+		return hematomaScore;
 	}	
-	
 	//hematoma score
-	hematomaTotalScore[0].value= hematomaScore;
+	hematomaTotalScore[0].value = "";
 	return hematomaScore;
 }
 
@@ -580,6 +635,11 @@ function calcHemarthrosis() {
 		.getElementsByName(hemarthrosisVariables.hemarthrosisTreatedHow);
 		
 	//Start scoring
+	if (hemarthrosisPrimary[1].checked) {
+		hemarthrosisTotalScore[0].value = hemarthrosisScore;
+		return hemarthrosisScore;
+	}
+	
 	if (hemarthrosisPrimary[0].checked) {
 		for (var i=0; i<hemarthrosisType.length; i++) {
 			if (hemarthrosisType[i].checked) {
@@ -600,10 +660,11 @@ function calcHemarthrosis() {
 				}
 			}
 		}
-	}
-	
+		hemarthrosisTotalScore[0].value = hemarthrosisScore;
+		return hemarthrosisScore;
+	}	
 	//Hemarthrosis score
-	hemarthrosisTotalScore[0].value= hemarthrosisScore;
+	hemarthrosisTotalScore[0].value = "";
 	return hemarthrosisScore;
 }
 
@@ -625,6 +686,11 @@ function calcCNS() {
 		.getElementsByName(cnsVariables.cnsTreatedHow);
 	
 	//Start scoring
+	if (cnsPrimary[1].checked) {
+		cnsTotalScore[0].value = cnsScore;
+		return cnsScore;
+	}
+	
 	if (cnsPrimary[0].checked) {
 		if (cnsType[0].checked) {
 			for (var i=0; i<cnsSpecify.length; i++) {
@@ -647,10 +713,11 @@ function calcCNS() {
 				}
 			}
 		}
-	}
-	
+		cnsTotalScore[0].value = cnsScore;
+		return cnsScore;
+	}	
 	//CNS Bleeding score
-	cnsTotalScore[0].value= cnsScore;
+	cnsTotalScore[0].value = "";
 	return cnsScore;
 }
 
