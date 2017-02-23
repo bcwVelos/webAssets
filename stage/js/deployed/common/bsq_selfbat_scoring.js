@@ -50,10 +50,10 @@ function calcNoseBleed() {
 		}
 	}	
 	//Nose Bleed Score
-	if (x == false)
-		epistaxisTotalScore[0].value = "";
-	else
+	if (x == true)
 		epistaxisTotalScore[0].value = noseBleedScore;
+	else
+		epistaxisTotalScore[0].value = "";
 	
 	return noseBleedScore;
 }
