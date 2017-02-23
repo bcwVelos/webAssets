@@ -814,6 +814,11 @@ function calcToothExtraction() {
 	}
 	
 	//Start Scoring
+	if (toothExtractionPrimary[1].checked) {
+		toothExtractionTotalScore[0].value = toothExtractionScore;
+		return toothExtractionScore;
+	}
+	
 	if (toothExtractionPrimary[0].checked) {
 		var toothNoOfTimes = toothExtractionHowManyTimes[0].value;
 		
@@ -859,9 +864,11 @@ function calcToothExtraction() {
 				}
 			}
 		}
+		toothExtractionTotalScore[0].value= toothExtractionScore;
+		return toothExtractionScore;
 	}	
 	//Tooth Extraction score
-	toothExtractionTotalScore[0].value= toothExtractionScore;
+	toothExtractionTotalScore[0].value= "";
 	return toothExtractionScore;
 }
 
@@ -902,6 +909,11 @@ function calcSurgery() {
 	}
 	
 	//Start Scoring
+	if (surgeryPrimary[1].checked) {
+		surgeryTotalScore[0].value = surgeryScore;
+		return surgeryScore;
+	}
+	
 	if (surgeryPrimary[0].checked) {
 		var noOfTimes = surgeryHowManyTimes[0].value;
 		
@@ -946,10 +958,12 @@ function calcSurgery() {
 					}
 				}
 			}
-		}
+		}		
+		surgeryTotalScore[0].value= surgeryScore;
+		return surgeryScore;
 	}	
 	//Surgery score
-	surgeryTotalScore[0].value= surgeryScore;
+	surgeryTotalScore[0].value= "";
 	return surgeryScore;
 }
 
