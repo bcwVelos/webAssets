@@ -518,8 +518,8 @@ function calcOtherBleeding() {
 
 	//Start scoring
 	if (otherNeonatalExcessive[1].checked || otherNeonatalExcessive[2].checked) {
-		menstrualTotalScore[0].value = menstrualScore;
-		return menstrualScore;
+		otherBleedingTotalScore[0].value = otherBleedingScore;
+		return otherBleedingScore;
 	}
 	
 	if (otherNeonatalExcessive[0].checked) {
