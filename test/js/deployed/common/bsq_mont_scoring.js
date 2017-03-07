@@ -10,7 +10,8 @@ function calcScore() {
 		testMapping();
 }
 
-function calcTotalScore() {	
+function calcTotalScore() {
+	nullScore = true;
 	var totalScore = calcNoseBleed()
 					+ calcCutaneous()
 					+ calcMinorWounds()
@@ -169,7 +170,7 @@ function calcCutaneous() {
 		return bruisingScore;
 	}	
 	//Bruising score
-	bruisingTotalScore[0].value= "";
+	nullScore = true;	bruisingTotalScore[0].value= "";
 	return bruisingScore;
 }
 
