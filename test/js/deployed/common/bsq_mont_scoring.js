@@ -170,7 +170,7 @@ function calcCutaneous() {
 		return bruisingScore;
 	}	
 	//Bruising score
-	nullScore = true;	bruisingTotalScore[0].value= "";
+	bruisingTotalScore[0].value= "";
 	return bruisingScore;
 }
 
