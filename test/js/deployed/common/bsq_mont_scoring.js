@@ -2,6 +2,7 @@ var str = "_";
 var nextID;
 var fieldElements = [];
 var firstIncrement, secondIncrement;
+var nullScore = true;
 
 function calcScore() {
 	calcTotalScore();
@@ -25,13 +26,18 @@ function calcTotalScore() {
 					+ calcHemarthrosis()
 					+ calcHematoma();
 	
-	var totalScoreTop = document
-		.getElementsByName(totalScoreVariables.totalScoreTop);
-	var totalScoreBottom = document
-		.getElementsByName(totalScoreVariables.totalScoreBottom);
+		var totalScoreTop = document
+			.getElementsByName(totalScoreVariables.totalScoreTop);
+		var totalScoreBottom = document
+			.getElementsByName(totalScoreVariables.totalScoreBottom);
 	
-	totalScoreTop[0].value = totalScore;
-	totalScoreBottom[0].value = totalScore;
+	if (nullScore == false) {
+		totalScoreTop[0].value = totalScore;
+		totalScoreBottom[0].value = totalScore;
+	} else {
+		totalScoreTop[0].value = "";
+		totalScoreBottom[0].value = "";
+	}
 }
 
 function calcNoseBleed() {
@@ -53,6 +59,7 @@ function calcNoseBleed() {
 	
 	//Start scoring
 	if (epistaxisPrimary[1].checked) {
+		nullScore = false;
 		epistaxisTotalScore[0].value = noseBleedScore;
 		return noseBleedScore;
 	}
@@ -86,6 +93,7 @@ function calcNoseBleed() {
 				}
 			}
 		}
+		nullScore = false;
 		epistaxisTotalScore[0].value = noseBleedScore;	
 		return noseBleedScore;
 	}
@@ -113,6 +121,7 @@ function calcCutaneous() {
 
 	//Start scoring
 	if (bruisingPrimary[1].checked) {
+		nullScore = false;
 		bruisingTotalScore[0].value = bruisingScore;
 		return bruisingScore;
 	}
@@ -155,6 +164,7 @@ function calcCutaneous() {
 					bruisingScore = Number(answerValue[1]);
 			}
 		}
+		nullScore = false;
 		bruisingTotalScore[0].value= bruisingScore;
 		return bruisingScore;
 	}	
@@ -182,6 +192,7 @@ function calcMinorWounds() {
 
 	//Start scoring
 	if (minorWoundsPrimary[1].checked) {
+		nullScore = false;
 		minorWoundsTotalScore[0].value = minorWoundsScore;
 		return minorWoundsScore;
 	}
@@ -215,6 +226,7 @@ function calcMinorWounds() {
 				}
 			}
 		}
+		nullScore = false;
 		minorWoundsTotalScore[0].value= minorWoundsScore;
 		return minorWoundsScore;
 	}
@@ -238,6 +250,7 @@ function calcOralCavity() {
 
 	//Start scoring
 	if (oralCavityPrimary[1].checked) {
+		nullScore = false;
 		oralCavityTotalScore[0].value = oralCavityScore;
 		return oralCavityScore;
 	}
@@ -262,6 +275,7 @@ function calcOralCavity() {
 				}
 			}
 		}
+		nullScore = false;
 		oralCavityTotalScore[0].value= oralCavityScore;
 		return oralCavityScore;
 	}
@@ -287,6 +301,7 @@ function calcGIBleeding() {
 
 	//Start scoring
 	if (giBleedingPrimary[1].checked) {
+		nullScore = false;
 		giBleedingTotalScore[0].value = giBleedingScore;
 		return giBleedingScore;
 	}
@@ -311,6 +326,7 @@ function calcGIBleeding() {
 				}
 			}
 		}
+		nullScore = false;
 		giBleedingTotalScore[0].value= giBleedingScore;
 		return giBleedingScore;
 	}
@@ -334,6 +350,7 @@ function calcHematuria() {
 
 	//Start scoring
 	if (hematuriaPrimary[1].checked) {
+		nullScore = false;
 		hematuriaTotalScore[0].value = hematuriaScore;
 		return hematuriaScore;
 	}
@@ -358,6 +375,7 @@ function calcHematuria() {
 				}
 			}
 		}
+		nullScore = false;
 		hematuriaTotalScore[0].value= hematuriaScore;
 		return hematuriaScore;
 	}
@@ -399,6 +417,7 @@ function calcMenstrual() {
 
 	//Start scoring
 	if (menstrualPrimary[1].checked) {
+		nullScore = false;
 		menstrualTotalScore[0].value = menstrualScore;
 		return menstrualScore;
 	}
@@ -493,6 +512,7 @@ function calcMenstrual() {
 			if (menstrualScore < 1)
 				menstrualScore = 1;
 		}
+		nullScore = false;
 		menstrualTotalScore[0].value= menstrualScore;
 		return menstrualScore;
 	}	
@@ -518,6 +538,7 @@ function calcOtherBleeding() {
 
 	//Start scoring
 	if (otherNeonatalExcessive[1].checked || otherNeonatalExcessive[2].checked) {
+		nullScore = false;
 		otherBleedingTotalScore[0].value = otherBleedingScore;
 		return otherBleedingScore;
 	}
@@ -542,6 +563,7 @@ function calcOtherBleeding() {
 				}
 			}
 		}
+		nullScore = false;
 		otherBleedingTotalScore[0].value= otherBleedingScore;
 		return otherBleedingScore;
 	}
@@ -589,6 +611,7 @@ function calcToothExtraction() {
 
 	//Start Scoring
 	if (toothExtractionPrimary[1].checked) {
+		nullScore = false;
 		toothExtractionTotalScore[0].value = toothExtractionScore;
 		return toothExtractionScore;
 	}
@@ -642,6 +665,7 @@ function calcToothExtraction() {
 				}
 			}
 		}
+		nullScore = false;
 		toothExtractionTotalScore[0].value= toothExtractionScore;
 		return toothExtractionScore;
 	}	
@@ -688,6 +712,7 @@ function calcSurgery() {
 	
 	//Start Scoring
 	if (surgeryPrimary[1].checked) {
+		nullScore = false;
 		surgeryTotalScore[0].value = surgeryScore;
 		return surgeryScore;
 	}
@@ -741,6 +766,7 @@ function calcSurgery() {
 				}
 			}
 		}
+		nullScore = false;
 		surgeryTotalScore[0].value= surgeryScore;
 		return surgeryScore;
 	}	
@@ -782,6 +808,7 @@ function calcDelivery() {
 	
 	//Start Scoring
 	if (deliveryPrimary[1].checked) {
+		nullScore = false;
 		deliveryTotalScore[0].value = deliveryScore;
 		return deliveryScore;
 	}
@@ -816,6 +843,7 @@ function calcDelivery() {
 				}
 			}
 		}
+		nullScore = false;
 		deliveryTotalScore[0].value= deliveryScore;
 		return deliveryScore;
 	}	
@@ -850,6 +878,7 @@ function calcCNS() {
 	
 	//Start scoring
 	if (cnsPrimary[1].checked) {
+		nullScore = false;
 		cnsTotalScore[0].value = cnsScore;
 		return cnsScore;
 	}
@@ -869,6 +898,7 @@ function calcCNS() {
 				}
 			}
 		}
+		nullScore = false;
 		cnsTotalScore[0].value= cnsScore;
 		return cnsScore;
 	}
@@ -910,6 +940,7 @@ function calcHemarthrosis() {
 	
 	//Start scoring
 	if (hemarthrosisPrimary[1].checked) {
+		nullScore = false;
 		hemarthrosisTotalScore[0].value = hemarthrosisScore;
 		return hemarthrosisScore;
 	}
@@ -941,6 +972,7 @@ function calcHemarthrosis() {
 				}
 			}
 		}
+		nullScore = false;
 		hemarthrosisTotalScore[0].value= hemarthrosisScore;
 		return hemarthrosisScore;
 	}	
@@ -982,6 +1014,7 @@ function calcHematoma() {
 	
 	//Start scoring
 	if (hematomaPrimary[1].checked) {
+		nullScore = false;
 		hematomaTotalScore[0].value = hematomaScore;
 		return hematomaScore;
 	}
@@ -1013,6 +1046,7 @@ function calcHematoma() {
 				}
 			}
 		}
+		nullScore = false;
 		hematomaTotalScore[0].value= hematomaScore;
 		return hematomaScore;
 	}	
