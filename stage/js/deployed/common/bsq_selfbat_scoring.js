@@ -61,6 +61,7 @@ function calcNoseBleed() {
 function calcCutaneous() {
 	
 	var bruisingScore = 0;
+	var x = false;
 
 	var bruisingTotalScore = document
 		.getElementsByName(cutaneousVariables.bruisingTotalScore);
@@ -70,6 +71,7 @@ function calcCutaneous() {
 	//Start scoring
 	for (var i=0; i < bruisingPrimary.length; i++) {
 		if (bruisingPrimary[i].checked) {
+			x = true;
 			var answer = bruisingPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > bruisingScore)
@@ -77,13 +79,18 @@ function calcCutaneous() {
 		}
 	}	
 	//Bruising score
-	bruisingTotalScore[0].value= bruisingScore;
+	if (x == true)
+		bruisingTotalScore[0].value = bruisingScore;
+	else
+		bruisingTotalScore[0].value = "";
+	
 	return bruisingScore;
 }
 
 function calcMinorWounds() {
 	
 	var minorWoundsScore = 0;
+	var x = false;
 
 	var minorWoundsTotalScore = document
 		.getElementsByName(minorWoundsVariables.minorWoundsTotalScore);
@@ -93,6 +100,7 @@ function calcMinorWounds() {
 	//Start scoring
 	for (var i=0; i < minorWoundsPrimary.length; i++) {
 		if (minorWoundsPrimary [i].checked) {
+			x = true;
 			var answer = minorWoundsPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > minorWoundsScore)
@@ -100,13 +108,18 @@ function calcMinorWounds() {
 		}
 	}
 	//Minor Wounds score
-	minorWoundsTotalScore[0].value= minorWoundsScore;
+	if (x == true)
+		minorWoundsTotalScore[0].value = minorWoundsScore;
+	else
+		minorWoundsTotalScore[0].value = "";
+	
 	return minorWoundsScore;
 }
 
 function calcHematuria() {
 	
 	var hematuriaScore = 0;
+	var x = false;
 
 	var hematuriaTotalScore = document
 		.getElementsByName(hematuriaVariables.hematuriaTotalScore);
@@ -116,6 +129,7 @@ function calcHematuria() {
 	//Start scoring
 	for (var i=0; i < hematuriaPrimary.length; i++) {
 		if (hematuriaPrimary [i].checked) {
+			x = true;
 			var answer = hematuriaPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > hematuriaScore)
@@ -123,13 +137,18 @@ function calcHematuria() {
 		}
 	}
 	//Hematuria score
-	hematuriaTotalScore[0].value= hematuriaScore;
+	if (x == true)
+		hematuriaTotalScore[0].value = hematuriaScore;
+	else
+		hematuriaTotalScore[0].value = "";
+	
 	return hematuriaScore;
 }
 
 function calcGIBleeding() {
 	
 	var giBleedingScore = 0;
+	var x = false;
 
 	var giBleedingTotalScore = document
 		.getElementsByName(giBleedingVariables.giBleedingTotalScore);
@@ -139,6 +158,7 @@ function calcGIBleeding() {
 	//Start scoring
 	for (var i=0; i < giBleedingPrimary.length; i++) {
 		if (giBleedingPrimary [i].checked) {
+			x = true;
 			var answer = giBleedingPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > giBleedingScore)
@@ -146,13 +166,18 @@ function calcGIBleeding() {
 		}
 	}
 	//GI Bleeding score
-	giBleedingTotalScore[0].value= giBleedingScore;
+	if (x == true)
+		giBleedingTotalScore[0].value = giBleedingScore;
+	else
+		giBleedingTotalScore[0].value = "";
+	
 	return giBleedingScore;
 }
 
 function calcOralCavity() {
 	
 	var oralCavityScore = 0;
+	var x = false;
 
 	var oralCavityTotalScore = document
 		.getElementsByName(oralCavityVariables.oralCavityTotalScore);
@@ -162,6 +187,7 @@ function calcOralCavity() {
 	//Start scoring
 	for (var i=0; i < oralCavityPrimary.length; i++) {
 		if (oralCavityPrimary [i].checked) {
+			x = true;
 			var answer = oralCavityPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > oralCavityScore)
@@ -169,13 +195,18 @@ function calcOralCavity() {
 		}
 	}
 	//Oral Cavity score
-	oralCavityTotalScore[0].value= oralCavityScore;
+	if (x == true)
+		oralCavityTotalScore[0].value = oralCavityScore;
+	else
+		oralCavityTotalScore[0].value = "";
+	
 	return oralCavityScore;
 }
 
 function calcMenstrual() {
 	
 	var menstrualScore = 0;
+	var x = false;
 
 	var menstrualTotalScore = document
 		.getElementsByName(menstrualVariables.menstrualTotalScore);
@@ -185,6 +216,7 @@ function calcMenstrual() {
 	//Start scoring
 	for (var i=0; i < menstrualPrimary.length; i++) {
 		if (menstrualPrimary [i].checked) {
+			x = true;
 			var answer = menstrualPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > menstrualScore)
@@ -192,13 +224,18 @@ function calcMenstrual() {
 		}
 	}
 	//Female Menstrual History score
-	menstrualTotalScore[0].value= menstrualScore;
+	if (x == true)
+		menstrualTotalScore[0].value = menstrualScore;
+	else
+		menstrualTotalScore[0].value = "";
+	
 	return menstrualScore;
 }
 
 function calcDelivery() {
 	
 	var deliveryScore = 0;
+	var x = false;
 
 	var deliveryTotalScore = document
 		.getElementsByName(deliveryVariables.deliveryTotalScore);
@@ -208,6 +245,7 @@ function calcDelivery() {
 	//Start Scoring
 	for (var i=0; i < deliveryPrimary.length; i++) {
 		if (deliveryPrimary [i].checked) {
+			x = true;
 			var answer = deliveryPrimary[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > deliveryScore)
@@ -215,13 +253,18 @@ function calcDelivery() {
 		}
 	}
 	//Deliveries score
-	deliveryTotalScore[0].value= deliveryScore;
+	if (x == true)
+		deliveryTotalScore[0].value = deliveryScore;
+	else
+		deliveryTotalScore[0].value = "";
+	
 	return deliveryScore;
 }
 
 function calcHematoma() {
 	
 	var hematomaScore = 0;
+	var x = false;
 
 	var hematomaTotalScore = document
 		.getElementsByName(hematomaVariables.hematomaTotalScore);
@@ -231,6 +274,7 @@ function calcHematoma() {
 	//Start scoring
 	for (var i=0; i < hematomaPrimary.length; i++) {
 		if (hematomaPrimary [i].checked) {
+			x = true;
 			var answer = hematomaPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > hematomaScore)
@@ -238,13 +282,18 @@ function calcHematoma() {
 		}
 	}	
 	//hematoma score
-	hematomaTotalScore[0].value= hematomaScore;
+	if (x == true)
+		hematomaTotalScore[0].value = hematomaScore;
+	else
+		hematomaTotalScore[0].value = "";
+	
 	return hematomaScore;
 }
 
 function calcHemarthrosis() {
 	
 	var hemarthrosisScore = 0;
+	var x = false;
 
 	var hemarthrosisTotalScore = document
 		.getElementsByName(hemarthrosisVariables.hemarthrosisTotalScore);
@@ -254,6 +303,7 @@ function calcHemarthrosis() {
 	//Start scoring
 	for (var i=0; i < hemarthrosisPrimary.length; i++) {
 		if (hemarthrosisPrimary [i].checked) {
+			x = true;
 			var answer = hemarthrosisPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > hemarthrosisScore)
@@ -261,13 +311,18 @@ function calcHemarthrosis() {
 		}
 	}		
 	//Hemarthrosis score
-	hemarthrosisTotalScore[0].value= hemarthrosisScore;
+	if (x == true)
+		hemarthrosisTotalScore[0].value = hemarthrosisScore;
+	else
+		hemarthrosisTotalScore[0].value = "";
+	
 	return hemarthrosisScore;
 }
 
 function calcCNS() {
 	
 	var cnsScore = 0;
+	var x = false;
 
 	var cnsTotalScore = document
 		.getElementsByName(cnsVariables.cnsTotalScore);
@@ -277,6 +332,7 @@ function calcCNS() {
 	//Start scoring
 	for (var i=0; i < cnsPrimary.length; i++) {
 		if (cnsPrimary [i].checked) {
+			x = true;
 			var answer = cnsPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > cnsScore)
@@ -284,13 +340,18 @@ function calcCNS() {
 		}
 	}	
 	//CNS Bleeding score
-	cnsTotalScore[0].value= cnsScore;
+	if (x == true)
+		cnsTotalScore[0].value = cnsScore;
+	else
+		cnsTotalScore[0].value = "";
+	
 	return cnsScore;
 }
 
 function calcOtherBleeding() {
 	
 	var otherBleedingScore = 0;
+	var x = false;
 
 	var otherBleedingTotalScore = document
 		.getElementsByName(otherBleedingVariables.otherBleedingTotalScore);
@@ -300,6 +361,7 @@ function calcOtherBleeding() {
 	//Start scoring
 	for (var i=0; i < otherBleedingPrimary.length; i++) {
 		if (otherBleedingPrimary [i].checked) {
+			x = true;
 			var answer = otherBleedingPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > otherBleedingScore)
@@ -307,13 +369,18 @@ function calcOtherBleeding() {
 		}
 	}
 	//Other Bleeding Section score
-	otherBleedingTotalScore[0].value= otherBleedingScore;
+	if (x == true)
+		otherBleedingTotalScore[0].value = otherBleedingScore;
+	else
+		otherBleedingTotalScore[0].value = "";
+	
 	return otherBleedingScore;
 }
 
 function calcToothExtraction() {
 	
 	var toothExtractionScore = 0;
+	var x = false;
 
 	var toothExtractionTotalScore = document
 		.getElementsByName(toothExtractionVariables.toothExtractionTotalScore);
@@ -323,6 +390,7 @@ function calcToothExtraction() {
 	//Start Scoring
 	for (var i=0; i < toothExtractionPrimary.length; i++) {
 		if (toothExtractionPrimary [i].checked) {
+			x = true;
 			var answer = toothExtractionPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > toothExtractionScore)
@@ -330,13 +398,18 @@ function calcToothExtraction() {
 		}
 	}
 	//Tooth Extraction score
-	toothExtractionTotalScore[0].value= toothExtractionScore;
+	if (x == true)
+		toothExtractionTotalScore[0].value = toothExtractionScore;
+	else
+		toothExtractionTotalScore[0].value = "";
+	
 	return toothExtractionScore;
 }
 
 function calcSurgery() {
 	
 	var surgeryScore = 0;
+	var x = false;
 	
 	var surgeryTotalScore = document
 		.getElementsByName(surgeryVariables.surgeryTotalScore);
@@ -346,6 +419,7 @@ function calcSurgery() {
 	//Start Scoring
 	for (var i=0; i < surgeryPrimary.length; i++) {
 		if (surgeryPrimary [i].checked) {
+			x = true;
 			var answer = surgeryPrimary [i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > surgeryScore)
@@ -353,7 +427,11 @@ function calcSurgery() {
 		}
 	}	
 	//Surgery score
-	surgeryTotalScore[0].value= surgeryScore;
+	if (x == true)
+		surgeryTotalScore[0].value = surgeryScore;
+	else
+		surgeryTotalScore[0].value = "";
+	
 	return surgeryScore;
 }
 
