@@ -22,14 +22,19 @@ function calcTotalScore() {
 					+ calcHemarthrosis()
 					+ calcCNS()
 					+ calcOtherBleeding();
-
+	
 	var totalScoreTop = document
 		.getElementsByName(totalScoreVariables.totalScoreTop);
 	var totalScoreBottom = document
 		.getElementsByName(totalScoreVariables.totalScoreBottom);
 	
-	totalScoreTop[0].value = totalScore;
-	totalScoreBottom[0].value = totalScore;
+	if (nullScore == false) {
+		totalScoreTop[0].value = totalScore;
+		totalScoreBottom[0].value = totalScore;
+	} else {
+		totalScoreTop[0].value = "";
+		totalScoreBottom[0].value = "";
+	}
 }
 
 function calcNoseBleed() {
