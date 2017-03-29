@@ -62,7 +62,7 @@ $j(document).ready(function() {
 			$j("#" + diagnosisRows[i-1].addRowBtn1).hide();
 			$j("#" + diagnosisRows[i-1].delRowBtn1).hide();
 			
-			if(i == 9){
+			if(i == 19){
 				$j("#" + diagnosisRows[i].addRowBtn1).hide();
 			}
 			

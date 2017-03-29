@@ -63,7 +63,7 @@ $j(document).ready(function() {
 			$j("#" + emergencyRoomRows[i-1].addRowBtn2).hide();
 			$j("#" + emergencyRoomRows[i-1].DelRowBtn2).hide();
 			
-			if(i == 9){
+			if(i == 99){
 				$j("#" + emergencyRoomRows[i].addRowBtn2).hide();
 			}
 			
