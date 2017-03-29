@@ -8,8 +8,8 @@ var diagnosisRows = new Array(totalRows);
 diagnosisRows[0] = {
 	diagnosisName : 'fld10050_120054_124516_span',  
 	diagnosisDate : 'fld10050_120014_124476_span',
-	addRowBtn11 : 'fld10050_119974_124436_id',
-	delRowBtn11 : 'fld10050_120034_124496_id'
+	addRowBtn1 : 'fld10050_119974_124436_id',
+	delRowBtn1 : 'fld10050_120034_124496_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
