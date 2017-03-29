@@ -34,9 +34,6 @@ function generateNextID(currentID) {
 $j(document).ready(function() {
 	
 		$j("#" + medicationRows[0].medicationName.substring(0, 20)).val("Cornell University");
-		//$j("#" + medicationRows[0].accessLevel[0].checked;
-		//$j("#" + medicationRows[1].addtlOrgs.substring(0, 20)).val("456789");
-		//$j("#" + medicationRows[1].accessLevel.[2].checked;
 	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
@@ -61,7 +58,7 @@ $j(document).ready(function() {
 		//Check if the addtlOrgs dropdown has an option selected OR
 		//Check if the Brand Name has data in it
 		//If either of these are True - assume that there are values for all columns and check the next row.
-		if ($j("#" + medicationRows[i].medicationName.substring(0, a) + " option:selected").text() != "Select an Option")
+		if ($j("#" + medicationRows[i].medicationName.substring(0, a)).val() != "")
 		{
 			//Hide the add button in the previous row. 
 			$j("#" + medicationRows[i-1].addRowBtn).hide();
