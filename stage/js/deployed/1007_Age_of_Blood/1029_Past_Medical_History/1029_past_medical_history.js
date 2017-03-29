@@ -6,11 +6,10 @@ var totalRows = 20;
 var diagnosisRows = new Array(totalRows);
 
 diagnosisRows[0] = {
-	diagnosisName : 'fld10050_119901_124343_span',  
-	diagnosisDate : 'fld10050_119921_124363_span',
-	medicationFrequency: 'fld10050_119941_124383_span',
-	addRowBtn11 : 'fld10050_119881_124323_id',
-	delRowBtn11 : 'fld10050_119861_124303_id'
+	diagnosisName : 'fld10050_120054_124516_span',  
+	diagnosisDate : 'fld10050_120014_124476_span',
+	addRowBtn11 : 'fld10050_119974_124436_id',
+	delRowBtn11 : 'fld10050_120034_124496_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
@@ -36,6 +35,7 @@ $j(document).ready(function() {
 	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
+		$j('td:contains("Space Break")').hide();
 	
 		//Check to see how many medications are available for the page
 		var rowTotal = diagnosisRows.length;
