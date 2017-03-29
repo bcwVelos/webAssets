@@ -81,7 +81,7 @@ $j(document).ready(function() {
 	}
 
 	
-$j(".addBtn").click(function() {
+$j(".addBtn1").click(function() {
 	var parentLabelElement = $j(this).parent("label");
     var labelId = $j(parentLabelElement).attr("id");
 	var x;
@@ -118,7 +118,7 @@ $j(".addBtn").click(function() {
 
 
 
-$j(".deleteBtn").click(function() {
+$j(".deleteBtn1").click(function() {
 	var parentLabelElement = $j(this).parent("label");
     var labelId = $j(parentLabelElement).attr("id");
 	var y;
