@@ -8,7 +8,7 @@ var medicationRows = new Array(totalRows);
 medicationRows[0] = {
 	medicationName : 'fld10050_119901_124343_span',  
 	medicationDose : 'fld10050_119921_124363_span',
-	medeicationFrequency: 'fld10050_119941_124383_span',
+	medicationFrequency: 'fld10050_119941_124383_span',
 	addRowBtn : 'fld10050_119881_124323_id',
 	delRowBtn : 'fld10050_119861_124303_id'
 }
@@ -17,7 +17,7 @@ for (var i = 1; i < totalRows; i++) {
 	medicationRows[i] = {
 		medicationName : String(generateNextID(medicationRows[i-1].medicationName).concat("_span")),
 		medicationDose : String(generateNextID(medicationRows[i-1].medicationDose).concat("_span")),
-		medeicationFrequency : String(generateNextID(medicationRows[i-1].medeicationFrequency).concat("_span")),
+		medicationFrequency : String(generateNextID(medicationRows[i-1].medicationFrequency).concat("_span")),
 		addRowBtn : String(generateNextID(medicationRows[i-1].addRowBtn).concat("_id")),
 		delRowBtn : String(generateNextID(medicationRows[i-1].delRowBtn).concat("_id"))
 	}
