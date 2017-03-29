@@ -33,7 +33,7 @@ function generateNextID(currentID) {
 
 $j(document).ready(function() {
 	
-		$j("#" + medicationRows[0].medicationName.substring(0, 20)).val("Cornell University");
+		//$j("#" + medicationRows[0].medicationName.substring(0, 20)).val("123456");
 	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
