@@ -26,7 +26,7 @@ for (var i = 1; i < totalRows; i++) {
 		infusionDate : String(generateNextID(infusionRows[i-1].infusionDate).concat("_span")),
 		quantity : String(generateNextID(infusionRows[i-1].quantity).concat("_span")),
 		bleedCause : String(generateNextID(infusionRows[i-1].bleedCause).concat("_span")),
-		bleedType : String(generateNextID(infusionRows[i-1].bleedType).concat("_span")),,
+		bleedType : String(generateNextID(infusionRows[i-1].bleedType).concat("_span")),
 		uniqueInfusion : String(generateNextID(infusionRows[i-1].uniqueInfusion).concat("_span")),
 		infusionType : String(generateNextID(infusionRows[i-1].infusionType).concat("_span")),
 		infusionLocation : String(generateNextID(infusionRows[i-1].infusionLocation).concat("_span")),
