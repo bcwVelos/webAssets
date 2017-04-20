@@ -183,8 +183,8 @@ $j(".deleteBtn").click(function() {
 			$j("#" + infusionRows[i].bleedSite).hide();
 			$j("#" + infusionRows[i].bleedSite).siblings().hide();
 			
-			var i = infusionRows[i].infusionProduct.indexOf("_span");
-			$j("#" + infusionRows[i].infusionProduct.substring(0, i)).val("");
+			var j = infusionRows[i].infusionProduct.indexOf("_span");
+			$j("#" + infusionRows[i].infusionProduct.substring(0, j)).val("");
 			$j("#" + infusionRows[i].infusionProduct).hide();
 			$j("#" + infusionRows[i].infusionProduct).siblings().hide();
 
