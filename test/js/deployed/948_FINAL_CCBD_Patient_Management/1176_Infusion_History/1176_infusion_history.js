@@ -90,7 +90,7 @@ $j(document).ready(function() {
 		}
 	}
 
-	
+/*	
 $j(".addBtn").click(function() {
 	var parentLabelElement = $j(this).parent("label");
     var labelId = $j(parentLabelElement).attr("id");
@@ -163,7 +163,7 @@ $j(".deleteBtn").click(function() {
 	
 	}
 
-});
+});*/
 
 });
 
