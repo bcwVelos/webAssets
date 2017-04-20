@@ -46,7 +46,7 @@ function generateNextID(currentID) {
 }
 
 $j(document).ready(function() {
-	
+/*	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
 	
@@ -92,7 +92,7 @@ $j(document).ready(function() {
 		}
 	}
 
-/*	
+	
 $j(".addBtn").click(function() {
 	var parentLabelElement = $j(this).parent("label");
     var labelId = $j(parentLabelElement).attr("id");
