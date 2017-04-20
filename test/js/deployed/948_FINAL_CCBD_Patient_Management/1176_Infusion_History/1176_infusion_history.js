@@ -134,7 +134,7 @@ $j(".addBtn").click(function() {
 });
 
 
-/*
+
 $j(".deleteBtn").click(function() {
 	var parentLabelElement = $j(this).parent("label");
     var labelId = $j(parentLabelElement).attr("id");
@@ -147,18 +147,46 @@ $j(".deleteBtn").click(function() {
 			y = "True";
 
 			//Remove values from current row and hide the row
-			var a = infusionRows[i].addtlOrgs.indexOf("_span");
-			$j("#" + infusionRows[i].addtlOrgs.substring(0, a)).val("");
-			$j("#" + infusionRows[i].addtlOrgs).hide();
-			$j("#" + infusionRows[i].addtlOrgs).siblings().hide();
+			var a = infusionRows[i].infusionDate.indexOf("_span");
+			$j("#" + infusionRows[i].infusionDate.substring(0, a)).val("");
+			$j("#" + infusionRows[i].infusionDate).hide();
+			$j("#" + infusionRows[i].infusionDate).siblings().hide();
+			
+			var b = infusionRows[i].quantity.indexOf("_span");
+			$j("#" + infusionRows[i].quantity.substring(0, b)).val("");
+			$j("#" + infusionRows[i].quantity).hide();
+			
+			var c = infusionRows[i].bleedCause.indexOf("_span");
+			$j("#" + infusionRows[i].bleedCause.substring(0, c)).val("");
+			$j("#" + infusionRows[i].bleedCause).hide();
+			
+			var d = infusionRows[i].bleedType.indexOf("_span");
+			$j("#" + infusionRows[i].bleedType.substring(0, d)).val("");
+			$j("#" + infusionRows[i].bleedType).hide();
 
-			var b = infusionRows[i].accessLevel.indexOf("_span");
-			var listUncheck = document.getElementsByName(infusionRows[i].accessLevel.substring(0, b));
+			var e = infusionRows[i].uniqueInfusion.indexOf("_span");
+			var listUncheck = document.getElementsByName(infusionRows[i].uniqueInfusion.substring(0, e));
 			for (var j = 0 ; j < listUncheck.length; j++)
 				listUncheck[j].checked = false;
-			$j("#" + infusionRows[i].accessLevel).hide();
+			$j("#" + infusionRows[i].uniqueInfusion).hide();
+			
+			var f = infusionRows[i].infusionType.indexOf("_span");
+			$j("#" + infusionRows[i].infusionType.substring(0, f)).val("");
+			$j("#" + infusionRows[i].infusionType).hide();
+			
+			var g = infusionRows[i].infusionLocation.indexOf("_span");
+			$j("#" + infusionRows[i].infusionLocation.substring(0, g)).val("");
+			$j("#" + infusionRows[i].infusionLocation).hide();
+			
+			var h = infusionRows[i].bleedSite.indexOf("_span");
+			$j("#" + infusionRows[i].bleedSite.substring(0, h)).val("");
+			$j("#" + infusionRows[i].bleedSite).hide();
+			
+			var i = infusionRows[i].infusionProduct.indexOf("_span");
+			$j("#" + infusionRows[i].infusionProduct.substring(0, i)).val("");
+			$j("#" + infusionRows[i].infusionProduct).hide();
 
-			$j("#" + infusionRows[i].addtlOrgs).closest("tr").hide();
+			$j("#" + infusionRows[i].infusionDate).closest("tr").hide();
 			
 			//show the Add and Delete Button on the previous row
 			$j("#" + infusionRows[i-1].addRowBtn).show();
@@ -167,10 +195,9 @@ $j(".deleteBtn").click(function() {
 			}
 		}
 			i++;
-	
 	}
 
-});*/
+});
 
 });
 
