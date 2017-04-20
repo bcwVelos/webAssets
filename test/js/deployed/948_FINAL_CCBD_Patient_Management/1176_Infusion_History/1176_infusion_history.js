@@ -44,7 +44,7 @@ function generateNextID(currentID) {
 }
 
 $j(document).ready(function() {
-		alert("Money");
+
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
 	
@@ -90,7 +90,7 @@ $j(document).ready(function() {
 		}
 	}
 
-/*	
+	
 $j(".addBtn").click(function() {
 	var parentLabelElement = $j(this).parent("label");
     var labelId = $j(parentLabelElement).attr("id");
@@ -111,10 +111,17 @@ $j(".addBtn").click(function() {
 			}
 					
 			//Show all values in row where the add button was selected
-			$j("#" + infusionRows[i+1].addtlOrgs).closest("tr").show();
-			$j("#" + infusionRows[i+1].addtlOrgs).show();
-			$j("#" + infusionRows[i+1].addtlOrgs).siblings().show();
-			$j("#" + infusionRows[i+1].accessLevel).show();
+			$j("#" + infusionRows[i+1].infusionDate).closest("tr").show();
+			$j("#" + infusionRows[i+1].infusionDate).show();
+			$j("#" + infusionRows[i+1].infusionDate).siblings().show();
+			$j("#" + infusionRows[i+1].quantity).show();
+			$j("#" + infusionRows[i+1].bleedCause).show();
+			$j("#" + infusionRows[i+1].bleedType).show();
+			$j("#" + infusionRows[i+1].uniqueInfusion).show();
+			$j("#" + infusionRows[i+1].infusionType).show();
+			$j("#" + infusionRows[i+1].infusionLocation).show();
+			$j("#" + infusionRows[i+1].bleedSite).show();
+			$j("#" + infusionRows[i+1].infusionProduct).show();
 			
 		} 
 			i++;
@@ -127,7 +134,7 @@ $j(".addBtn").click(function() {
 });
 
 
-
+/*
 $j(".deleteBtn").click(function() {
 	var parentLabelElement = $j(this).parent("label");
     var labelId = $j(parentLabelElement).attr("id");
