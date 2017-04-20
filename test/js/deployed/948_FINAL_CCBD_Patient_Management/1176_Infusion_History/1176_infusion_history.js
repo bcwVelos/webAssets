@@ -121,7 +121,9 @@ $j(".addBtn").click(function() {
 			$j("#" + infusionRows[i+1].infusionType).show();
 			$j("#" + infusionRows[i+1].infusionLocation).show();
 			$j("#" + infusionRows[i+1].bleedSite).show();
+			$j("#" + infusionRows[i+1].bleedSite).siblings().show();
 			$j("#" + infusionRows[i+1].infusionProduct).show();
+			$j("#" + infusionRows[i+1].infusionProduct).siblings().show();
 			
 		} 
 			i++;
