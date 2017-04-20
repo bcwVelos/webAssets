@@ -5,6 +5,8 @@ var firstIncrement, secondIncrement;
 var totalRows = 31;
 var infusionRows = new Array(totalRows);
 
+alert("HELLO");
+
 infusionRows[0] = {
 	infusionDate : 'fld10050_165498_170044_span',
 	quantity : 'fld10050_165374_169920_span',
