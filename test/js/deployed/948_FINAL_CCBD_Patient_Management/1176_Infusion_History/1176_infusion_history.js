@@ -181,10 +181,12 @@ $j(".deleteBtn").click(function() {
 			var h = infusionRows[i].bleedSite.indexOf("_span");
 			$j("#" + infusionRows[i].bleedSite.substring(0, h)).val("");
 			$j("#" + infusionRows[i].bleedSite).hide();
+			$j("#" + infusionRows[i].bleedSite).siblings().hide();
 			
 			var i = infusionRows[i].infusionProduct.indexOf("_span");
 			$j("#" + infusionRows[i].infusionProduct.substring(0, i)).val("");
 			$j("#" + infusionRows[i].infusionProduct).hide();
+			$j("#" + infusionRows[i].infusionProduct).siblings().hide();
 
 			$j("#" + infusionRows[i].infusionDate).closest("tr").hide();
 			
