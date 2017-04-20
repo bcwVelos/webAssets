@@ -6,7 +6,7 @@ var totalRows = 31;
 var infusionRows = new Array(totalRows);
 
 alert("HELLO");
-/*
+
 infusionRows[0] = {
 	infusionDate : 'fld10050_165498_170044_span',
 	quantity : 'fld10050_165374_169920_span',
@@ -44,7 +44,7 @@ function generateNextID(currentID) {
 	nextID = fieldElements[0].concat(str,firstIncrement,str,secondIncrement);
 	return nextID;
 }
-*/
+
 $j(document).ready(function() {
 /*	
 		//hide the comments label- never want to see it
