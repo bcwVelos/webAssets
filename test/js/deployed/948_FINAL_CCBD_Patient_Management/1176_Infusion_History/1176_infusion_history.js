@@ -44,7 +44,7 @@ function generateNextID(currentID) {
 }
 
 $j(document).ready(function() {
-		alert("HELLO");
+		alert("Money");
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
 	
