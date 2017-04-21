@@ -238,7 +238,7 @@ $j(".deleteBtn").click(function() {
 			$j("#" + infusionRows[i].infusionProduct).hide();
 			$j("#" + infusionRows[i].infusionProduct).siblings().hide();
 	}; */
-}
+//}
 
 });
 
