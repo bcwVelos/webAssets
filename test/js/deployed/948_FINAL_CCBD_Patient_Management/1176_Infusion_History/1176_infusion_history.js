@@ -225,19 +225,19 @@ $j(".deleteBtn").click(function() {
 	function showUniqueInfusion(j, x) {
 		return function(event) {
 			if (x.checked)
-				$j("#" + infusionRows[i].infusionType).show();
-				$j("#" + infusionRows[i].infusionLocation).show();
-				$j("#" + infusionRows[i].bleedSite).show();
-				$j("#" + infusionRows[i].bleedSite).siblings().show();
-				$j("#" + infusionRows[i].infusionProduct).show();
-				$j("#" + infusionRows[i].infusionProduct).siblings().show();
+				$j("#" + infusionRows[j].infusionType).show();
+				$j("#" + infusionRows[j].infusionLocation).show();
+				$j("#" + infusionRows[j].bleedSite).show();
+				$j("#" + infusionRows[j].bleedSite).siblings().show();
+				$j("#" + infusionRows[j].infusionProduct).show();
+				$j("#" + infusionRows[j].infusionProduct).siblings().show();
 			else
-				$j("#" + infusionRows[i].infusionType).hide();
-				$j("#" + infusionRows[i].infusionLocation).hide();
-				$j("#" + infusionRows[i].bleedSite).hide();
-				$j("#" + infusionRows[i].bleedSite).siblings().hide();
-				$j("#" + infusionRows[i].infusionProduct).hide();
-				$j("#" + infusionRows[i].infusionProduct).siblings().hide();
+				$j("#" + infusionRows[j].infusionType).hide();
+				$j("#" + infusionRows[j].infusionLocation).hide();
+				$j("#" + infusionRows[j].bleedSite).hide();
+				$j("#" + infusionRows[j].bleedSite).siblings().hide();
+				$j("#" + infusionRows[j].infusionProduct).hide();
+				$j("#" + infusionRows[j].infusionProduct).siblings().hide();
 		};
 	}
 
