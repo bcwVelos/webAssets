@@ -200,8 +200,10 @@ $j(".deleteBtn").click(function() {
 		}
 			i++;
 	}
-	
-	var a;
+
+});
+
+var a;
 	var fieldID;
 	
 	for (var i = 0; i < totalRows; i++) {
@@ -240,8 +242,6 @@ $j(".deleteBtn").click(function() {
 			$j("#" + infusionRows[i].infusionProduct).siblings().hide();
 	}; */
 //}
-
-});
 
 });
 
