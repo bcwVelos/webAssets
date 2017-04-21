@@ -224,20 +224,21 @@ $j(".deleteBtn").click(function() {
 	
 	function showUniqueInfusion(j, x) {
 		return function(event) {
-			if (x.checked)
+			if (x.checked) {
 				$j("#" + infusionRows[j].infusionType).show();
 				$j("#" + infusionRows[j].infusionLocation).show();
 				$j("#" + infusionRows[j].bleedSite).show();
 				$j("#" + infusionRows[j].bleedSite).siblings().show();
 				$j("#" + infusionRows[j].infusionProduct).show();
 				$j("#" + infusionRows[j].infusionProduct).siblings().show();
-			else
+			} else {				
 				$j("#" + infusionRows[j].infusionType).hide();
 				$j("#" + infusionRows[j].infusionLocation).hide();
 				$j("#" + infusionRows[j].bleedSite).hide();
 				$j("#" + infusionRows[j].bleedSite).siblings().hide();
 				$j("#" + infusionRows[j].infusionProduct).hide();
 				$j("#" + infusionRows[j].infusionProduct).siblings().hide();
+			}
 		};
 	}
 
