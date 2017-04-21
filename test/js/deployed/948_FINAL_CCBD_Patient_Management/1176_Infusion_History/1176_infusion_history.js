@@ -203,7 +203,7 @@ $j(".deleteBtn").click(function() {
 
 });
 
-var a;
+	var a;
 	var fieldID;
 	
 	for (var i = 0; i < totalRows; i++) {
@@ -219,27 +219,27 @@ var a;
 			$j("#" + infusionRows[i].infusionProduct).siblings().hide();
 		}
 
-		//$j(uniqueInfusionBox).click(showUniqueInfusion(i, uniqueInfusionBox)); {}
+		$j(uniqueInfusionBox).click(showUniqueInfusion(i, uniqueInfusionBox)); {}
 	}
 	
-	/* function showUniqueInfusion(j, x) {
-	return function(event) {
-		if (x.checked)
-			$j("#" + infusionRows[i].infusionType).show();
-			$j("#" + infusionRows[i].infusionLocation).show();
-			$j("#" + infusionRows[i].bleedSite).show();
-			$j("#" + infusionRows[i].bleedSite).siblings().show();
-			$j("#" + infusionRows[i].infusionProduct).show();
-			$j("#" + infusionRows[i].infusionProduct).siblings().show();
-		else
-			$j("#" + infusionRows[i].infusionType).hide();
-			$j("#" + infusionRows[i].infusionLocation).hide();
-			$j("#" + infusionRows[i].bleedSite).hide();
-			$j("#" + infusionRows[i].bleedSite).siblings().hide();
-			$j("#" + infusionRows[i].infusionProduct).hide();
-			$j("#" + infusionRows[i].infusionProduct).siblings().hide();
-	}; */
-//}
+	function showUniqueInfusion(j, x) {
+		return function(event) {
+			if (x.checked)
+				$j("#" + infusionRows[i].infusionType).show();
+				$j("#" + infusionRows[i].infusionLocation).show();
+				$j("#" + infusionRows[i].bleedSite).show();
+				$j("#" + infusionRows[i].bleedSite).siblings().show();
+				$j("#" + infusionRows[i].infusionProduct).show();
+				$j("#" + infusionRows[i].infusionProduct).siblings().show();
+			else
+				$j("#" + infusionRows[i].infusionType).hide();
+				$j("#" + infusionRows[i].infusionLocation).hide();
+				$j("#" + infusionRows[i].bleedSite).hide();
+				$j("#" + infusionRows[i].bleedSite).siblings().hide();
+				$j("#" + infusionRows[i].infusionProduct).hide();
+				$j("#" + infusionRows[i].infusionProduct).siblings().hide();
+		};
+	}
 
 });
 
