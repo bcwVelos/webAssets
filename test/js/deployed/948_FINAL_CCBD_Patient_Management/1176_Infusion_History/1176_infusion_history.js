@@ -210,15 +210,13 @@ var a;
 		a = infusionRows[i].uniqueInfusion.indexOf("_span");
 		fieldID = infusionRows[i].uniqueInfusion.substring(0, a);
 		var uniqueInfusionBox = document.getElementsByName(fieldID)[0];
-		alert("Hello");
 		if (!uniqueInfusionBox.checked) {
-			alert("Money");
 			$j("#" + infusionRows[i].infusionType).hide();
 			$j("#" + infusionRows[i].infusionLocation).hide();
 			$j("#" + infusionRows[i].bleedSite).hide();
 			$j("#" + infusionRows[i].bleedSite).siblings().hide();
 			$j("#" + infusionRows[i].infusionProduct).hide();
-			$j("#" + infusionRows[i].infusionProduct).hide();
+			$j("#" + infusionRows[i].infusionProduct).siblings().hide();
 		}
 
 		//$j(uniqueInfusionBox).click(showUniqueInfusion(i, uniqueInfusionBox)); {}
