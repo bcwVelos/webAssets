@@ -1,3 +1,15 @@
 $j(document).ready(function() {
-	<img src="../bcw/image/Dental Numbering System.jpg" alt="Tooth Pic">
+	var test_field = 'fld10050_121655_126118';
+
+	var test_box = document.getElementsByName(test_field);
+	
+	$(function() {
+		$("fld10050_121655_126118").position({
+			my: "center",
+			at: "center",
+			of: "#targetImage"
+		});
+		
+	});
+	
 });
