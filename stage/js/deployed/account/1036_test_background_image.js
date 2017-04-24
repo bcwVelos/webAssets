@@ -4,7 +4,7 @@ $j(document).ready(function() {
 
 	var test_box = document.getElementsByName(test_field);
 		
-	$j("fld10050_121655_126118").position({
+	$("fld10050_121655_126118").position({
 		my: "center",
 		at: "center",
 		of: "#targetImage"
