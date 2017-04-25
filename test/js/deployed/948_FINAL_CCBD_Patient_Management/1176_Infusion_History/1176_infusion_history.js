@@ -47,6 +47,7 @@ $j(document).ready(function() {
 
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
+		$j('td:contains("Space Break")').hide();
 	
 		//Check to see how many medications are available for the page
 		var rowTotal = infusionRows.length;
