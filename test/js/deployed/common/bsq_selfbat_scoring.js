@@ -365,12 +365,24 @@ function calcOtherBleeding() {
 		.getElementsByName(otherBleedingVariables.otherBleedingTotalScore);
 	var otherBleedingPrimary = document
 		.getElementsByName(otherBleedingVariables.otherBleedingPrimary);
+	var otherBleedingPrimary2 = document
+		.getElementsByName(otherBleedingVariables.otherBleedingPrimary2);
 
 	//Start scoring
 	for (var i=0; i < otherBleedingPrimary.length; i++) {
 		if (otherBleedingPrimary [i].checked) {
 			x = true; nullScore =  false;
 			var answer = otherBleedingPrimary [i].value;
+			var answerValue = answer.split("|");
+			if (Number(answerValue[1]) > otherBleedingScore)
+				otherBleedingScore = Number(answerValue[1]);
+		}
+	}
+	
+	for (var i=0; i < otherBleedingPrimary2.length; i++) {
+		if (otherBleedingPrimary2[i].checked) {
+			x = true; nullScore =  false;
+			var answer = otherBleedingPrimary2[i].value;
 			var answerValue = answer.split("|");
 			if (Number(answerValue[1]) > otherBleedingScore)
 				otherBleedingScore = Number(answerValue[1]);
@@ -487,5 +499,6 @@ function testMapping() {
 	document.getElementById(cnsVariables.cnsPrimary + "_id").style.color = "red";
 
 	document.getElementById(otherBleedingVariables.otherBleedingTotalScore + "_id").style.color = "red";
-	document.getElementById(otherBleedingVariables.otherBleedingPrimary + "_id").style.color = "red";
+	document.getElementById(otherBleedingVariables.otherBleedingPrimary + "_id").style.color = "red";	
+	document.getElementById(otherBleedingVariables.otherBleedingPrimary2 + "_id").style.color = "red";
 }
