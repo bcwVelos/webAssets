@@ -68,7 +68,7 @@ cnsVariables = {
 
 otherBleedingVariables = {
 	otherBleedingTotalScore: 'fld10050_164905_169426',
-	otherBleedingPrimary: 'fld10050_164907_169428'
+	otherBleedingPrimary: 'fld10050_164907_169428',
 	otherBleedingPrimary2: 'fld10050_165798_170363'
 }
 
