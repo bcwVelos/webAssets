@@ -2,7 +2,7 @@ var nullScore = true;
 
 function calcScore() {
 	calcTotalScore();
-	if (formStatus[0].value == '16036')
+	if (formStatus[0].value == '15736')
 		testMapping();
 }
 
