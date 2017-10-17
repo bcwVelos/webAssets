@@ -2,15 +2,15 @@ var str = "_";
 var nextID;
 var fieldElements = [];
 var firstIncrement, secondIncrement;
-var totalRows = 20;
+var totalRows = 50;
 var medicationRows = new Array(totalRows);
 
 medicationRows[0] = {
-	medicationName : 'fld10050_119901_124343_span',  
-	medicationDose : 'fld10050_119921_124363_span',
-	medicationFrequency: 'fld10050_119941_124383_span',
-	addRowBtn : 'fld10050_119881_124323_id',
-	delRowBtn : 'fld10050_119861_124303_id'
+	medicationName : 'fld10050_124391_129734_span',  
+	medicationDose : 'fld10050_124441_129784_span',
+	medicationFrequency: 'fld10050_124491_129834_span',
+	addRowBtn : 'fld10050_124341_129684_id',
+	delRowBtn : 'fld10050_124291_129634_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
@@ -161,6 +161,3 @@ $j(".deleteBtn").click(function() {
 });
 
 });
-
-
-
