@@ -87,4 +87,8 @@ $j(document).ready(function() {
 	$j('.[id^="eSign"]').focus(function(event) {
 		calcScore();
 	});
+	
+	$j('.[id^="submit_btn"]').hover(function(event) {
+		calcScore();
+	});
 });
