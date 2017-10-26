@@ -88,7 +88,7 @@ $j(document).ready(function() {
 		calcScore();
 	});
 	
-	$j('.[id^="submit_btn"]').hover(function(event) {
+	$j('.[id^="submit_btn"]').click(function(event) {
 		calcScore();
 	});
 });
