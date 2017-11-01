@@ -33,12 +33,12 @@ oralCavityVariables = {
 
 toothExtractionVariables = {
 	toothExtractionTotalScore: 'fld10050_125970_130737',
-	toothExtractionPrimary: 'fld10050_125972_130739'
+	toothExtractionPrimary: 'fld10050_127341_132248'
 }
 
 surgeryVariables = {
 	surgeryTotalScore: 'fld10050_125973_130740',
-	surgeryPrimary: 'fld10050_125975_130742'
+	surgeryPrimary: 'fld10050_127342_132249'
 }
 
 menstrualVariables = {
