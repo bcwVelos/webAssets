@@ -32,7 +32,7 @@ oralCavityVariables = {
 }
 
 toothExtractionVariables = {
-	toothExtractionTotalScore: 'fld10050_122298_127723',
+	toothExtractionTotalScore: 'fld10050_125163_130525',
 	toothExtractionPrimary: 'fld10050_125165_130527'
 }
 
