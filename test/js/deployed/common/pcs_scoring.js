@@ -1,5 +1,5 @@
 var nullScore = true;
-
+alert("Hello world");
 function calcScore() {
 	calcTotalScore();
 	if (formStatus[0].value == '15736')
