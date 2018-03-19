@@ -1,7 +1,7 @@
 /**
  * 
  */
- alert("Hello world");
+alert("Hello world");
 pcsVariables = {
 	pcsWorry = 'fld10050_128106_133034';
 	/* pcsCantGoOn = 'fld10050_128107_133035';
