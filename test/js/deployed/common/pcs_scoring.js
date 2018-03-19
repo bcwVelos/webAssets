@@ -27,9 +27,9 @@ function calcTotalScore() {
 	
 	var totalScore = 0;
 	
-	for (var i = 0; i < pcsWorryField.length; i++) {			
-		if (pcsWorryField[i].checked) {
-			var answer = pcsWorryField[i].value;
+	for (var i = 0; i < pcsWorry.length; i++) {			
+		if (pcsWorry[i].checked) {
+			var answer = pcsWorry[i].value;
 			var answerValue = answer.split("|");
 			totalScore = totalScore + Number(answerValue[1]);
 		}
