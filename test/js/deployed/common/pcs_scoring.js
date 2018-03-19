@@ -36,7 +36,7 @@ function calcTotalScore() {
 	}	
 	
 	var pcsTotalScore = document
-		.getElementsByName(pcsTotalScore);
+		.getElementsByName(pcsVariables.pcsTotalScore);
 	
 	pcsTotalScore[0].value = totalScore;
 
