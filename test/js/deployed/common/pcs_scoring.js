@@ -10,20 +10,30 @@ function calcTotalScore() {
 
 	var pcsWorry = document
 	  .getElementsByName(pcsVariables.pcsWorry);
-//	var pcsCantGoOn = 'fld10050_128107_133035';
-//	var pcsTerrible = 'fld10050_128108_133036';
-//	var pcsAwful = 'fld10050_128093_133024';
-//	var pcsCantStand = 'fld10050_128109_133037';
-//	var pcsAfraid = 'fld10050_128110_133038';
-//	var pcsPainfulEvents = 'fld10050_128111_133039';
-//	var pcsAnxious = 'fld10050_128112_133040';
-//	var pcsOutOfMind = 'fld10050_128113_133041';
-//	var pcsHowMuchHurts = 'fld10050_128114_133042';
-//	var pcsPainToStop = 'fld10050_128115_133043';
-//	var pcsIntensity = 'fld10050_128116_133044';
-//	var pcsSerious = 'fld10050_128117_133045';
-//	var pcsTotalScore = 'fld10050_128118_133046';
-	
+	var pcsCantGoOn = document
+	  .getElementsByName(pcsVariables.pcsCantGoOn);
+	var pcsTerrible = document
+	  .getElementsByName(pcsVariables.pcsTerrible);
+	var pcsAwful = document
+	  .getElementsByName(pcsVariables.pcsAwful);
+	var pcsCantStand = document
+	  .getElementsByName(pcsVariables.pcsCantStand);
+	var pcsAfraid = document
+	  .getElementsByName(pcsVariables.pcsAfraid);
+	var pcsPainfulEvents = document
+	  .getElementsByName(pcsVariables.pcsPainfulEvents);
+	var pcsAnxious = document
+	  .getElementsByName(pcsVariables.pcsAnxious);
+	var pcsOutOfMind = document
+	  .getElementsByName(pcsVariables.pcsOutOfMind);
+	var pcsHowMuchHurts = document
+	  .getElementsByName(pcsVariables.pcsHowMuchHurts);
+	var pcsPainToStop = document
+	  .getElementsByName(pcsVariables.pcsPainToStop);
+	var pcsIntensity = document
+	  .getElementsByName(pcsVariables.pcsIntensity);
+	var pcsSerious = document
+	  .getElementsByName(pcsVariables.pcsSerious);
 	
 	var totalScore = 0;
 	
@@ -33,7 +43,103 @@ function calcTotalScore() {
 			var answerValue = answer.split("|");
 			totalScore = totalScore + Number(answerValue[1]);
 		}
-	}	
+	}
+	
+	for (var i = 0; i < pcsCantGoOn.length; i++) {			
+		if (pcsCantGoOn[i].checked) {
+			var answer = pcsCantGoOn[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsTerrible.length; i++) {			
+		if (pcsTerrible[i].checked) {
+			var answer = pcsTerrible[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsAwful.length; i++) {			
+		if (pcsAwful[i].checked) {
+			var answer = pcsAwful[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsCantStand.length; i++) {			
+		if (pcsCantStand[i].checked) {
+			var answer = pcsCantStand[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsAfraid.length; i++) {			
+		if (pcsAfraid[i].checked) {
+			var answer = pcsAfraid[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsPainfulEvents.length; i++) {			
+		if (pcsPainfulEvents[i].checked) {
+			var answer = pcsPainfulEvents[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsAnxious.length; i++) {			
+		if (pcsAnxious[i].checked) {
+			var answer = pcsAnxious[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsOutOfMind.length; i++) {			
+		if (pcsOutOfMind[i].checked) {
+			var answer = pcsOutOfMind[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsHowMuchHurts.length; i++) {			
+		if (pcsHowMuchHurts[i].checked) {
+			var answer = pcsHowMuchHurts[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsPainToStop.length; i++) {			
+		if (pcsPainToStop[i].checked) {
+			var answer = pcsPainToStop[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsIntensity.length; i++) {			
+		if (pcsIntensity[i].checked) {
+			var answer = pcsIntensity[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
+	
+	for (var i = 0; i < pcsSerious.length; i++) {			
+		if (pcsSerious[i].checked) {
+			var answer = pcsSerious[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+		}
+	}
 	
 	var pcsTotalScore = document
 		.getElementsByName(pcsVariables.pcsTotalScore);
@@ -42,49 +148,32 @@ function calcTotalScore() {
 
 }
 
-//function testMapping() {
-//	document.getElementById(totalScoreVariables.totalScoreTop + "_id").style.color = "red";
-//	document.getElementById(totalScoreVariables.totalScoreBottom + "_id").style.color = "red";
-//	
-//	document.getElementById(noseBleedVariables.epistaxisTotalScore + "_id").style.color = "red";
-//	document.getElementById(noseBleedVariables.epistaxisPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(cutaneousVariables.bruisingTotalScore + "_id").style.color = "red";
-//	document.getElementById(cutaneousVariables.bruisingPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(minorWoundsVariables.minorWoundsTotalScore + "_id").style.color = "red";
-//	document.getElementById(minorWoundsVariables.minorWoundsPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(hematuriaVariables.hematuriaTotalScore + "_id").style.color = "red";
-//	document.getElementById(hematuriaVariables.hematuriaPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(giBleedingVariables.giBleedingTotalScore + "_id").style.color = "red";
-//	document.getElementById(giBleedingVariables.giBleedingPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(oralCavityVariables.oralCavityTotalScore + "_id").style.color = "red";
-//	document.getElementById(oralCavityVariables.oralCavityPrimary + "_id").style.color = "red";
-//	
-//	document.getElementById(toothExtractionVariables.toothExtractionTotalScore + "_id").style.color = "red";
-//	document.getElementById(toothExtractionVariables.toothExtractionPrimary + "_id").style.color = "red";
-//	
-//	document.getElementById(surgeryVariables.surgeryTotalScore + "_id").style.color = "red";
-//	document.getElementById(surgeryVariables.surgeryPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(menstrualVariables.menstrualTotalScore + "_id").style.color = "red";
-//	document.getElementById(menstrualVariables.menstrualPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(deliveryVariables.deliveryTotalScore + "_id").style.color = "red";
-//	document.getElementById(deliveryVariables.deliveryPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(hematomaVariables.hematomaTotalScore + "_id").style.color = "red";
-//	document.getElementById(hematomaVariables.hematomaPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(hemarthrosisVariables.hemarthrosisTotalScore + "_id").style.color = "red";
-//	document.getElementById(hemarthrosisVariables.hemarthrosisPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(cnsVariables.cnsTotalScore + "_id").style.color = "red";
-//	document.getElementById(cnsVariables.cnsPrimary + "_id").style.color = "red";
-//
-//	document.getElementById(otherBleedingVariables.otherBleedingTotalScore + "_id").style.color = "red";
-//	document.getElementById(otherBleedingVariables.otherBleedingPrimary + "_id").style.color = "red";
-//}
+function testMapping() {
+	document.getElementById(pcsVariables.pcsWorry + "_id").style.color = "red";
+	
+	document.getElementById(pcsVariables.pcsCantGoOn + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsTerrible + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsAwful + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsCantStand + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsAfraid + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsPainfulEvents + "_id").style.color = "red";
+	
+	document.getElementById(pcsVariables.pcsAnxious + "_id").style.color = "red";
+	
+	document.getElementById(pcsVariables.pcsOutOfMind + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsHowMuchHurts + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsPainToStop + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsIntensity + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsSerious + "_id").style.color = "red";
+
+	document.getElementById(pcsVariables.pcsTotalScore + "_id").style.color = "red";
+}
