@@ -1,8 +1,9 @@
 /**
  * 
  */
+ alert("Hello world");
 pcsVariables = {
-	pcsWorryField = 'fld10050_128106_133034';
+	pcsWorry = 'fld10050_128106_133034';
 	/* pcsCantGoOn = 'fld10050_128107_133035';
 	pcsTerrible = 'fld10050_128108_133036';
 	pcsAwful = 'fld10050_128093_133024';

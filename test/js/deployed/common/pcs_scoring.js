@@ -1,5 +1,5 @@
 var nullScore = true;
-alert("HELLO WORLD");
+
 function calcScore() {
 	calcTotalScore();
 	if (formStatus[0].value == '15736')
@@ -8,8 +8,8 @@ function calcScore() {
 
 function calcTotalScore() {
 
-	var pcsWorryField = document
-	  .getElementsByName(pcsVariables.pcsWorryField);
+	var pcsWorry = document
+	  .getElementsByName(pcsVariables.pcsWorry);
 //	var pcsCantGoOn = 'fld10050_128107_133035';
 //	var pcsTerrible = 'fld10050_128108_133036';
 //	var pcsAwful = 'fld10050_128093_133024';
