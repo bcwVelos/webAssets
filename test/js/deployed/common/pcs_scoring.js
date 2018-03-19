@@ -7,10 +7,9 @@ function calcScore() {
 }
 
 function calcTotalScore() {
-	nullScore = true;
-	
+
 	var pcsWorryField = document
-	  .getElementsByName(pcsWorryField);
+	  .getElementsByName(pcsVariables.pcsWorryField);
 //	var pcsCantGoOn = 'fld10050_128107_133035';
 //	var pcsTerrible = 'fld10050_128108_133036';
 //	var pcsAwful = 'fld10050_128093_133024';
