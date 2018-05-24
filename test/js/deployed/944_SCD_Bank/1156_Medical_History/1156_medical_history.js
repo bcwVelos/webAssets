@@ -42,7 +42,7 @@ $j(document).ready(function() {
 		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
 		
 		if (!jointReplacementYes.checked) {
-			$j("#" + surgeryRows[0].addRowBtn).hide();
+			$j("#" + surgeryRows[0].addRowBtn).closest("table").hide();
 		}
 	
 		//Check to see how many medications are available for the page
