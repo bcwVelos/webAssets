@@ -4,6 +4,7 @@ var fieldElements = [];
 var firstIncrement, secondIncrement;
 var totalRows = 10;
 var surgeryRows = new Array(totalRows);
+var jointReplacement = 'fld10050_131879_136832';
 
 surgeryRows[0] = {
 	jointSurgeryName : 'fld10050_131900_136853_span',  
@@ -37,6 +38,27 @@ $j(document).ready(function() {
 	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
+		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
+		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
+		
+			// Hide the comments if primary question has answer of no
+	if (!jointReplacementYes.checked) {
+		$j("#" + jointReplacment.addRowBtn).hide();
+	}
+	
+	// Add an event listener to show the comment if Yes is clicked
+	jointReplacementYes.addEventListener('click', function() {
+		$j("#" + jointReplacment.addRowBtn).show();
+	}, false);
+	
+	// Add an event listener to hide the comment if No is clicked
+	jointReplacementNo.addEventListener('click', function() {
+		$j("#" + jointReplacment.addRowBtn).hide();
+	}, false);
+	
+	jointReplacementYes.addEventListener('dblclick', function() {
+		$j("#" + jointReplacment.addRowBtn).hide();
+	}, false);
 	
 		//Check to see how many medications are available for the page
 		var rowTotal = surgeryRows.length;
