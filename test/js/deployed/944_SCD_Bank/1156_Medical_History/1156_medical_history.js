@@ -43,7 +43,7 @@ $j(document).ready(function() {
 		
 		alert(jointReplacementYes);
 		if (!jointReplacementYes.checked) {
-			$j("#" + surgeryRows[0].addRowBtn).closest("table").hide();
+			$j("#" + surgeryRows[0].addRowBtn).hide();
 		}
 	
 		//Check to see how many medications are available for the page
