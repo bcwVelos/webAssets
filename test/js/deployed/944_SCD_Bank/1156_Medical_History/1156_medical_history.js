@@ -41,7 +41,7 @@ $j(document).ready(function() {
 		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
 		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
 		
-		if (!surgeryYes.checked) {
+		if (!jointReplacementYes.checked) {
 			$j("#" + surgeryRows.addRowBtn.hide();
 		}
 	
