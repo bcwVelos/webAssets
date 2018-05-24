@@ -40,13 +40,16 @@ $j(document).ready(function() {
 		$j('td:contains("Comments")').hide();
 		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
 		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
+		
+		if (!surgeryYes.checked) {
+			$j("#" + surgeryRows.addRowBtn.hide();
+		}
 	
 		//Check to see how many medications are available for the page
 		var rowTotal = surgeryRows.length;
 	
 		// hide the delete Button in the first row - it should never be seen
 		$j("#" + surgeryRows[0].delRowBtn).hide();
-
 
 	    // Start the for loop in the second row (array # 1) because the first row
 	    // will always display.
