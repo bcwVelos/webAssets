@@ -40,25 +40,6 @@ $j(document).ready(function() {
 		$j('td:contains("Comments")').hide();
 		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
 		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
-		
-			// Hide the comments if primary question has answer of no
-	if (!jointReplacementYes.checked) {
-		$j("#" + surgeryRows.addRowBtn).hide();
-	}
-	
-	// Add an event listener to show the comment if Yes is clicked
-	jointReplacementYes.addEventListener('click', function() {
-		$j("#" + surgeryRows.addRowBtn).show();
-	}, false);
-	
-	// Add an event listener to hide the comment if No is clicked
-	jointReplacementNo.addEventListener('click', function() {
-		$j("#" + surgeryRows.addRowBtn).hide();
-	}, false);
-	
-	jointReplacementYes.addEventListener('dblclick', function() {
-		$j("#" + surgeryRows.addRowBtn).hide();
-	}, false);
 	
 		//Check to see how many medications are available for the page
 		var rowTotal = surgeryRows.length;
