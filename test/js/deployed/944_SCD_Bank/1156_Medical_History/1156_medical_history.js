@@ -4,7 +4,7 @@ var fieldElements = [];
 var firstIncrement, secondIncrement;
 var totalRows = 10;
 var surgeryRows = new Array(totalRows);
-var jointReplacement = 'fld10050_131879_136832';
+var jointReplacement = "fld10050_131879_136832";
 
 surgeryRows[0] = {
 	jointSurgeryName : 'fld10050_131900_136853_span',  
