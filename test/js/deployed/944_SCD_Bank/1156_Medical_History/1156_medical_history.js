@@ -38,8 +38,8 @@ $j(document).ready(function() {
 	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
-		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
-		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
+		//var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
+		//var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
 		
 		//if (!jointReplacementYes.checked) {
 			$j("#" + surgeryRows[0].addRowBtn).hide();
