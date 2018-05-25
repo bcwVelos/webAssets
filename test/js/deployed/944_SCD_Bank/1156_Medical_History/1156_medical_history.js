@@ -41,10 +41,9 @@ $j(document).ready(function() {
 		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
 		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
 		
-		if (!jointReplacementYes.checked) {
-			alert(jointReplacementYes);
+		//if (!jointReplacementYes.checked) {
 			$j("#" + surgeryRows[0].addRowBtn).hide();
-		}
+		//}
 /*		
  		jointReplacementYes.addEventListener('click', function() {
 			alert(jointReplacementYes);
