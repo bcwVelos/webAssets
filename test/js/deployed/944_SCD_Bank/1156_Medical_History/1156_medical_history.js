@@ -40,10 +40,6 @@ $j(document).ready(function() {
 		$j('td:contains("Comments")').hide();
 		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
 		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
-		
-		//if (!jointReplacementYes.checked) {
-		$j("#" + surgeryRows[0].addRowBtn).hide();
-		//}
 /*		
  		jointReplacementYes.addEventListener('click', function() {
 			alert(jointReplacementYes);
@@ -89,8 +85,8 @@ $j(document).ready(function() {
 		} else {
 			//There is no data in this row.
 			//Make sure the add and delete buttons are shown for the previous row.
-			if ((i-1) = 0 && !jointReplacementYes.checked)
-				$j("#" + surgeryRows[i-1].addRowBtn).hide();
+			if (!jointReplacementYes.checked)
+				$j("#" + surgeryRows[0].addRowBtn).hide();
 			else
 				$j("#" + surgeryRows[i-1].addRowBtn).show();
 			
