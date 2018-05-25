@@ -38,8 +38,8 @@ $j(document).ready(function() {
 	
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
-		//var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
-		//var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
+		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
+		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
 		
 		//if (!jointReplacementYes.checked) {
 		$j("#" + surgeryRows[0].addRowBtn).hide();
@@ -89,7 +89,11 @@ $j(document).ready(function() {
 		} else {
 			//There is no data in this row.
 			//Make sure the add and delete buttons are shown for the previous row.
-			//$j("#" + surgeryRows[i-1].addRowBtn).show();
+			if ((i-1) = 0 && !jointReplacementYes.checked)
+				$j("#" + surgeryRows[i-1].addRowBtn).hide();
+			else
+				$j("#" + surgeryRows[i-1].addRowBtn).show();
+			
 			if((i-1) > 0){
 				$j("#" + surgeryRows[i-1].delRowBtn).show();
 			}
