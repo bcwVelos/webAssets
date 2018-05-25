@@ -45,12 +45,12 @@ $j(document).ready(function() {
 			alert(jointReplacementYes);
 			$j("#" + surgeryRows[0].addRowBtn).hide();
 		}
-		
+/*		
  		jointReplacementYes.addEventListener('click', function() {
 			alert(jointReplacementYes);
 			$j("#" + surgeryRows[0].addRowBtn).show();
 		}, false);
-/*		
+		
 		// Add an event listener to hide the comment if No is clicked
 		surgeryNo.addEventListener('click', function() {
 			$j("#" + surgeryRows[0].addRowBtn).hide();
