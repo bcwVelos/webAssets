@@ -40,9 +40,8 @@ $j(document).ready(function() {
 		$j('td:contains("Comments")').hide();
 		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
 		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
-/*		
+		
  		jointReplacementYes.addEventListener('click', function() {
-			alert(jointReplacementYes);
 			$j("#" + surgeryRows[0].addRowBtn).show();
 		}, false);
 		
@@ -53,7 +52,7 @@ $j(document).ready(function() {
 		
 		jointReplacementYes.addEventListener('dblclick', function() {
 			$j("#" + surgeryRows[0].addRowBtn).hide();
-		}, false); */
+		}, false);
 	
 		//Check to see how many medications are available for the page
 		var rowTotal = surgeryRows.length;
