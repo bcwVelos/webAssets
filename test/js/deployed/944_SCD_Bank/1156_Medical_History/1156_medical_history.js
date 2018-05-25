@@ -45,7 +45,7 @@ $j(document).ready(function() {
 			$j("#" + surgeryRows[0].addRowBtn).hide();
 		}
 		
-		jointReplacementYes.addEventListener('click', function() {
+/* 		jointReplacementYes.addEventListener('click', function() {
 			$j("#" + surgeryRows[0].addRowBtn).show();
 		}, false);
 		
@@ -56,7 +56,7 @@ $j(document).ready(function() {
 		
 		jointReplacementYes.addEventListener('dblclick', function() {
 			$j("#" + surgeryRows[0].addRowBtn).hide();
-		}, false);
+		}, false); */
 	
 		//Check to see how many medications are available for the page
 		var rowTotal = surgeryRows.length;
@@ -124,7 +124,6 @@ $j(".addBtn").click(function() {
 			//Show all values in row where the add button was selected
 			$j("#" + surgeryRows[i+1].jointSurgeryName).closest("tr").show();
 			$j("#" + surgeryRows[i+1].jointSurgeryName).show();
-			$j("#" + surgeryRows[i+1].jointSurgeryName).siblings().show();
 			$j("#" + surgeryRows[i+1].ifOther).show();
 			$j("#" + surgeryRows[i+1].jointSurgeryDate).show();
 			
@@ -155,7 +154,6 @@ $j(".deleteBtn").click(function() {
 			var a = surgeryRows[i].jointSurgeryName.indexOf("_span");
 			$j("#" + surgeryRows[i].jointSurgeryName.substring(0, a)).val("");
 			$j("#" + surgeryRows[i].jointSurgeryName).hide();
-			$j("#" + surgeryRows[i].jointSurgeryName).siblings().hide();
 
 			var b = surgeryRows[i].ifOther.indexOf("_span");
 			$j("#" + surgeryRows[i].ifOther.substring(0, b)).val("");
