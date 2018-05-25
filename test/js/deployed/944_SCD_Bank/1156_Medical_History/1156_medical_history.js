@@ -72,8 +72,6 @@ $j(document).ready(function() {
 		// when the form loads, check to see if there is data populated in the
 		// rows.
 		var a = surgeryRows[i].jointSurgeryName.indexOf("_span");
-		var b = surgeryRows[i].ifOther.indexOf("_span");		
-		var b = surgeryRows[i].jointSurgeryDate.indexOf("_span");
 		
 		//Check if the addtlOrgs dropdown has an option selected OR
 		//Check if the Brand Name has data in it
@@ -91,7 +89,7 @@ $j(document).ready(function() {
 		} else {
 			//There is no data in this row.
 			//Make sure the add and delete buttons are shown for the previous row.
-			$j("#" + surgeryRows[i-1].addRowBtn).show();
+			//$j("#" + surgeryRows[i-1].addRowBtn).show();
 			if((i-1) > 0){
 				$j("#" + surgeryRows[i-1].delRowBtn).show();
 			}
@@ -103,7 +101,7 @@ $j(document).ready(function() {
 	}
 
 	
-$j(".addBtn").click(function() {
+$j(".addBtn1").click(function() {
 	var parentLabelElement = $j(this).parent("label");
     var labelId = $j(parentLabelElement).attr("id");
 	var x;
@@ -140,7 +138,7 @@ $j(".addBtn").click(function() {
 
 
 
-$j(".deleteBtn").click(function() {
+$j(".deleteBtn1").click(function() {
 	var parentLabelElement = $j(this).parent("label");
     var labelId = $j(parentLabelElement).attr("id");
 	var y;
