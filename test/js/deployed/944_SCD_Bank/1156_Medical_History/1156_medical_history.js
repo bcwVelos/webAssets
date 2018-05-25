@@ -41,11 +41,11 @@ $j(document).ready(function() {
 		var jointReplacementYes = document.getElementsByName(jointReplacement)[0];
 		var jointReplacementNo = document.getElementsByName(jointReplacement)[1];
 		
- /*		jointReplacementYes.addEventListener('click', function() {
+ 		jointReplacementYes.addEventListener('click', function() {
 			$j("#" + surgeryRows[0].addRowBtn).show();
 		}, false);
 		
- 		// Add an event listener to hide the comment if No is clicked
+ /*		// Add an event listener to hide the comment if No is clicked
 		surgeryNo.addEventListener('click', function() {
 			$j("#" + surgeryRows[0].addRowBtn).hide();
 		}, false);
