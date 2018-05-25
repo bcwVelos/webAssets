@@ -45,14 +45,14 @@ $j(document).ready(function() {
 			$j("#" + surgeryRows[0].addRowBtn).show();
 		}, false);
 		
- /*		// Add an event listener to hide the comment if No is clicked
-		surgeryNo.addEventListener('click', function() {
+ 		// Add an event listener to hide the comment if No is clicked
+		jointReplacementNo.addEventListener('click', function() {
 			$j("#" + surgeryRows[0].addRowBtn).hide();
 		}, false);
 		
 		jointReplacementYes.addEventListener('dblclick', function() {
 			$j("#" + surgeryRows[0].addRowBtn).hide();
-		}, false); */
+		}, false);
 	
 		//Check to see how many medications are available for the page
 		var rowTotal = surgeryRows.length;
