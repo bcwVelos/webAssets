@@ -3,14 +3,14 @@ var nextID;
 var fieldElements = [];
 var firstIncrement, secondIncrement;
 var totalOtherRows = 20;
-var otherotherSurgeryRows = new Array(totalOtherRows);
-var otherSurgery = "fld10050_131879_136832";
+var otherSurgeryRows = new Array(totalOtherRows);
+var otherSurgery = "fld10050_131939_136892";
 
 otherSurgeryRows[0] = {
-	specifyName : 'fld10050_131890_136843_span',
-	surgeryDate: 'fld10050_131880_136833_span',
-	addRowBtn : 'fld10050_131910_136863_id',
-	delRowBtn : 'fld10050_131920_136873_id'
+	specifyName : 'fld10050_131960_136913_span',
+	surgeryDate: 'fld10050_131980_136933_span',
+	addRowBtn : 'fld10050_131940_136893_id',
+	delRowBtn : 'fld10050_132000_136953_id'
 }
 
 for (var i = 1; i < totalOtherRows; i++) {
