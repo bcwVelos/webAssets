@@ -7,14 +7,14 @@ function calcScore() {
 function calcTotalScore() {
 	var totalScore = 0;
 	
-	var courseOfPain = document
-			.getElementsByName(painDetectVariables.courseOfPain);
+	var burningSensation = document
+			.getElementsByName(painDetectVariables.burningSensation);
 	var totalScoreField = document
-		.getElementsByName(scoreVariables.totalScore);
+			.getElementsByName(scoreVariables.totalScore);
 		
-	for (var i = 0; i < courseOfPain.length; i++) {			
-		if (courseOfPain[i].checked) {
-			var answer = epistaxisPrimary[i].value;
+	for (var i = 0; i < burningSensation.length; i++) {			
+		if (burningSensation[i].checked) {
+			var answer = burningSensation[i].value;
 			var answerValue = answer.split("|");
 			totalScore = Number(answerValue[1]);
 		}
