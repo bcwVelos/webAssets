@@ -26,6 +26,10 @@ function calcTotalScore() {
 			.getElementsByName(painDetectVariables.numbnessSensation);
 	var slightPressure = document
 			.getElementsByName(painDetectVariables.slightPressure);
+	var courseOfPain = document
+			.getElementsByName(painDetectVariables.courseOfPain);
+	var painRadiate = document
+			.getElementsByName(painDetectVariables.painRadiate);
 			
 	var totalScoreField = document
 			.getElementsByName(scoreVariables.totalScore);
@@ -39,6 +43,8 @@ function calcTotalScore() {
 			.getElementsByName(scoreVariables.stronglyScore);
 	var veryStronglyField = document
 			.getElementsByName(scoreVariables.veryStronglyScore);
+	var finalScoreField = document
+			.getElementsByName(scoreVariables.finalScore);
 	
 	//Burning Sensation Question
 	for (var i = 0; i < burningSensation.length; i++) {			
@@ -179,35 +185,27 @@ function calcTotalScore() {
 	stronglyField[0].value = stronglyCount;
 	veryStronglyField[0].value = veryStronglyCount;
 	totalScoreField[0].value = totalScore;
-}
-
-function calcEpistaxis() {
 	
-	var noseBleedScore = 0;
-	var x = false;
-
-	var epistaxisTotalScore = document
-			.getElementsByName(noseBleedVariables.epistaxisTotalScore);
-	var epistaxisPrimary = document
-			.getElementsByName(noseBleedVariables.epistaxisPrimary);
+	var finalScore = totalScore;
 	
-	//Start scoring
-	for (var i = 0; i < epistaxisPrimary.length; i++) {			
-		if (epistaxisPrimary[i].checked) {		
-			x = true; nullScore =  false;
-			var answer = epistaxisPrimary[i].value;
+	//Final Score Calculation
+	for (var i = 0; i < courseOfPain.length; i++) {			
+		if (courseOfPain[i].checked) {
+			var answer = courseOfPain[i].value;
 			var answerValue = answer.split("|");
-			if (Number(answerValue[1]) > noseBleedScore)
-				noseBleedScore = Number(answerValue[1]);
+			finalScore = finalScore + Number(answerValue[1]);
 		}
-	}	
-	//Nose Bleed Score
-	if (x == true)
-		epistaxisTotalScore[0].value = noseBleedScore;
-	else
-		epistaxisTotalScore[0].value = "";
+	}
 	
-	return noseBleedScore;
+	for (var i = 0; i < painRadiate.length; i++) {			
+		if (painRadiate[i].checked) {
+			var answer = painRadiate[i].value;
+			var answerValue = answer.split("|");
+			finalScore = finalScore + Number(answerValue[1]);
+		}
+	}
+	
+	finalScoreField[0].value = finalScore;
 }
 
 function testMapping() {
