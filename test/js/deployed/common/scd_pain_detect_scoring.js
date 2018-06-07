@@ -209,48 +209,21 @@ function calcTotalScore() {
 }
 
 function testMapping() {
-	document.getElementById(totalScoreVariables.totalScoreTop + "_id").style.color = "red";
-	document.getElementById(totalScoreVariables.totalScoreBottom + "_id").style.color = "red";
-	
-	document.getElementById(noseBleedVariables.epistaxisTotalScore + "_id").style.color = "red";
-	document.getElementById(noseBleedVariables.epistaxisPrimary + "_id").style.color = "red";
+	document.getElementById(painDetectVariables.courseOfPain + "_id").style.color = "red";
+	document.getElementById(painDetectVariables.painRadiate + "_id").style.color = "red";
+	document.getElementById(painDetectVariables.burningSensation + "_id").style.color = "red";
+	document.getElementById(painDetectVariables.tinglingSensation + "_id").style.color = "red";
+	document.getElementById(painDetectVariables.lightTouching + "_id").style.color = "red";
+	document.getElementById(painDetectVariables.painAttacks + "_id").style.color = "red";
+	document.getElementById(painDetectVariables.coldHeat + "_id").style.color = "red";
+	document.getElementById(painDetectVariables.numbnessSensation + "_id").style.color = "red";
+	document.getElementById(painDetectVariables.slightPressure + "_id").style.color = "red";
 
-	document.getElementById(cutaneousVariables.bruisingTotalScore + "_id").style.color = "red";
-	document.getElementById(cutaneousVariables.bruisingPrimary + "_id").style.color = "red";
-
-	document.getElementById(minorWoundsVariables.minorWoundsTotalScore + "_id").style.color = "red";
-	document.getElementById(minorWoundsVariables.minorWoundsPrimary + "_id").style.color = "red";
-
-	document.getElementById(hematuriaVariables.hematuriaTotalScore + "_id").style.color = "red";
-	document.getElementById(hematuriaVariables.hematuriaPrimary + "_id").style.color = "red";
-
-	document.getElementById(giBleedingVariables.giBleedingTotalScore + "_id").style.color = "red";
-	document.getElementById(giBleedingVariables.giBleedingPrimary + "_id").style.color = "red";
-
-	document.getElementById(oralCavityVariables.oralCavityTotalScore + "_id").style.color = "red";
-	document.getElementById(oralCavityVariables.oralCavityPrimary + "_id").style.color = "red";
-	
-	document.getElementById(toothExtractionVariables.toothExtractionTotalScore + "_id").style.color = "red";
-	document.getElementById(toothExtractionVariables.toothExtractionPrimary + "_id").style.color = "red";
-	
-	document.getElementById(surgeryVariables.surgeryTotalScore + "_id").style.color = "red";
-	document.getElementById(surgeryVariables.surgeryPrimary + "_id").style.color = "red";
-
-	document.getElementById(menstrualVariables.menstrualTotalScore + "_id").style.color = "red";
-	document.getElementById(menstrualVariables.menstrualPrimary + "_id").style.color = "red";
-
-	document.getElementById(deliveryVariables.deliveryTotalScore + "_id").style.color = "red";
-	document.getElementById(deliveryVariables.deliveryPrimary + "_id").style.color = "red";
-
-	document.getElementById(hematomaVariables.hematomaTotalScore + "_id").style.color = "red";
-	document.getElementById(hematomaVariables.hematomaPrimary + "_id").style.color = "red";
-
-	document.getElementById(hemarthrosisVariables.hemarthrosisTotalScore + "_id").style.color = "red";
-	document.getElementById(hemarthrosisVariables.hemarthrosisPrimary + "_id").style.color = "red";
-
-	document.getElementById(cnsVariables.cnsTotalScore + "_id").style.color = "red";
-	document.getElementById(cnsVariables.cnsPrimary + "_id").style.color = "red";
-
-	document.getElementById(otherBleedingVariables.otherBleedingTotalScore + "_id").style.color = "red";
-	document.getElementById(otherBleedingVariables.otherBleedingPrimary + "_id").style.color = "red";
+	document.getElementById(scoreVariables.hardlyNoticedScore + "_id").style.color = "red";
+	document.getElementById(scoreVariables.slightlyScore + "_id").style.color = "red";
+	document.getElementById(scoreVariables.moderatelyScore + "_id").style.color = "red";
+	document.getElementById(scoreVariables.stronglyScore + "_id").style.color = "red";
+	document.getElementById(scoreVariables.veryStronglyScore + "_id").style.color = "red";
+	document.getElementById(scoreVariables.totalScore + "_id").style.color = "red";
+	document.getElementById(scoreVariables.finalScore + "_id").style.color = "red";
 }
