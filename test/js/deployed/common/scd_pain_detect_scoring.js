@@ -36,13 +36,13 @@ function calcTotalScore() {
 			totalScore = Number(answerValue[1]);
 			if (answerValue[1] = 1)
 				hardlyNoticedCount = hardlyNoticedCount + 1;
-			if (answerValue[1] = 2)
+			else if (answerValue[1] = 2)
 				slightlyCount = slightlyCount + 1;
-			if (answerValue[1] = 3)
+			else if (answerValue[1] = 3)
 				moderatelyCount = moderatelyCount + 1;
-			if (answerValue[1] = 4)
+			else if (answerValue[1] = 4)
 				stronglyCount = stronglyCount + 1;
-			if (answerValue[1] = 5)
+			else if (answerValue[1] = 5)
 				veryStronglyCount = veryStronglyCount + 1;
 		}
 	}
