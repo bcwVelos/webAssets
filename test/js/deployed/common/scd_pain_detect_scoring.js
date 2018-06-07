@@ -16,6 +16,17 @@ function calcTotalScore() {
 			.getElementsByName(painDetectVariables.burningSensation);
 	var tinglingSensation = document
 			.getElementsByName(painDetectVariables.tinglingSensation);
+	var lightTouching = document
+			.getElementsByName(painDetectVariables.lightTouching);
+	var painAttacks = document
+			.getElementsByName(painDetectVariables.painAttacks);
+	var coldHeat = document
+			.getElementsByName(painDetectVariables.coldHeat);
+	var numbnessSensation = document
+			.getElementsByName(painDetectVariables.numbnessSensation);
+	var slightPressure = document
+			.getElementsByName(painDetectVariables.slightPressure);
+			
 	var totalScoreField = document
 			.getElementsByName(scoreVariables.totalScore);
 	var hardlyNoticedField = document
@@ -28,7 +39,8 @@ function calcTotalScore() {
 			.getElementsByName(scoreVariables.stronglyScore);
 	var veryStronglyField = document
 			.getElementsByName(scoreVariables.veryStronglyScore);
-		
+	
+	//Burning Sensation Question
 	for (var i = 0; i < burningSensation.length; i++) {			
 		if (burningSensation[i].checked) {
 			var answer = burningSensation[i].value;
@@ -47,9 +59,105 @@ function calcTotalScore() {
 		}
 	}
 	
+	//Tingling Sensation Question
 	for (var i = 0; i < tinglingSensation.length; i++) {			
 		if (tinglingSensation[i].checked) {
 			var answer = tinglingSensation[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+			if (Number(answerValue[1]) == 1)
+				hardlyNoticedCount = hardlyNoticedCount + 1;
+			else if (Number(answerValue[1]) == 2)
+				slightlyCount = slightlyCount + 1;
+			else if (Number(answerValue[1]) == 3)
+				moderatelyCount = moderatelyCount + 1;
+			else if (Number(answerValue[1]) == 4)
+				stronglyCount = stronglyCount + 1;
+			else if (Number(answerValue[1]) == 5)
+				veryStronglyCount = veryStronglyCount + 1;
+		}
+	}
+	
+	//Light Touching Question
+	for (var i = 0; i < lightTouching.length; i++) {			
+		if (lightTouching[i].checked) {
+			var answer = lightTouching[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+			if (Number(answerValue[1]) == 1)
+				hardlyNoticedCount = hardlyNoticedCount + 1;
+			else if (Number(answerValue[1]) == 2)
+				slightlyCount = slightlyCount + 1;
+			else if (Number(answerValue[1]) == 3)
+				moderatelyCount = moderatelyCount + 1;
+			else if (Number(answerValue[1]) == 4)
+				stronglyCount = stronglyCount + 1;
+			else if (Number(answerValue[1]) == 5)
+				veryStronglyCount = veryStronglyCount + 1;
+		}
+	}
+	
+	//Pain Attacks Question
+	for (var i = 0; i < painAttacks.length; i++) {			
+		if (painAttacks[i].checked) {
+			var answer = painAttacks[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+			if (Number(answerValue[1]) == 1)
+				hardlyNoticedCount = hardlyNoticedCount + 1;
+			else if (Number(answerValue[1]) == 2)
+				slightlyCount = slightlyCount + 1;
+			else if (Number(answerValue[1]) == 3)
+				moderatelyCount = moderatelyCount + 1;
+			else if (Number(answerValue[1]) == 4)
+				stronglyCount = stronglyCount + 1;
+			else if (Number(answerValue[1]) == 5)
+				veryStronglyCount = veryStronglyCount + 1;
+		}
+	}
+	
+	//Cold - Hot Water Question
+	for (var i = 0; i < coldHeat.length; i++) {			
+		if (coldHeat[i].checked) {
+			var answer = coldHeat[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+			if (Number(answerValue[1]) == 1)
+				hardlyNoticedCount = hardlyNoticedCount + 1;
+			else if (Number(answerValue[1]) == 2)
+				slightlyCount = slightlyCount + 1;
+			else if (Number(answerValue[1]) == 3)
+				moderatelyCount = moderatelyCount + 1;
+			else if (Number(answerValue[1]) == 4)
+				stronglyCount = stronglyCount + 1;
+			else if (Number(answerValue[1]) == 5)
+				veryStronglyCount = veryStronglyCount + 1;
+		}
+	}
+	
+	//Numbness Sensation Question
+	for (var i = 0; i < numbnessSensation.length; i++) {			
+		if (numbnessSensation[i].checked) {
+			var answer = numbnessSensation[i].value;
+			var answerValue = answer.split("|");
+			totalScore = totalScore + Number(answerValue[1]);
+			if (Number(answerValue[1]) == 1)
+				hardlyNoticedCount = hardlyNoticedCount + 1;
+			else if (Number(answerValue[1]) == 2)
+				slightlyCount = slightlyCount + 1;
+			else if (Number(answerValue[1]) == 3)
+				moderatelyCount = moderatelyCount + 1;
+			else if (Number(answerValue[1]) == 4)
+				stronglyCount = stronglyCount + 1;
+			else if (Number(answerValue[1]) == 5)
+				veryStronglyCount = veryStronglyCount + 1;
+		}
+	}
+	
+	//Slight Pressure Question
+	for (var i = 0; i < slightPressure.length; i++) {			
+		if (slightPressure[i].checked) {
+			var answer = slightPressure[i].value;
 			var answerValue = answer.split("|");
 			totalScore = totalScore + Number(answerValue[1]);
 			if (Number(answerValue[1]) == 1)
