@@ -34,15 +34,15 @@ function calcTotalScore() {
 			var answer = burningSensation[i].value;
 			var answerValue = answer.split("|");
 			totalScore = Number(answerValue[1]);
-			if (answerValue[1] = 1)
+			if (Number(answerValue[1]) == 1)
 				hardlyNoticedCount = hardlyNoticedCount + 1;
-			else if (answerValue[1] = 2)
+			else if (Number(answerValue[1]) == 2)
 				slightlyCount = slightlyCount + 1;
-			else if (answerValue[1] = 3)
+			else if (Number(answerValue[1]) == 3)
 				moderatelyCount = moderatelyCount + 1;
-			else if (answerValue[1] = 4)
+			else if (Number(answerValue[1]) == 4)
 				stronglyCount = stronglyCount + 1;
-			else if (answerValue[1] = 5)
+			else if (Number(answerValue[1]) == 5)
 				veryStronglyCount = veryStronglyCount + 1;
 		}
 	}
