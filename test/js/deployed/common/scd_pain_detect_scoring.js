@@ -47,9 +47,9 @@ function calcTotalScore() {
 		}
 	}
 	
-	for (var i = 0; i < burningSensation.length; i++) {			
-		if (burningSensation[i].checked) {
-			var answer = burningSensation[i].value;
+	for (var i = 0; i < tinglingSensation.length; i++) {			
+		if (tinglingSensation[i].checked) {
+			var answer = tinglingSensation[i].value;
 			var answerValue = answer.split("|");
 			totalScore = totalScore + Number(answerValue[1]);
 			if (Number(answerValue[1]) == 1)
