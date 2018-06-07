@@ -6,12 +6,47 @@ function calcScore() {
 
 function calcTotalScore() {
 	var totalScore = 0;
+	var hardlyNoticedCount = 0;
+	var slightlyCount = 0;
+	var moderatelyCount = 0;
+	var stronglyCount = 0;
+	var veryStronglyCount = 0;
 	
 	var burningSensation = document
 			.getElementsByName(painDetectVariables.burningSensation);
+	var tinglingSensation = document
+			.getElementsByName(painDetectVariables.tinglingSensation);
 	var totalScoreField = document
 			.getElementsByName(scoreVariables.totalScore);
+	var hardlyNoticedField = document
+			.getElementsByName(scoreVariables.hardlyNoticedScore);
+	var slightlyField = document
+			.getElementsByName(scoreVariables.slightlyScore);
+	var moderatelyField = document
+			.getElementsByName(scoreVariables.moderatelyScore);
+	var stronglyField = document
+			.getElementsByName(scoreVariables.stronglyScore);
+	var veryStronglyField = document
+			.getElementsByName(scoreVariables.veryStronglyScore);
 		
+	for (var i = 0; i < burningSensation.length; i++) {			
+		if (burningSensation[i].checked) {
+			var answer = burningSensation[i].value;
+			var answerValue = answer.split("|");
+			totalScore = Number(answerValue[1]);
+			if (answerValue[1] = 1)
+				hardlyNoticedCount = hardlyNoticedCount + 1;
+			if (answerValue[1] = 2)
+				slightlyCount = slightlyCount + 1;
+			if (answerValue[1] = 3)
+				moderatelyCount = moderatelyCount + 1;
+			if (answerValue[1] = 4)
+				stronglyCount = stronglyCount + 1;
+			if (answerValue[1] = 5)
+				veryStronglyCount = veryStronglyCount + 1;
+		}
+	}
+	
 	for (var i = 0; i < burningSensation.length; i++) {			
 		if (burningSensation[i].checked) {
 			var answer = burningSensation[i].value;
@@ -20,6 +55,11 @@ function calcTotalScore() {
 		}
 	}
 	
+	hardlyNoticedField[0].value = hardlyNoticedCount;
+	slightlyField[0].value = slightlyCount;
+	moderatelyField[0].value = moderatelyCount;
+	stronglyField[0].value = stronglyCount;
+	veryStronglyField[0].value = veryStronglyCount;
 	totalScoreField[0].value = totalScore;
 }
 
