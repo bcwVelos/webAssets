@@ -1,7 +1,7 @@
 function calcScore() {
 	calcTotalScore();
-	//if (formStatus[0].value == '15736')
-		//testMapping();
+	if (formStatus[0].value == '15736')
+		testMapping();
 }
 
 function calcTotalScore() {
