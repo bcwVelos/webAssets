@@ -22,6 +22,7 @@ $j(document).ready(function() {
 });
 
 function calcBMI() {
+	alert("Hello");
 
 	var BMIValue = 0;
 
@@ -34,7 +35,7 @@ function calcBMI() {
 			
 	var heightValue = Number(BMIHeight[0].value);
 	var weightValue = Number(BMIWeight[0].value);
-	BMIValue[0].value = heightValue + weightValue;
+	BMIField[0].value = heightValue + weightValue;
 	
 	alert("Hello");
 }
