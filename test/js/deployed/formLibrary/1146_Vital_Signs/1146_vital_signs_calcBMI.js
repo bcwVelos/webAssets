@@ -31,9 +31,10 @@ function calcBMI() {
 			.getElementsByName(calcBMIVariables.weight);
 	var BMIField = document
 			.getElementsByName(calcBMIVariables.BMI);
-	var calcButton = document
-			.getElementsByName(calcBMIVariables.calcButton);
 			
 	var heightValue = Number(BMIHeight[0].value);
 	var weightValue = Number(BMIWeight[0].value);
+	BMIValue[0].value = heightValue + weightValue;
+	
+	alert("Hello");
 }
