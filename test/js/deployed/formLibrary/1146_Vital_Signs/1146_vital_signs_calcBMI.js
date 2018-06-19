@@ -37,6 +37,6 @@ function calcBMI() {
 	
 	BMIValue = (weightValue/(heightValue * heightValue)) * 703;
 	
-	BMIField[0].value = BMIValue;
+	BMIField[0].value = BMIValue.toPrecision(2);
 	
 }
