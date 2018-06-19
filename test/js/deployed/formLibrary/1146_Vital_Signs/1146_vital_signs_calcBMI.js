@@ -35,7 +35,7 @@ function calcBMI() {
 	var heightValue = Number(BMIHeight[0].value);
 	var weightValue = Number(BMIWeight[0].value);
 	
-	BMIValue = (weightValue/(heightValue * heightValue)) * 703;
+	BMIValue = weightValue/(heightValue * heightValue);
 	
 	BMIField[0].value = BMIValue.toFixed(1);
 	
