@@ -6,12 +6,12 @@ var totalRows = 20;
 var intTransfusions = new Array(totalRows);
 
 intTransfusions[0] = {
-	transfusionDate : 'fld10050_132255_137227_span',
-	transfusionIndication : 'fld10050_132155_137127_span',	
-	transfusionUnits : 'fld10050_132175_137147_span',
-	transfusionType : 'fld10050_132195_137167_span',
-	addRowBtn : 'fld10050_132215_137187_id',
-	delRowBtn : 'fld10050_132235_137207_id'
+	transfusionDate : 'fld10050_128044_134021_span',
+	transfusionIndication : 'fld10050_127944_133921_span',	
+	transfusionUnits : 'fld10050_127964_133941_span',
+	transfusionType : 'fld10050_127984_133961_span',
+	addRowBtn : 'fld10050_128004_133981_id',
+	delRowBtn : 'fld10050_128024_134001_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
