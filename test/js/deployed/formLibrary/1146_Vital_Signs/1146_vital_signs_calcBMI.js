@@ -15,10 +15,6 @@ $j(document).ready(function() {
 	$j('.[class^="calculateBtn"]').click(function(event) {
 		calcBMI();
 	});
-	
-	$j('.[id^="submit_btn"]').click(function(event) {
-		calcBMI();
-	});
 });
 
 function calcBMI() {
