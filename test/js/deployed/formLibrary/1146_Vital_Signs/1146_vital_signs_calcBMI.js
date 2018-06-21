@@ -36,7 +36,11 @@ function calcBMI() {
 	var heightValue = Number(BMIHeight[0].value);
 	var weightValue = Number(BMIWeight[0].value);
 	
-	BMIValue = weightValue/(heightValue * heightValue);
+	if (isNaN(heightValue) || isNaN(weightValue)) {
+			alert ("Please check the values entered in the Height (m) and Weight (kg) fields to confirm they are correct.");
+	} else {
+		BMIValue = weightValue/(heightValue * heightValue);
+	}
 	
 	BMIField[0].value = BMIValue.toFixed(1);
 	
@@ -55,6 +59,6 @@ function convertCM() {
 	
 	heightInM = heightValue/100;
 	
-	BMIHeight[0].value = heightInM.toFixed(1);
+	BMIHeight[0].value = heightInM;
 	
 }
