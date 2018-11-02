@@ -2,9 +2,8 @@ var str = "_";
 var nextID;
 var fieldElements = [];
 var firstIncrement, secondIncrement;
-var totalRowsER = 50;
+var totalRowsER = 100;
 var emergencyRoomRows = new Array(totalRowsER);
-
 
 emergencyRoomRows[0] = {
 	erDate : 'fld10050_134718_139731_span',  
