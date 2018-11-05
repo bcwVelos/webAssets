@@ -2,7 +2,7 @@ var str = "_";
 var nextID;
 var fieldElements = [];
 var firstIncrement, secondIncrement;
-var totalRowsER = 100;
+var totalRowsER = 50;
 var emergencyRoomRows = new Array(totalRowsER);
 
 emergencyRoomRows[0] = {
