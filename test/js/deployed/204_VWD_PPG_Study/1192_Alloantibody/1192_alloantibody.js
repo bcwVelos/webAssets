@@ -192,45 +192,6 @@ $j(".deleteBtnSA").click(function() {
 
 });
 
-	var a;
-	var fieldID;
-	
-	for (var i = 0; i < totalRows; i++) {
-		a = assaysRows[i].uniqueInfusion.indexOf("_span");
-		fieldID = assaysRows[i].uniqueInfusion.substring(0, a);
-		var uniqueInfusionBox = document.getElementsByName(fieldID)[0];
-		if (!uniqueInfusionBox.checked) {
-			$j("#" + assaysRows[i].infusionType).hide();
-			$j("#" + assaysRows[i].infusionLocation).hide();
-			$j("#" + assaysRows[i].bleedSite).hide();
-			$j("#" + assaysRows[i].bleedSite).siblings().hide();
-			$j("#" + assaysRows[i].infusionProduct).hide();
-			$j("#" + assaysRows[i].infusionProduct).siblings().hide();
-		}
-
-		$j(uniqueInfusionBox).click(showUniqueInfusion(i, uniqueInfusionBox)); {}
-	}
-	
-	function showUniqueInfusion(j, x) {
-		return function(event) {
-			if (x.checked) {
-				$j("#" + assaysRows[j].infusionType).show();
-				$j("#" + assaysRows[j].infusionLocation).show();
-				$j("#" + assaysRows[j].bleedSite).show();
-				$j("#" + assaysRows[j].bleedSite).siblings().show();
-				$j("#" + assaysRows[j].infusionProduct).show();
-				$j("#" + assaysRows[j].infusionProduct).siblings().show();
-			} else {				
-				$j("#" + assaysRows[j].infusionType).hide();
-				$j("#" + assaysRows[j].infusionLocation).hide();
-				$j("#" + assaysRows[j].bleedSite).hide();
-				$j("#" + assaysRows[j].bleedSite).siblings().hide();
-				$j("#" + assaysRows[j].infusionProduct).hide();
-				$j("#" + assaysRows[j].infusionProduct).siblings().hide();
-			}
-		};
-	}
-
 });
 
 
