@@ -111,6 +111,8 @@ $j(".addBtnSA").click(function() {
 					
 			//Show all values in row where the add button was selected
 			$j("#" + assaysRows[i+1].assayDate).closest("tr").show();
+			$j("#" + assaysRows[i+1].assayDate).show();
+			$j("#" + assaysRows[i+1].assayDate).siblings().show();
 			$j("#" + assaysRows[i+1].sample).show();
 			$j("#" + assaysRows[i+1].studyPhase).show();
 			$j("#" + assaysRows[i+1].rvwfHumateP).show();
