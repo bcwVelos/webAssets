@@ -51,7 +51,7 @@ $j(document).ready(function() {
 		var rowTotal = assaysRows.length;
 	
 		// hide the delete Button in the first row - it should never be seen
-		$j("#" + assaysRows[0].delRowBtnAA).hide();
+		$j("#" + assaysRows[0].delRowBtnA).hide();
 
 	    // Start the for loop in the second row (array # 1) because the first row
 	    // will always display.
@@ -180,6 +180,8 @@ $j(".deleteBtnSA").click(function() {
 			var h = assaysRows[i].igm95.indexOf("_span");
 			$j("#" + assaysRows[i].igm95.substring(0, h)).val("");
 			$j("#" + assaysRows[i].igm95).hide();
+			
+			$j("#" + assaysRows[i].assayDate).closest("tr").hide();
 			
 			//show the Add and Delete Button on the previous row
 			$j("#" + assaysRows[i-1].addRowBtnA).show();
