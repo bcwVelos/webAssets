@@ -14,8 +14,8 @@ assaysRows[0] = {
 	igg95 : 'fld10050_136326_141361_span',
 	igmOD : 'fld10050_136366_141401_span',
 	igm95 : 'fld10050_136346_141381_span',
-	addRowBtnAA : 'fld10050_136306_141341_id',
-	delRowBtnAA : 'fld10050_136386_141421_id'
+	addRowBtnA : 'fld10050_136306_141341_id',
+	delRowBtnA : 'fld10050_136386_141421_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
@@ -28,8 +28,8 @@ for (var i = 1; i < totalRows; i++) {
 		igg95 : String(generateNextID(assaysRows[i-1].igg95).concat("_span")),
 		igmOD : String(generateNextID(assaysRows[i-1].igmOD).concat("_span")),
 		igm95 : String(generateNextID(assaysRows[i-1].igm95).concat("_span")),
-		addRowBtnAA : String(generateNextID(assaysRows[i-1].addRowBtnAA).concat("_id")),
-		delRowBtnAA : String(generateNextID(assaysRows[i-1].delRowBtnAA).concat("_id"))
+		addRowBtnA : String(generateNextID(assaysRows[i-1].addRowBtnAA).concat("_id")),
+		delRowBtnA : String(generateNextID(assaysRows[i-1].delRowBtnAA).concat("_id"))
 	}
 }
 
