@@ -6,16 +6,16 @@ var totalRows = 20;
 var assaysRows = new Array(totalRows);
 
 assaysRows[0] = {
-	assayDate : 'fld10050_122691_127179_span',
-	sample : 'fld10050_122491_126979_span',
-	studyPhase : 'fld10050_122491_126979_span',
-	rwfHumateP : 'fld10050_122591_127079_span',
-	iggOD : 'fld10050_122641_127129_span',
-	igg95 : 'fld10050_122541_127029_span',
-	igmOD : 'fld10050_122441_126929_span',
-	igm95 : 'fld10050_122841_127329_span',
-	addRowBtnAA : 'fld10050_122391_126879_id',
-	delRowBtnAA : 'fld10050_122791_127279_id'
+	assayDate : 'fld10050_136226_141261_span',
+	sample : 'fld10050_136246_141281_span',
+	studyPhase : 'fld10050_136186_141221_span',
+	rvwfHumateP : 'fld10050_136206_141241_span',
+	iggOD : 'fld10050_136286_141321_span',
+	igg95 : 'fld10050_136326_141361_span',
+	igmOD : 'fld10050_136366_141401_span',
+	igm95 : 'fld10050_136346_141381_span',
+	addRowBtnAA : 'fld10050_136306_141341_id',
+	delRowBtnAA : 'fld10050_136386_141421_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
@@ -23,7 +23,7 @@ for (var i = 1; i < totalRows; i++) {
 		assayDate : String(generateNextID(assaysRows[i-1].assayDate).concat("_span")),
 		sample : String(generateNextID(assaysRows[i-1].sample).concat("_span")),
 		studyPhase : String(generateNextID(assaysRows[i-1].studyPhase).concat("_span")),
-		rwfHumateP : String(generateNextID(assaysRows[i-1].rwfHumateP).concat("_span")),
+		rvwfHumateP : String(generateNextID(assaysRows[i-1].rvwfHumateP).concat("_span")),
 		iggOD : String(generateNextID(assaysRows[i-1].iggOD).concat("_span")),
 		igg95 : String(generateNextID(assaysRows[i-1].igg95).concat("_span")),
 		igmOD : String(generateNextID(assaysRows[i-1].igmOD).concat("_span")),
@@ -113,7 +113,7 @@ $j(".addBtnSA").click(function() {
 			$j("#" + assaysRows[i+1].assayDate).closest("tr").show();
 			$j("#" + assaysRows[i+1].sample).show();
 			$j("#" + assaysRows[i+1].studyPhase).show();
-			$j("#" + assaysRows[i+1].rwfHumateP).show();
+			$j("#" + assaysRows[i+1].rvwfHumateP).show();
 			$j("#" + assaysRows[i+1].iggOD).show();
 			$j("#" + assaysRows[i+1].igg95).show();
 			$j("#" + assaysRows[i+1].igmOD).show();
@@ -141,14 +141,6 @@ $j(".deleteBtnSA").click(function() {
 		if (rowName === labelId) {
 			y = "True";
 
-			sample : 'fld10050_122491_126979_span',
-			rwfHumateP : 'fld10050_122591_127079_span',
-			iggOD : 'fld10050_122641_127129_span',
-			igg95 : 'fld10050_122541_127029_span',
-			igmOD : 'fld10050_122441_126929_span',
-			igm95 : 'fld10050_122841_127329_span',
-			addRowBtnAA : 'fld10050_122391_126879_id',
-			delRowBtnAA : 'fld10050_122791_127279_id'
 			//Remove values from current row and hide the row
 			var a = assaysRows[i].assayDate.indexOf("_span");
 			$j("#" + assaysRows[i].assayDate.substring(0, a)).val("");
@@ -159,11 +151,11 @@ $j(".deleteBtnSA").click(function() {
 			$j("#" + assaysRows[i].sample.substring(0, b)).val("");
 			$j("#" + assaysRows[i].sample).hide();
 			
-			var c = assaysRows[i].rwfHumateP.indexOf("_span");
-			var listUncheck = document.getElementsByName(assaysRows[i].rwfHumateP.substring(0, c));
+			var c = assaysRows[i].rvwfHumateP.indexOf("_span");
+			var listUncheck = document.getElementsByName(assaysRows[i].rvwfHumateP.substring(0, c));
 			for (var j = 0 ; j < listUncheck.length; j++)
 				listUncheck[j].checked = false;
-			$j("#" + assaysRows[i].rwfHumateP).hide();
+			$j("#" + assaysRows[i].rvwfHumateP).hide();
 			
 			var d = assaysRows[i].studyPhase.indexOf("_span");
 			var listUncheck = document.getElementsByName(assaysRows[i].studyPhase.substring(0, d));
@@ -238,3 +230,6 @@ $j(".deleteBtnSA").click(function() {
 	}
 
 });
+
+
+
