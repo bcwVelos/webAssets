@@ -28,8 +28,8 @@ for (var i = 1; i < totalRows; i++) {
 		igg95 : String(generateNextID(assaysRows[i-1].igg95).concat("_span")),
 		igmOD : String(generateNextID(assaysRows[i-1].igmOD).concat("_span")),
 		igm95 : String(generateNextID(assaysRows[i-1].igm95).concat("_span")),
-		addRowBtnA : String(generateNextID(assaysRows[i-1].addRowBtnAA).concat("_id")),
-		delRowBtnA : String(generateNextID(assaysRows[i-1].delRowBtnAA).concat("_id"))
+		addRowBtnA : String(generateNextID(assaysRows[i-1].addRowBtnA).concat("_id")),
+		delRowBtnA : String(generateNextID(assaysRows[i-1].delRowBtnA).concat("_id"))
 	}
 }
 
