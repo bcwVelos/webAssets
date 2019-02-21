@@ -6,15 +6,15 @@ var totalRows = 10;
 var inhibRows = new Array(totalRows);
 
 inhibRows[0] = {
-	iaDate : 'fld10050_137001_142035_span',
-	sample : 'fld10050_136981_142015_span',
-	studyPhase : 'fld10050_137011_142045_span',
-	vwfF8b : 'fld10050_136931_141965_span',
-	vwfGpibm : 'fld10050_136991_142025_span',
-	vwfCb3 : 'fld10050_136971_142005_span',
-	vwfCb4 : 'fld10050_136951_141985_span',
-	addRowBtn : 'fld10050_136961_141995_id',
-	delRowBtn : 'fld10050_137021_142055_id'
+	iaDate : 'fld10050_137833_142869_span',
+	sample : 'fld10050_137813_142849_span',
+	studyPhase : 'fld10050_137843_142879_span',
+	vwfF8b : 'fld10050_137763_142799_span',
+	vwfGpibm : 'fld10050_137823_142859_span',
+	vwfCb3 : 'fld10050_137803_142839_span',
+	vwfCb4 : 'fld10050_137783_142819_span',
+	addRowBtn : 'fld10050_137793_142829_id',
+	delRowBtn : 'fld10050_137853_142889_id'
 }
 
 for (var i = 1; i < totalRows; i++) {

@@ -6,14 +6,14 @@ var totalRows = 10;
 var ctRows = new Array(totalRows);
 
 ctRows[0] = {
-	ctDate : 'fld10050_136891_141925_span',
-	sample : 'fld10050_136861_141895_span',
-	studyPhase : 'fld10050_136901_141935_span',
-	iggIgm : 'fld10050_136841_141875_span',
-	confirmed : 'fld10050_136871_141905_span',
-	lowestTiter : 'fld10050_136881_141915_span',
-	addRowBtn : 'fld10050_136921_141955_id',
-	delRowBtn : 'fld10050_136911_141945_id'
+	ctDate : 'fld10050_137723_142759_span',
+	sample : 'fld10050_137693_142729_span',
+	studyPhase : 'fld10050_137733_142769_span',
+	iggIgm : 'fld10050_137673_142709_span',
+	confirmed : 'fld10050_137703_142739_span',
+	lowestTiter : 'fld10050_137713_142749_span',
+	addRowBtn : 'fld10050_137753_142789_id',
+	delRowBtn : 'fld10050_137743_142779_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
