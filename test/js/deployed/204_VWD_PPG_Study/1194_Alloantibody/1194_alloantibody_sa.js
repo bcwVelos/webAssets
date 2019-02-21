@@ -6,16 +6,16 @@ var totalRows = 20;
 var assaysRows = new Array(totalRows);
 
 assaysRows[0] = {
-	assayDate : 'fld10050_136226_141261_span',
-	sample : 'fld10050_136246_141281_span',
-	studyPhase : 'fld10050_136186_141221_span',
-	rvwfHumateP : 'fld10050_136206_141241_span',
-	iggOD : 'fld10050_136286_141321_span',
-	igg95 : 'fld10050_136326_141361_span',
-	igmOD : 'fld10050_136366_141401_span',
-	igm95 : 'fld10050_136346_141381_span',
-	addRowBtnA : 'fld10050_136306_141341_id',
-	delRowBtnA : 'fld10050_136386_141421_id'
+	assayDate : 'fld10050_137077_142112_span',
+	sample : 'fld10050_137097_142132_span',
+	studyPhase : 'fld10050_137037_142072_span',
+	rvwfHumateP : 'fld10050_137057_142092_span',
+	iggOD : 'fld10050_137137_142172_span',
+	igg95 : 'fld10050_137177_142212_span',
+	igmOD : 'fld10050_137217_142252_span',
+	igm95 : 'fld10050_137197_142232_span',
+	addRowBtnA : 'fld10050_137157_142192_id',
+	delRowBtnA : 'fld10050_137237_142272_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
