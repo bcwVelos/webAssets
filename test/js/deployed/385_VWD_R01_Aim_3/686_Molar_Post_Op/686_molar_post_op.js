@@ -498,6 +498,7 @@ $j('.[class^="copyBtn"]').click(function(event) {
 			x = "True";
 			
 			var a = thisarray[i].type.indexOf("_span");
+			alert(a);
 			//Show all values in row where the add button was selected
 			tempMedType = thisarray[i].type.substring(0, a).val;
 			alert(tempMedType);
