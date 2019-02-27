@@ -481,7 +481,7 @@ $j('.[class^="deleteBtn"]').click(function(event) {
 
 //******* BEGIN COPY BUTTON LISTENER ***************//	
 $j('.[class^="copyBtn"]').click(function(event) {
-	
+	alert("Hello world");
 
 	var parentLabel = $j(this).parent("label");
 	var labelId = $j(parentLabel).attr("id");
