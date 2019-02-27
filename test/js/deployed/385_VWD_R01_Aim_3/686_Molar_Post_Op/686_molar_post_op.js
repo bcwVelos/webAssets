@@ -494,11 +494,12 @@ $j('.[class^="copyBtn"]').click(function(event) {
 	while (!Boolean(x)) {
 		alert("Hello world 3");
 		var rowName = thisarray[i].copyBtn;
+		alert("Hello world 4");
 		if (rowName === labelId) {
-
+			alert("Hello world 5");
 			x = "True";
 			
-			alert("Hello world 4");
+			alert("Hello world 6");
 			//Show all values in row where the add button was selected
 			tempMedType = thisarray[i][name].val;
 			alert(tempMedType);
