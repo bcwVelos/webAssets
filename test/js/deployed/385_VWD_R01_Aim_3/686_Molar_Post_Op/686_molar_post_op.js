@@ -65,10 +65,10 @@ var totalRepeatingSections = 15;
 //Define the name of the object that will be used to hold the row's data
 var rowObjName = "medicationRow";
 
-var tempMedType = "";
+var tempType = "";
 var tempBrandName = "";
 var tempGenericName = "";
-var tempMedicationType = "";
+var tempNdcType = "";
 var tempPharmClass = "";
 
 //Number of rows
@@ -496,17 +496,29 @@ $j('.[class^="copyBtn"]').click(function(event) {
 
 		if (rowName === labelId) {
 			x = "True";
-			alert("hello all");
-			
+
 			var a = thisarray[i].type.indexOf("_span");
-			if (a < 0) {
-				a = thisarray[i].type.indexOf("_id");
-			}
 			tempMedType = $j("#" + thisarray[i].type.substring(0, a)).val();
 			alert(tempMedType);
 
+			var b = thisarray[i].brandName.indexOf("_span");
+			tempBrandName = $j("#" + thisarray[i].brandName.substring(0, b)).val();
+			alert(tempBrandName);
+			
+			var c = thisarray[i].genericName.indexOf("_span");
+			tempGenericName = $j("#" + thisarray[i].genericName.substring(0, c)).val();
+			alert(tempGenericName);
+			
+			var d = thisarray[i].ndcType.indexOf("_span");
+			tempNdcType = $j("#" + thisarray[i].ndcType.substring(0, d)).val();
+			alert(tempNdcType);
+			
+			var e = thisarray[i].pharmClass.indexOf("_span");
+			tempPharmClass = $j("#" + thisarray[i].pharmClass.substring(0, e)).val();
+			alert(tempPharmClass);
+			}
 
-		} 
+		}
 
 		i++;
 		
