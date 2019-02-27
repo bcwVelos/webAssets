@@ -496,16 +496,15 @@ $j('.[class^="copyBtn"]').click(function(event) {
 
 		if (rowName === labelId) {
 			x = "True";
-			alert("hello world");
+			alert("hello all");
 			
-			for (var name in thisarray[i]) {
-				var a = thisarray[i][name].indexOf("_span");
-				if (a < 0) {
-					a = thisarray[i][name].indexOf("_id");
-				}
-				tempMedType = $j("#" + thisarray[i][name].substring(0, a)).val();
-				alert(tempMedType);
+			var a = thisarray[i][name].indexOf("_span");
+			if (a < 0) {
+				a = thisarray[i][name].indexOf("_id");
 			}
+			tempMedType = $j("#" + thisarray[i].type.substring(0, a)).val();
+			alert(tempMedType);
+
 
 		} 
 
