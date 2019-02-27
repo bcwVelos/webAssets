@@ -14,7 +14,7 @@ function medicationRow(){
     this.pasteBtn = null;
 }
 
-function medicationRow(type, brandName, genericName, ndcType, pharmClass, addRowBtn, delRowBtn) {
+function medicationRow(type, brandName, genericName, ndcType, pharmClass, addRowBtn, delRowBtn, copyBtn, pasteBtn) {
     this.type = type;
     this.brandName = brandName;
     this.genericName = genericName;
