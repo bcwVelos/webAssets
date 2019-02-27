@@ -65,6 +65,12 @@ var totalRepeatingSections = 15;
 //Define the name of the object that will be used to hold the row's data
 var rowObjName = "medicationRow";
 
+var tempMedType = "";
+var tempBrandName = "";
+var tempGenericName = "";
+var tempMedicationType = "";
+var tempPharmClass = "";
+
 //Number of rows
 var postOp0_rowNum = 10;
 var postOp1_rowNum = 10;
@@ -472,5 +478,41 @@ $j('.[class^="deleteBtn"]').click(function(event) {
 
 });
 //******* END DELETE BUTTON LISTENER ***************//	
+
+//******* BEGIN COPY BUTTON LISTENER ***************//	
+$j('.[class^="copyBtn"]').click(function(event) {
+	
+
+	var parentLabel = $j(this).parent("label");
+	var labelId = $j(parentLabel).attr("id");
+
+	var x;
+	var i = 0;
+	
+	var thisarray = window["postOp" + $j(this).attr("class").substring(6) + "_medicationRows"];
+
+	while (!Boolean(x)) {
+		var rowName = thisarray[i].copyBtn;
+		if (rowName === labelId) {
+
+			x = "True";
+			
+			var tempMedType = "";
+			var tempBrandName = "";
+			var tempGenericName = "";
+			var tempMedicationType = "";
+			var tempPharmClass = "";		
+			//Show all values in row where the add button was selected
+			tempMedType = thisarray[i][name].val;
+			alert(tempMedType);
+
+		} 
+
+		i++;
+		
+	}
+	
+
+});
 
 });
