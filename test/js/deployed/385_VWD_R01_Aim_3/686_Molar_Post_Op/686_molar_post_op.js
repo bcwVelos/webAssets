@@ -497,10 +497,10 @@ $j('.[class^="copyBtn"]').click(function(event) {
 		if (rowName === labelId) {
 			x = "True";
 			
-			alert("Hello world 6");
+			var a = thisarray[i].type.indexOf("_span");
 			//Show all values in row where the add button was selected
-			tempMedType = thisarray[i].type.val;
-			alert(thisarray[i].type.val);
+			tempMedType = thisarray[i].type.substring(0, a).val;
+			alert(tempMedType);
 
 		} 
 
