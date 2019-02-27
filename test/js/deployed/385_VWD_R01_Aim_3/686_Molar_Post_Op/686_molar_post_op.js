@@ -503,10 +503,8 @@ $j('.[class^="copyBtn"]').click(function(event) {
 				if (a < 0) {
 					a = thisarray[i][name].indexOf("_id");
 				}
-				$j("#" + thisarray[i][name].substring(0, a)).val("");
-				$j("#" + thisarray[i][name]).hide();
-				$j("#" + thisarray[i][name]).siblings().hide();
-				alert($j("#" + thisarray[i][name].substring(0, a)).val());
+				tempMedType = $j("#" + thisarray[i][name].substring(0, a)).val();
+				alert(tempMedType);
 			}
 
 		} 
