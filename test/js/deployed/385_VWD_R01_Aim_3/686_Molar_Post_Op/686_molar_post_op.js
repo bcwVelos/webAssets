@@ -489,7 +489,7 @@ $j('.[class^="copyBtn"]').click(function(event) {
 	var x;
 	var i = 0;
 	
-	var thisarray = window["postOp" + $j(this).attr("class").substring(6) + "_medicationRows"];
+	var thisarray = window["postOp" + $j(this).attr("class").substring(7) + "_medicationRows"];
 	alert("Hello world 2");
 	while (!Boolean(x)) {
 		alert("Hello world 3");
