@@ -496,11 +496,18 @@ $j('.[class^="copyBtn"]').click(function(event) {
 
 		if (rowName === labelId) {
 			x = "True";
-			alert("hello");
-			var a = thisarray[i].type.indexOf("_span");
-			//Show all values in row where the add button was selected
-			tempMedType = thisarray[i].type.substring(0,a).value;
-			alert(tempMedType);
+			alert("hello world");
+			
+			for (var name in thisarray[i]) {
+				var a = thisarray[i][name].indexOf("_span");
+				if (a < 0) {
+					a = thisarray[i][name].indexOf("_id");
+				}
+				$j("#" + thisarray[i][name].substring(0, a)).val("");
+				$j("#" + thisarray[i][name]).hide();
+				$j("#" + thisarray[i][name]).siblings().hide();
+				alert($j("#" + thisarray[i][name].substring(0, a)).val());
+			}
 
 		} 
 
