@@ -516,7 +516,7 @@ $j('.[class^="copyBtn"]').click(function(event) {
 			var e = thisarray[i].pharmClass.indexOf("_span");
 			tempPharmClass = $j("#" + thisarray[i].pharmClass.substring(0, e)).val();
 			alert(tempPharmClass);
-			}
+			
 
 		}
 
