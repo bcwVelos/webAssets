@@ -498,9 +498,9 @@ $j('.[class^="copyBtn"]').click(function(event) {
 			x = "True";
 			alert("hello all");
 			
-			var a = thisarray[i][name].indexOf("_span");
+			var a = thisarray[i].type.indexOf("_span");
 			if (a < 0) {
-				a = thisarray[i][name].indexOf("_id");
+				a = thisarray[i].type.indexOf("_id");
 			}
 			tempMedType = $j("#" + thisarray[i].type.substring(0, a)).val();
 			alert(tempMedType);
