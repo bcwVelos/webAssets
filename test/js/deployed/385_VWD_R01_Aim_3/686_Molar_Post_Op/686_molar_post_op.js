@@ -498,10 +498,9 @@ $j('.[class^="copyBtn"]').click(function(event) {
 			x = "True";
 			
 			alert("Hello world 6");
-			alert(tempMedType);
 			//Show all values in row where the add button was selected
-			tempMedType = thisarray[i].medType.val;
-			alert(thisarray[i].medType.val);
+			tempMedType = thisarray[i].type.val;
+			alert(thisarray[i].type.val);
 
 		} 
 
