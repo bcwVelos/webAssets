@@ -527,4 +527,47 @@ $j('.[class^="copyBtn"]').click(function(event) {
 
 });
 
+//******* BEGIN PASTE BUTTON LISTENER ***************//	
+$j('.[class^="pasteBtn"]').click(function(event) {
+
+	var parentLabel = $j(this).parent("label");
+	var labelId = $j(parentLabel).attr("id");
+
+	var x;
+	var i = 0;
+	
+	var thisarray = window["postOp" + $j(this).attr("class").substring(8) + "_medicationRows"];
+
+	while (!Boolean(x)) {
+
+		var rowName = thisarray[i].pasteBtn;
+
+		if (rowName === labelId) {
+			x = "True";
+
+			var a = thisarray[i].type.indexOf("_span");
+			$j("#" + thisarray[i].type.substring(0, a)).val(tempMedType);
+
+			var b = thisarray[i].brandName.indexOf("_span");
+			$j("#" + thisarray[i].brandName.substring(0, b)).val(tempBrandName);
+			
+			var c = thisarray[i].genericName.indexOf("_span");
+			 $j("#" + thisarray[i].genericName.substring(0, c)).val(tempGenericName);
+			
+			var d = thisarray[i].ndcType.indexOf("_span");
+			$j("#" + thisarray[i].ndcType.substring(0, d)).val(tempNdcType);
+			
+			var e = thisarray[i].pharmClass.indexOf("_span");
+			$j("#" + thisarray[i].pharmClass.substring(0, e)).val(tempPharmClass);
+			
+
+		}
+
+		i++;
+		
+	}
+	
+
+});
+
 });
