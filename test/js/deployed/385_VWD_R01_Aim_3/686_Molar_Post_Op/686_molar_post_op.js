@@ -481,7 +481,7 @@ $j('.[class^="deleteBtn"]').click(function(event) {
 
 //******* BEGIN COPY BUTTON LISTENER ***************//	
 $j('.[class^="copyBtn"]').click(function(event) {
-	alert("Hello world");
+	alert("Hello world 1");
 
 	var parentLabel = $j(this).parent("label");
 	var labelId = $j(parentLabel).attr("id");
@@ -490,14 +490,14 @@ $j('.[class^="copyBtn"]').click(function(event) {
 	var i = 0;
 	
 	var thisarray = window["postOp" + $j(this).attr("class").substring(6) + "_medicationRows"];
-
+	alert("Hello world 2");
 	while (!Boolean(x)) {
 		var rowName = thisarray[i].copyBtn;
 		if (rowName === labelId) {
 
 			x = "True";
 			
-			alert("Hello world");
+			alert("Hello world 3");
 			//Show all values in row where the add button was selected
 			tempMedType = thisarray[i][name].val;
 			alert(tempMedType);
