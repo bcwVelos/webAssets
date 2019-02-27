@@ -501,9 +501,10 @@ $j('.[class^="copyBtn"]').click(function(event) {
 			
 			alert("Hello world 6");
 			//Show all values in row where the add button was selected
-			tempMedType = thisarray[i][name].val;
+			tempMedType = thisarray[i].medType.val;
+			tempBrandType = thisarray[i].BrandType.val;
 			alert(tempMedType);
-
+			alert(tempBrandType);
 		} 
 
 		i++;
