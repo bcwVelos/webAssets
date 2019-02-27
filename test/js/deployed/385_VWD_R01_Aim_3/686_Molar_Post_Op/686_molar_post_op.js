@@ -497,11 +497,7 @@ $j('.[class^="copyBtn"]').click(function(event) {
 
 			x = "True";
 			
-			var tempMedType = "";
-			var tempBrandName = "";
-			var tempGenericName = "";
-			var tempMedicationType = "";
-			var tempPharmClass = "";		
+			alert("Hello world");
 			//Show all values in row where the add button was selected
 			tempMedType = thisarray[i][name].val;
 			alert(tempMedType);
