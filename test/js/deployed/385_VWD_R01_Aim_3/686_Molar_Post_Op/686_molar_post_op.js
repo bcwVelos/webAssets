@@ -8,10 +8,10 @@ function medicationRow(){
     this.genericName = null;
     this.ndcType = null;
     this.pharmClass = null;
-    this.addRowBtn = null;
-    this.delRowBtn = null;
     this.copyBtn = null;
     this.pasteBtn = null;
+    this.addRowBtn = null;
+    this.delRowBtn = null;
 }
 
 function medicationRow(type, brandName, genericName, ndcType, pharmClass, addRowBtn, delRowBtn, copyBtn, pasteBtn) {
@@ -20,10 +20,10 @@ function medicationRow(type, brandName, genericName, ndcType, pharmClass, addRow
     this.genericName = genericName;
     this.ndcType = ndcType;
     this.pharmClass = pharmClass;
-    this.addRowBtn = addRowBtn;
-    this.delRowBtn = delRowBtn;
     this.copyBtn = copyBtn;
     this.pasteBtn = pasteBtn;
+    this.addRowBtn = addRowBtn;
+    this.delRowBtn = delRowBtn;
 }
 
 //********* END DATA OBJECT FUNCTIONS **********//
@@ -93,105 +93,105 @@ var postOp14_rowNum = 10;
 var postOp0_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp0_medicationRows[0] = new medicationRow(
-	"fld10050_139438_144473_span",
-	"fld10050_139468_144503_span",
-	"fld10050_139488_144523_span",
-	"fld10050_139478_144513_span",
-	"fld10050_139498_144533_span",
-	"fld10050_139448_144483_id",
-	"fld10050_139458_144493_id",
-	"fld10050_139508_144543_id",
-	"fld10050_139518_144553_id");
+	"fld10050_57667_60944_span",
+	"fld10050_57697_60974_span", 
+	"fld10050_57717_60994_span",
+	"fld10050_57707_60984_span", 
+	"fld10050_57727_61004_span",
+	"fld10050_140983_146019_id",
+	"fld10050_140993_146029_id",
+	"fld10050_57677_60954_id", 
+	"fld10050_57687_60964_id");
 
 //Post Op Day 1 
 //array to contain objects representing each row for this section
 var postOp1_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp1_medicationRows[0] = new medicationRow(
-	"fld10050_139601_144636_span",
-	"fld10050_139571_144606_span",
-	"fld10050_139581_144616_span",
-	"fld10050_139561_144596_span",
-	"fld10050_139591_144626_span",
-	"fld10050_139611_144646_id",
-	"fld10050_139621_144656_id",
-	"fld10050_139541_144576_id",
-	"fld10050_139551_144586_id");
+	"fld10050_57790_61067_span",
+	"fld10050_57760_61037_span", 
+	"fld10050_57770_61047_span",
+	"fld10050_57750_61027_span", 
+	"fld10050_57780_61057_span",	
+	"fld10050_141023_146059_id",
+	"fld10050_141033_146069_id",
+	"fld10050_57800_61077_id", 
+	"fld10050_57810_61087_id");
 
 //Post Op Day 2
 //array to contain objects representing each row for this section
 var postOp2_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp2_medicationRows[0] = new medicationRow(
-		"fld10050_139654_144689_span",
-		"fld10050_139714_144749_span",
-		"fld10050_139724_144759_span",
-		"fld10050_139704_144739_span",
-		"fld10050_139644_144679_span",
-		"fld10050_139684_144719_id",
-		"fld10050_139694_144729_id",
-		"fld10050_139664_144699_id",
-		"fld10050_139674_144709_id");
+	"fld10050_57893_61170_span",
+	"fld10050_57863_61140_span", 
+	"fld10050_57873_61150_span",
+	"fld10050_57853_61130_span", 
+	"fld10050_57883_61160_span",
+	"fld10050_141043_146079_id",
+	"fld10050_141053_146089_id",
+	"fld10050_57833_61110_id", 
+	"fld10050_57843_61120_id");
 
 //Post Op Day 3
 //array to contain objects representing each row for this section
 var postOp3_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp3_medicationRows[0] = new medicationRow(
-		"fld10050_139787_144822_span",
-		"fld10050_139757_144792_span",
-		"fld10050_139767_144802_span",
-		"fld10050_139747_144782_span",
-		"fld10050_139777_144812_span",
-		"fld10050_139797_144832_id",
-		"fld10050_139807_144842_id",
-		"fld10050_139817_144852_id",
-		"fld10050_139827_144862_id");
+	"fld10050_57956_61233_span",
+	"fld10050_57926_61203_span", 
+	"fld10050_57936_61213_span",
+	"fld10050_57916_61193_span", 
+	"fld10050_57946_61223_span",
+	"fld10050_141063_146099_id",
+	"fld10050_141073_146109_id",
+	"fld10050_57966_61243_id", 
+	"fld10050_57976_61253_id");
 
 //Post Op Day 4
 //array to contain objects representing each row for this section
 var postOp4_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp4_medicationRows[0] = new medicationRow(
-		"fld10050_139870_144905_span",
-		"fld10050_139890_144925_span",
-		"fld10050_139900_144935_span",
-		"fld10050_139880_144915_span",
-		"fld10050_139910_144945_span",
-		"fld10050_139850_144885_id",
-		"fld10050_139860_144895_id",
-		"fld10050_139930_144965_id",
-		"fld10050_139920_144955_id");
+	"fld10050_58019_61296_span",
+	"fld10050_58039_61316_span", 
+	"fld10050_58049_61326_span",
+	"fld10050_58029_61306_span", 
+	"fld10050_58059_61336_span",
+	"fld10050_141083_146119_id",
+	"fld10050_141093_146129_id",
+	"fld10050_57999_61276_id", 
+	"fld10050_58009_61286_id");
 
 //Post Op Day 5
 //array to contain objects representing each row for this section
 var postOp5_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp5_medicationRows[0] = new medicationRow(
-		"fld10050_140013_145048_span",
-		"fld10050_139963_144998_span",
-		"fld10050_139973_145008_span",
-		"fld10050_139953_144988_span",
-		"fld10050_139983_145018_span",
-		"fld10050_139993_145028_id",
-		"fld10050_140003_145038_id",
-		"fld10050_140033_145068_id",
-		"fld10050_140023_145058_id");
+	"fld10050_58142_61419_span",
+	"fld10050_58092_61369_span", 
+	"fld10050_58102_61379_span",
+	"fld10050_58082_61359_span", 
+	"fld10050_58112_61389_span",
+	"fld10050_141103_146139_id",
+	"fld10050_141113_146149_id",
+	"fld10050_58122_61399_id", 
+	"fld10050_58132_61409_id");
 
 //Post Op Day 6
 //array to contain objects representing each row for this section
 var postOp6_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp6_medicationRows[0] = new medicationRow(
-		"fld10050_140126_145161_span",
-		"fld10050_140076_145111_span",
-		"fld10050_140086_145121_span",
-		"fld10050_140066_145101_span",
-		"fld10050_140096_145131_span",
-		"fld10050_140106_145141_id",
-		"fld10050_140116_145151_id",
-		"fld10050_140056_145091_id",
-		"fld10050_140136_145171_id");
+	"fld10050_58225_61502_span",
+	"fld10050_58175_61452_span", 
+	"fld10050_58185_61462_span",
+	"fld10050_58165_61442_span", 
+	"fld10050_58195_61472_span",
+	"fld10050_141123_146159_id",
+	"fld10050_141133_146169_id",
+	"fld10050_58205_61482_id", 
+	"fld10050_58215_61492_id");
 
 
 //Post Op Day 7
@@ -199,120 +199,120 @@ postOp6_medicationRows[0] = new medicationRow(
 var postOp7_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp7_medicationRows[0] = new medicationRow(
-		"fld10050_140169_145204_span",
-		"fld10050_140199_145234_span",
-		"fld10050_140209_145244_span",
-		"fld10050_140189_145224_span",
-		"fld10050_140219_145254_span",
-		"fld10050_140179_145214_id",
-		"fld10050_140229_145264_id",
-		"fld10050_140239_145274_id",
-		"fld10050_140159_145194_id");
+	"fld10050_58248_61525_span",
+	"fld10050_58278_61555_span", 
+	"fld10050_58288_61565_span",
+	"fld10050_58268_61545_span", 
+	"fld10050_58298_61575_span",
+	"fld10050_141143_146179_id",
+	"fld10050_141203_146239_id",
+	"fld10050_58258_61535_id", 
+	"fld10050_58308_61585_id");
 
 //Post Op Day 8
 //array to contain objects representing each row for this section
 var postOp8_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp8_medicationRows[0] = new medicationRow(
-		"fld10050_140262_145297_span",
-		"fld10050_140282_145317_span",
-		"fld10050_140292_145327_span",
-		"fld10050_140272_145307_span",
-		"fld10050_140302_145337_span",
-		"fld10050_140332_145367_id",
-		"fld10050_140342_145377_id",
-		"fld10050_140312_145347_id",
-		"fld10050_140322_145357_id");
+	"fld10050_58351_61628_span",
+	"fld10050_58371_61648_span", 
+	"fld10050_58381_61658_span",
+	"fld10050_58361_61638_span", 
+	"fld10050_58391_61668_span",
+	"fld10050_141153_146189_id",
+	"fld10050_141163_146199_id",
+	"fld10050_58331_61608_id", 
+	"fld10050_58341_61618_id");
 
 //Post Op Day 9
 //array to contain objects representing each row for this section
 var postOp9_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp9_medicationRows[0] = new medicationRow(
-		"fld10050_140415_145450_span",
-		"fld10050_140375_145410_span",
-		"fld10050_140385_145420_span",
-		"fld10050_140365_145400_span",
-		"fld10050_140405_145440_span",
-		"fld10050_140435_145470_id",
-		"fld10050_140425_145460_id",
-		"fld10050_140445_145480_id",
-		"fld10050_140395_145430_id");
+	"fld10050_58454_61731_span",
+	"fld10050_58424_61701_span", 
+	"fld10050_58434_61711_span",
+	"fld10050_58414_61691_span", 
+	"fld10050_58444_61721_span",
+	"fld10050_141173_146209_id",
+	"fld10050_141183_146219_id",
+	"fld10050_58474_61751_id", 
+	"fld10050_58464_61741_id");
 
 //Post Op Day 10
 //array to contain objects representing each row for this section
 var postOp10_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp10_medicationRows[0] = new medicationRow(
-		"fld10050_140478_145513_span",
-		"fld10050_140508_145543_span",
-		"fld10050_140488_145523_span",
-		"fld10050_140498_145533_span",
-		"fld10050_140518_145553_span",
-		"fld10050_140538_145573_id",
-		"fld10050_140528_145563_id",
-		"fld10050_140468_145503_id",
-		"fld10050_140548_145583_id");
+	"fld10050_58497_61774_span",
+	"fld10050_58527_61804_span", 
+	"fld10050_58507_61784_span",
+	"fld10050_58517_61794_span", 
+	"fld10050_58537_61814_span",
+	"fld10050_141193_146229_id",
+	"fld10050_141213_146249_id",
+	"fld10050_58557_61834_id", 
+	"fld10050_58547_61824_id");
 
 //Post Op Day 11
 //array to contain objects representing each row for this section
 var postOp11_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp11_medicationRows[0] = new medicationRow(
-		"fld10050_140631_145666_span",
-		"fld10050_140591_145626_span",
-		"fld10050_140601_145636_span",
-		"fld10050_140581_145616_span",
-		"fld10050_140611_145646_span",
-		"fld10050_140641_145676_id",
-		"fld10050_140621_145656_id",
-		"fld10050_140651_145686_id",
-		"fld10050_140571_145606_id");
+	"fld10050_58630_61907_span",
+	"fld10050_58590_61867_span", 
+	"fld10050_58600_61877_span",
+	"fld10050_58580_61857_span", 
+	"fld10050_58610_61887_span",
+	"fld10050_141223_146259_id",
+	"fld10050_141233_146269_id",
+	"fld10050_58640_61917_id", 
+	"fld10050_58620_61897_id");
 
 //Post Op Day 12
 //array to contain objects representing each row for this section
 var postOp12_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp12_medicationRows[0] = new medicationRow(
-		"fld10050_140695_145730_span",
-		"fld10050_140715_145750_span",
-		"fld10050_140725_145760_span",
-		"fld10050_140705_145740_span",
-		"fld10050_140735_145770_span",
-		"fld10050_140745_145780_id",
-		"fld10050_140685_145720_id",
-		"fld10050_140755_145790_id",
-		"fld10050_140675_145710_id");
+	"fld10050_58673_61950_span",
+	"fld10050_58693_61970_span", 
+	"fld10050_58703_61980_span",
+	"fld10050_58683_61960_span", 
+	"fld10050_58713_61990_span",
+	"fld10050_141243_146279_id",
+	"fld10050_141253_146289_id",
+	"fld10050_58723_62000_id", 
+	"fld10050_58663_61940_id");
 
 //Post Op Day 13
 //array to contain objects representing each row for this section
 var postOp13_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp13_medicationRows[0] = new medicationRow(
-		"fld10050_140778_145813_span",
-		"fld10050_140798_145833_span",
-		"fld10050_140808_145843_span",
-		"fld10050_140788_145823_span",
-		"fld10050_140818_145853_span",
-		"fld10050_140828_145863_id",
-		"fld10050_140838_145873_id",
-		"fld10050_140848_145883_id",
-		"fld10050_140858_145893_id");
+	"fld10050_58746_62023_span",
+	"fld10050_58766_62043_span", 
+	"fld10050_58776_62053_span",
+	"fld10050_58756_62033_span", 
+	"fld10050_58786_62063_span",
+	"fld10050_141263_146299_id",
+	"fld10050_141273_146309_id",
+	"fld10050_58796_62073_id", 
+	"fld10050_58806_62083_id");
 
 //Post Op Day 14
 //array to contain objects representing each row for this section
 var postOp14_medicationRows = [];
 //Define identifiers for the first row in the repeating data set.
 postOp14_medicationRows[0] = new medicationRow(
-		"fld10050_140961_145996_span",
-		"fld10050_140911_145946_span",
-		"fld10050_140921_145956_span",
-		"fld10050_140901_145936_span",
-		"fld10050_140931_145966_span",
-		"fld10050_140941_145976_id",
-		"fld10050_140951_145986_id",
-		"fld10050_140881_145916_id",
-		"fld10050_140891_145926_id");
+	"fld10050_58889_62166_span",
+	"fld10050_58839_62116_span", 
+	"fld10050_58849_62126_span",
+	"fld10050_58829_62106_span", 
+	"fld10050_58859_62136_span",
+	"fld10050_141003_146039_id",
+	"fld10050_141013_146049_id",
+	"fld10050_58869_62146_id", 
+	"fld10050_58879_62156_id");
 
 //******* END DATA DEFINITIONS ***************//
 
@@ -411,9 +411,9 @@ $j('.[class^="addBtn"]').click(function(event) {
 			$j("#" + thisarray[i+1].genericName).show();
 			$j("#" + thisarray[i+1].ndcType).show();
 			$j("#" + thisarray[i+1].pharmClass).show();
-			$j("#" + thisarray[i+1].delRowBtn).show();
 			$j("#" + thisarray[i+1].copyBtn).show();
 			$j("#" + thisarray[i+1].pasteBtn).show();
+			$j("#" + thisarray[i+1].delRowBtn).show();
 
 			
 			if((i+1) < (thisarray.length -1)) {
@@ -530,6 +530,9 @@ $j('.[class^="copyBtn"]').click(function(event) {
 //******* BEGIN PASTE BUTTON LISTENER ***************//	
 $j('.[class^="pasteBtn"]').click(function(event) {
 
+		if (tempMedtype == null || tempBrandName == null)
+			alert("You have not copied any text yet!");
+		else {
 		var parentLabel = $j(this).parent("label");
 		var labelId = $j(parentLabel).attr("id");
 	
@@ -537,7 +540,7 @@ $j('.[class^="pasteBtn"]').click(function(event) {
 		var i = 0;
 		
 		var thisarray = window["postOp" + $j(this).attr("class").substring(8) + "_medicationRows"];
-
+	
 		while (!Boolean(x)) {
 	
 			var rowName = thisarray[i].pasteBtn;
@@ -565,6 +568,7 @@ $j('.[class^="pasteBtn"]').click(function(event) {
 	
 			i++;
 		}
+	}
 	
 
 });
