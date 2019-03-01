@@ -530,9 +530,6 @@ $j('.[class^="copyBtn"]').click(function(event) {
 //******* BEGIN PASTE BUTTON LISTENER ***************//	
 $j('.[class^="pasteBtn"]').click(function(event) {
 
-		if (tempMedtype == null && tempBrandName == null)
-			alert("You have not copied any text yet!");
-		else {
 		var parentLabel = $j(this).parent("label");
 		var labelId = $j(parentLabel).attr("id");
 	
@@ -540,7 +537,9 @@ $j('.[class^="pasteBtn"]').click(function(event) {
 		var i = 0;
 		
 		var thisarray = window["postOp" + $j(this).attr("class").substring(8) + "_medicationRows"];
-	
+	if (tempMedtype == null && tempBrandName == null)
+			alert("You have not copied any text yet!");
+	else {
 		while (!Boolean(x)) {
 	
 			var rowName = thisarray[i].pasteBtn;
