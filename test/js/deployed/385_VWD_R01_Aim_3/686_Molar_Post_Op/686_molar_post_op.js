@@ -524,9 +524,6 @@ $j('.[class^="copyBtn"]').click(function(event) {
 //******* BEGIN PASTE BUTTON LISTENER ***************//	
 $j('.[class^="pasteBtn"]').click(function(event) {
 
-		if (tempMedtype == null || tempBrandName == null)
-			alert("You have not copied any text yet!");
-		else {
 		var parentLabel = $j(this).parent("label");
 		var labelId = $j(parentLabel).attr("id");
 	
@@ -562,7 +559,6 @@ $j('.[class^="pasteBtn"]').click(function(event) {
 	
 			i++;
 		}
-	}
 	
 
 });
