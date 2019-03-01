@@ -537,9 +537,7 @@ $j('.[class^="pasteBtn"]').click(function(event) {
 		var i = 0;
 		
 		var thisarray = window["postOp" + $j(this).attr("class").substring(8) + "_medicationRows"];
-	if (tempMedtype == null && tempBrandName == null)
-			alert("You have not copied any text yet!");
-	else {
+
 		while (!Boolean(x)) {
 	
 			var rowName = thisarray[i].pasteBtn;
@@ -567,7 +565,6 @@ $j('.[class^="pasteBtn"]').click(function(event) {
 	
 			i++;
 		}
-	}
 	
 
 });
