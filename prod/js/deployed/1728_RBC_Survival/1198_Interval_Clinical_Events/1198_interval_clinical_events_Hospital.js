@@ -6,11 +6,11 @@ var totalRowsHospital = 50;
 var hospitalRows = new Array(totalRowsHospital);
 
 hospitalRows[0] = {
-	hospitalAdminDate : 'fld10050_136916_143122_span',
-	hospitalDisDate : 'fld10050_137066_143272_span', 
-	hospitalDiagnosis : 'fld10050_136866_143072_span',
-	AddRowBtn3 : 'fld10050_136816_143022_id',
-	DelRowBtn3 : 'fld10050_136966_143172_id'
+	hospitalAdminDate : 'fld10050_138218_144426_span',
+	hospitalDisDate : 'fld10050_138068_144276_span', 
+	hospitalDiagnosis : 'fld10050_138018_144226_span',
+	AddRowBtn3 : 'fld10050_137968_144176_id',
+	DelRowBtn3 : 'fld10050_138118_144326_id'
 }
 
 for (var i = 1; i < totalRowsHospital; i++) {
