@@ -23,7 +23,7 @@ $j(document).ready(function() {
 	var labelId = $j(parentLabel).attr("id");
 
 	var x;
-	var tempDate = $j("#" + preDate).val();
+	var tempDate = $j("#" + ifPreDate).val();
 
 	alert("tempDate");
 });
