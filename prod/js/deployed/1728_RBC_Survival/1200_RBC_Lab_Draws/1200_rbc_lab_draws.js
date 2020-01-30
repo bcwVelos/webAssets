@@ -20,6 +20,7 @@ $j(document).ready(function() {
 $j(".copyBtn").click(function() {
 	
 	alert("Hello");
+	alert(dateRows[0].ifPreDate);
 	
 	var parentLabel = $j(this).parent("label");
 	var labelId = $j(parentLabel).attr("id");
