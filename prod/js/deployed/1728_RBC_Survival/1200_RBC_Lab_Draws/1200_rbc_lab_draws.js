@@ -1,3 +1,5 @@
+alert("Hello");
+
 var preDate = "fld10050_138457_144669_span";
 var 5minDate = "fld10050_138442_144654_span";
 var 7minDate = "fld10050_138464_144676_span";
