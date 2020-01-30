@@ -6,10 +6,10 @@ var totalRowsER = 100;
 var emergencyRoomRows = new Array(totalRowsER);
 
 emergencyRoomRows[0] = {
-	erDate : 'fld10050_120376_124838_span',  
-	erDiagnosis : 'fld10050_120176_124638_span',
-	addRowBtn2 : 'fld10050_120476_124938_id',
-	DelRowBtn2 : 'fld10050_120076_124538_id'
+	erDate : 'fld10050_136716_142922_span',  
+	erDiagnosis : 'fld10050_136416_142622_span',
+	addRowBtn2 : 'fld10050_136616_142822_id',
+	DelRowBtn2 : 'fld10050_136316_142522_id'
 }
 
 for (var i = 1; i < totalRowsER; i++) {
@@ -155,6 +155,3 @@ $j(".deleteBtn2").click(function() {
 });
 
 });
-
-
-
