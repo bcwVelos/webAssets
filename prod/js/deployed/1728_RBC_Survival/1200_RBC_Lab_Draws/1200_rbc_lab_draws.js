@@ -17,17 +17,18 @@ dateRows[0] = {
 
 $j(document).ready(function() {
 	
-	alert("Hello 1");
+	alert("Hello 2");
 	
 $j(".copyBtn").click(function() {
 	
 	alert(dateRows[0].ifPreDate);
+	var tempDate;
 	
 	var parentLabel = $j(this).parent("label");
 	var labelId = $j(parentLabel).attr("id");
 
 	var a = dateRows[0].type.indexOf("_span");
-	var tempDate = $j("#" + dateRows[0].type.substring(0, a)).val();
+	tempDate = $j("#" + dateRows[0].ifPreDate.substring(0, a)).val();
 
 	alert("tempDate");
 });
