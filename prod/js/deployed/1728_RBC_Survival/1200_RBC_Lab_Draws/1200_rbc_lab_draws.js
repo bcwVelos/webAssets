@@ -17,6 +17,15 @@ dateRows[0] = {
 
 $j(document).ready(function() {
 	
-	alert("Hello");
+	$j(".copyBtn").click(function() {
+	
+	var parentLabel = $j(this).parent("label");
+	var labelId = $j(parentLabel).attr("id");
+
+	var x;
+	var tempDate = $j("#" + preDate).val();
+
+	alert("tempDate");
+});
 	
 });
