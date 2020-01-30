@@ -6,15 +6,17 @@ var totalRowsHospital = 50;
 var hospitalRows = new Array(totalRowsHospital);
 
 hospitalRows[0] = {
-	hospitalDate : 'fld10050_120676_125138_span',  
-	hospitalDiagnosis : 'fld10050_120626_125088_span',
-	AddRowBtn3 : 'fld10050_120576_125038_id',
-	DelRowBtn3 : 'fld10050_120776_125238_id'
+	hospitalAdminDate : 'fld10050_136916_143122_span',
+	hospitalDisDate : 'fld10050_137066_143272_span', 
+	hospitalDiagnosis : 'fld10050_136866_143072_span',
+	AddRowBtn3 : 'fld10050_136816_143022_id',
+	DelRowBtn3 : 'fld10050_136966_143172_id'
 }
 
 for (var i = 1; i < totalRowsHospital; i++) {
 	hospitalRows[i] = {
-		hospitalDate : String(generateNextID(hospitalRows[i-1].hospitalDate).concat("_span")),
+		hospitalAdminDate : String(generateNextID(hospitalRows[i-1].hospitalAdminDate).concat("_span")),
+		hospitalDisDate : String(generateNextID(hospitalRows[i-1].hospitalDisDate).concat("_span")),
 		hospitalDiagnosis : String(generateNextID(hospitalRows[i-1].hospitalDiagnosis).concat("_span")),
 		AddRowBtn3 : String(generateNextID(hospitalRows[i-1].AddRowBtn3).concat("_id")),
 		DelRowBtn3 : String(generateNextID(hospitalRows[i-1].DelRowBtn3).concat("_id"))
@@ -50,13 +52,13 @@ $j(document).ready(function() {
 			
 		// when the form loads, check to see if there is data populated in the
 		// rows.
-		var a = hospitalRows[i].hospitalDate.indexOf("_span");
+		var a = hospitalRows[i].hospitalAdminDate.indexOf("_span");
 		var b = hospitalRows[i].hospitalDiagnosis.indexOf("_span");
 		
 		//Check if the addtlOrgs dropdown has an option selected OR
 		//Check if the Brand Name has data in it
 		//If either of these are True - assume that there are values for all columns and check the next row.
-		if ($j("#" + hospitalRows[i].hospitalDate.substring(0, a)).val() != "" ||
+		if ($j("#" + hospitalRows[i].hospitalAdminDate.substring(0, a)).val() != "" ||
 				$j("#" + hospitalRows[i].hospitalDiagnosis.substring(0,b)).val() != "")
 		{
 			//Hide the add button in the previous row. 
@@ -76,7 +78,7 @@ $j(document).ready(function() {
 			}
 			
 			//Hide this row.
-			$j("#" + hospitalRows[i].hospitalDate).closest("tr").hide();
+			$j("#" + hospitalRows[i].hospitalAdminDate).closest("tr").hide();
 			
 		}
 	}
@@ -102,9 +104,10 @@ $j(".addBtn3").click(function() {
 			}
 					
 			//Show all values in row where the add button was selected
-			$j("#" + hospitalRows[i+1].hospitalDate).closest("tr").show();
-			$j("#" + hospitalRows[i+1].hospitalDate).show();
-			$j("#" + hospitalRows[i+1].hospitalDate).siblings().show();
+			$j("#" + hospitalRows[i+1].hospitalAdminDate).closest("tr").show();
+			$j("#" + hospitalRows[i+1].hospitalAdminDate).show();
+			$j("#" + hospitalRows[i+1].hospitalAdminDate).siblings().show();
+			$j("#" + hospitalRows[i+1].hospitalDisDate).show();
 			$j("#" + hospitalRows[i+1].hospitalDiagnosis).show();
 			
 		} 
@@ -131,16 +134,20 @@ $j(".deleteBtn3").click(function() {
 			y = "True";
 
 			//Remove values from current row and hide the row
-			var a = hospitalRows[i].hospitalDate.indexOf("_span");
-			$j("#" + hospitalRows[i].hospitalDate.substring(0, a)).val("");
-			$j("#" + hospitalRows[i].hospitalDate).hide();
-			$j("#" + hospitalRows[i].hospitalDate).siblings().hide();
+			var a = hospitalRows[i].hospitalAdminDate.indexOf("_span");
+			$j("#" + hospitalRows[i].hospitalAdminDate.substring(0, a)).val("");
+			$j("#" + hospitalRows[i].hospitalAdminDate).hide();
+			$j("#" + hospitalRows[i].hospitalAdminDate).siblings().hide();
 
-			var b = hospitalRows[i].hospitalDiagnosis.indexOf("_span");
-			$j("#" + hospitalRows[i].hospitalDiagnosis.substring(0, b)).val("");
+			var b = hospitalRows[i].hospitalDisDate.indexOf("_span");
+			$j("#" + hospitalRows[i].hospitalDisDate.substring(0, b)).val("");
+			$j("#" + hospitalRows[i].hospitalDisDate).hide();
+			
+			var c = hospitalRows[i].hospitalDiagnosis.indexOf("_span");
+			$j("#" + hospitalRows[i].hospitalDiagnosis.substring(0, c)).val("");
 			$j("#" + hospitalRows[i].hospitalDiagnosis).hide();
 
-			$j("#" + hospitalRows[i].hospitalDate).closest("tr").hide();
+			$j("#" + hospitalRows[i].hospitalAdminDate).closest("tr").hide();
 			
 			//show the Add and Delete Button on the previous row
 			$j("#" + hospitalRows[i-1].AddRowBtn3).show();
@@ -155,6 +162,3 @@ $j(".deleteBtn3").click(function() {
 });
 
 });
-
-
-
