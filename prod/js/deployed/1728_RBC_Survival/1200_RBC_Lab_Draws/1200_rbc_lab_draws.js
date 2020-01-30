@@ -17,9 +17,10 @@ dateRows[0] = {
 
 $j(document).ready(function() {
 	
+	alert("Hello 1");
+	
 $j(".copyBtn").click(function() {
 	
-	alert("Hello");
 	alert(dateRows[0].ifPreDate);
 	
 	var parentLabel = $j(this).parent("label");
