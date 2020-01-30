@@ -1,5 +1,3 @@
-alert("Hello");
-
 var preDate = "fld10050_138457_144669_span";
 var 5minDate = "fld10050_138442_144654_span";
 var 7minDate = "fld10050_138464_144676_span";
@@ -16,6 +14,8 @@ var tf4hrDate = "fld10050_138514_144726_span";
 var copyBtn = "fld10050_138539_144752_id";
 
 $j(document).ready(function() {
+	
+	alert("Hello");
 	
 $j(".copyBtn").click(function() {
 	
