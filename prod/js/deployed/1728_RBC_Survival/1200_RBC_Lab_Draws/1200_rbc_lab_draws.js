@@ -17,7 +17,7 @@ dateRows[0] = {
 
 $j(document).ready(function() {
 	
-	alert("Hello 2");
+	alert("Hello 3");
 	
 $j(".copyBtn").click(function() {
 	
@@ -27,10 +27,13 @@ $j(".copyBtn").click(function() {
 	var parentLabel = $j(this).parent("label");
 	var labelId = $j(parentLabel).attr("id");
 
+	alert("Test 1");
+	
 	var a = dateRows[0].type.indexOf("_span");
+	alert("Test 2");
 	tempDate = $j("#" + dateRows[0].ifPreDate.substring(0, a)).val();
 
-	alert("tempDate");
+	alert(tempDate);
 });
 
 
