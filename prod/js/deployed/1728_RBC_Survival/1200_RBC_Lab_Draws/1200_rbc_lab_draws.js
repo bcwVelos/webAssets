@@ -17,8 +17,6 @@ dateRows[0] = {
 
 $j(document).ready(function() {
 	
-	alert("Hello 5");
-	
 $j(".copyBtn").click(function() {
 	
 	var tempDate;
