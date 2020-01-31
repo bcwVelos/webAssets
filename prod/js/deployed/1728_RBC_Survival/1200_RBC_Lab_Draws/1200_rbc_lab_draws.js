@@ -17,23 +17,20 @@ dateRows[0] = {
 
 $j(document).ready(function() {
 	
-	alert("Hello 4");
+	alert("Hello 5");
 	
 $j(".copyBtn").click(function() {
 	
-	alert(dateRows[0].ifPreDate);
 	var tempDate;
 	
 	var parentLabel = $j(this).parent("label");
 	var labelId = $j(parentLabel).attr("id");
-
-	alert("Test 1");
 	
 	var a = dateRows[0].ifPreDate.indexOf("_span");
-	alert("Test 2");
 	tempDate = $j("#" + dateRows[0].ifPreDate.substring(0, a)).val();
 
-	alert(tempDate);
+	var b = dateRows[0].if5minDate.indexOf("_span");
+	$j("#" + dateRows[0].if5minDate.substring(0, b)).val(tempDate);
 });
 
 
