@@ -57,47 +57,6 @@ alert("Hello 2");
 
 	    // Start the for loop in the second row (array # 1) because the first row
 	    // will always display.
-		for ( var i = 1; i < rowTotal; i++) {
-			
-		// when the form loads, check to see if there is data populated in the
-		// rows.
-		var a = labRows[i].fviii.indexOf("_span");
-		var b = labRows[i].vwfag.indexOf("_span");
-		var c = labRows[i].vwfrco.indexOf("_span");
-		var f = labRows[i].vwfgpbm.indexOf("_span");
-		var d = labRows[i].vwfpp.indexOf("_span");
-		var g = labRows[i].vwfcb.indexOf("_span");
-		var e = labRows[i].vwfMult.indexOf("_span");		
-		
-		//Check if the Type dropdown has an option selected OR
-		//Check if the Brand Name has data in it
-		//If either of these are True - assume that there are values for all columns and check the next row.
-		if ($j("#" + labRows[i].fviii.substring(0, a)).val() != "" ||
-				$j("#" + labRows[i].vwfag.substring(0,b)).val() != "" ||
-				$j("#" + labRows[i].vwfrco.substring(0,c)).val() != "" ||
-				$j("#" + labRows[i].vwfpp.substring(0,d)).val() != "" ||
-				$j("#" + labRows[i].vwfMult.substring(0,e)).val() != ""
-				$j("#" + labRows[i].vwfgpbm.substring(0,f)).val() != "" ||
-				$j("#" + labRows[i].vwfcb.substring(0,g)).val() != "" ||)
-		{
-			//Hide the add button in the previous row. 
-			$j("#" + labRows[i-1].addRowBtn).hide();
-			$j("#" + labRows[i-1].delRowBtn).hide();
-			
-			if(i == 9){
-				$j("#" + labRows[i].addRowBtn).hide();
-			}
-			
-		} else {
-			//There is no data in this row.
-			//Make sure the add and delete buttons are shown for the previous row.
-			$j("#" + labRows[i-1].addRowBtn).show();
-			if((i-1) > 0){
-				$j("#" + labRows[i-1].delRowBtn).show();
-			}
-			
-			//Hide this row.
-			$j("#" + labRows[i].sample).closest("tr").hide();
 			
 		}
 	}
