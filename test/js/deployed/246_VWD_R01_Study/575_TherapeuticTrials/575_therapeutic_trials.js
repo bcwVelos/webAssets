@@ -9,7 +9,7 @@ var labRows = new Array(totalRows);
 
 labRows[0] = {
 	sample : 'fld10050_32469_35679_span',
-	time : 'fld10050_32479_35689_span',
+	timeHrs : 'fld10050_32479_35689_span',
 	fviii : 'fld10050_32509_35719_span',
 	vwfag : 'fld10050_32519_35729_span',
 	vwfrco : 'fld10050_32499_35709_span',
@@ -24,7 +24,7 @@ labRows[0] = {
 for (var i = 1; i < totalRows; i++) {
 	labRows[i] = {
 		sample : String(generateNextID(labRows[i-1].sample).concat("_span")),
-		time : String(generateNextID(labRows[i-1].time).concat("_span")),
+		timeHrs : String(generateNextID(labRows[i-1].timeHrs).concat("_span")),
 		fviii : String(generateNextID(labRows[i-1].fviii).concat("_span")),
 		vwfag : String(generateNextID(labRows[i-1].vwfag).concat("_span")),
 		vwfrco : String(generateNextID(labRows[i-1].vwfrco).concat("_span")),
@@ -100,7 +100,7 @@ $j(document).ready(function() {
 			}
 			
 			//Hide this row.
-			$j("#" + labRows[i].sampleID).closest("tr").hide();
+			$j("#" + labRows[i].sample).closest("tr").hide();
 			
 		}
 	}
@@ -127,9 +127,9 @@ $j(".addBtn").click(function() {
 			}
 					
 			//Show all values in row where the add button was selected
-			$j("#" + labRows[i+1].sampleID).closest("tr").show();
-			$j("#" + labRows[i+1].sampleID).show();
-			$j("#" + labRows[i+1].time).show();
+			$j("#" + labRows[i+1].sample).closest("tr").show();
+			$j("#" + labRows[i+1].sample).show();
+			$j("#" + labRows[i+1].timeHrs).show();
 			$j("#" + labRows[i+1].fviii).show();
 			$j("#" + labRows[i+1].vwfag).show();
 			$j("#" + labRows[i+1].vwfrco).show();
@@ -171,14 +171,13 @@ $j(".deleteBtn").click(function() {
 			y = "True";
 
 			//Remove values from current row and hide the row
-			var a = labRows[i].sampleID.indexOf("_span");
-			$j("#" + labRows[i].sampleID.substring(0, a)).val("");
-			$j("#" + labRows[i].sampleID).hide();
-			//$j("#" + labRows[i].sampleID).siblings().hide();
+			var a = labRows[i].sample.indexOf("_span");
+			$j("#" + labRows[i].sample.substring(0, a)).val("");
+			$j("#" + labRows[i].sample).hide();
 
-			var b = labRows[i].time.indexOf("_span");
-			$j("#" + labRows[i].time.substring(0, b)).val("");
-			$j("#" + labRows[i].time).hide();
+			var b = labRows[i].timeHrs.indexOf("_span");
+			$j("#" + labRows[i].timeHrs.substring(0, b)).val("");
+			$j("#" + labRows[i].timeHrs).hide();
 
 			var d = labRows[i].fviii.indexOf("_span");
 			$j("#" + labRows[i].fviii.substring(0, d)).val("");
@@ -208,7 +207,7 @@ $j(".deleteBtn").click(function() {
 			$j("#" + labRows[i].vwfMult.substring(0, h)).val("");
 			$j("#" + labRows[i].vwfMult).hide();
 
-			$j("#" + labRows[i].sampleID).closest("tr").hide();
+			$j("#" + labRows[i].sample).closest("tr").hide();
 			
 			//show the Add and Delete Button on the previous row
 			$j("#" + labRows[i-1].addRowBtn).show();
