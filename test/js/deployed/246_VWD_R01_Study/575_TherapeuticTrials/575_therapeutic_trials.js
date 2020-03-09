@@ -78,7 +78,7 @@ $j(document).ready(function() {
 				$j("#" + labRows[i].vwfpp.substring(0,d)).val() != "" ||
 				$j("#" + labRows[i].vwfMult.substring(0,e)).val() != "" ||
 				$j("#" + labRows[i].vwfgpbm.substring(0,f)).val() != "" ||
-				$j("#" + labRows[i].vwfcb.substring(0,g)).val() != "" ||)
+				$j("#" + labRows[i].vwfcb.substring(0,g)).val() != "")
 		{
 			//Hide the add button in the previous row. 
 			$j("#" + labRows[i-1].addRowBtn).hide();
