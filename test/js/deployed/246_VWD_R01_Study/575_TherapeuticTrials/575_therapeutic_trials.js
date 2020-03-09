@@ -23,9 +23,9 @@ function medicationRow(sampleID, timeInHours, fviii, vwfag, vwfrco, vwfgp1bm, vw
     this.fviii = fviii;
     this.vwfag = vwfag;
     this.vwfrco = vwfrco;
-    this.vwfrco = vwfgp1bm;
+    this.vwfgb1bm = vwfgp1bm;
     this.vwfpp = vwfpp;
-    this.vwfrco = vwfcb;
+    this.vwfcb = vwfcb;
     this.vwfMult = vwfMult;
     this.addRowBtn = addRowBtn;
     this.delRowBtn = delRowBtn;
