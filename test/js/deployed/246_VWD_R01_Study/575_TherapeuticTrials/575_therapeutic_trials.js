@@ -61,7 +61,13 @@ $j(document).ready(function() {
 			
 		// when the form loads, check to see if there is data populated in the
 		// rows.
-		var a = labRows[i].fviii.indexOf("_span");		
+		var a = labRows[i].fviii.indexOf("_span");
+		var b = labRows[i].vwfag.indexOf("_span");
+		var c = labRows[i].vwfrco.indexOf("_span");
+		var f = labRows[i].vwfgpbm.indexOf("_span");
+		var d = labRows[i].vwfpp.indexOf("_span");
+		var g = labRows[i].vwfcb.indexOf("_span");
+		var e = labRows[i].vwfMult.indexOf("_span");		
 		
 		//Check if the Type dropdown has an option selected OR
 		//Check if the Brand Name has data in it
