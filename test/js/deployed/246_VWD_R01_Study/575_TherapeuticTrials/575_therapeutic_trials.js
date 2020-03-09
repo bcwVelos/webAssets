@@ -1,5 +1,3 @@
-alert("Hello 1");
-
 var str = "_";
 var nextID;
 var fieldElements = [];
@@ -48,7 +46,7 @@ function generateNextID(currentID) {
 
 
 $j(document).ready(function() {
-
+alert("Hello 1");
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
 		
