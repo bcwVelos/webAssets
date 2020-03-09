@@ -89,6 +89,8 @@ medicationRows[0] = new medicationRow(
 
 
 $j(document).ready(function() {
+	
+	alert("Hello 1);
 		//hide the comments label- never want to see it
 		$j('td:contains("Comments")').hide();
 		
