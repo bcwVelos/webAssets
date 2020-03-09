@@ -45,20 +45,7 @@ function generateNextID(currentID) {
 
 
 $j(document).ready(function() {
-alert("Hello 2");
-		//hide the comments label- never want to see it
-		$j('td:contains("Comments")').hide();
-		
-		//Check to see how many medications are available for the page
-		var rowTotal = labRows.length;
-	
-		// hide the delete Button in the first row - it should never be seen
-		$j("#" + labRows[0].delRowBtn).hide();
+	alert("Hello 2");
 
-	    // Start the for loop in the second row (array # 1) because the first row
-	    // will always display.
-			
-		}
-	}
 });
 
