@@ -101,7 +101,6 @@ $j(document).ready(function() {
 			
 		}
 	}
-	alert("Hello 6");
 
 
 //******* BEGIN ADD BUTTON LISTENER ***************//
