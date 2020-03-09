@@ -8,7 +8,7 @@ function medicationRow(){
     this.fviii = null;
     this.vwfag = null;
     this.vwfrco = null;
-    this.vwfgp1bm = null;
+    this.vwfgpbm = null;
     this.vwfpp = null;
     this.vwfcb = null;
     this.vwfMult = null;
@@ -17,13 +17,13 @@ function medicationRow(){
 
 }
 
-function medicationRow(sampleID, timeInHours, fviii, vwfag, vwfrco, vwfgp1bm, vwfpp, vwfcb, vwfMult, addRowBtn, delRowBtn) {
+function medicationRow(sampleID, timeInHours, fviii, vwfag, vwfrco, vwfgpbm, vwfpp, vwfcb, vwfMult, addRowBtn, delRowBtn) {
     this.sampleID = sampleID;
     this.timeInHours = timeInHours;
     this.fviii = fviii;
     this.vwfag = vwfag;
     this.vwfrco = vwfrco;
-    this.vwfgb1bm = vwfgp1bm;
+    this.vwfgpbm = vwfgpbm;
     this.vwfpp = vwfpp;
     this.vwfcb = vwfcb;
     this.vwfMult = vwfMult;
@@ -111,7 +111,7 @@ $j(document).ready(function() {
 		var a = medicationRows[i].fviii.indexOf("_span");
 		var b = medicationRows[i].vwfag.indexOf("_span");
 		var c = medicationRows[i].vwfrco.indexOf("_span");
-		var f = medicationRows[i].vwfgp1bm.indexOf("_span");
+		var f = medicationRows[i].vwfgpbm.indexOf("_span");
 		var d = medicationRows[i].vwfpp.indexOf("_span");
 		var g = medicationRows[i].vwfcb.indexOf("_span");
 		var e = medicationRows[i].vwfMult.indexOf("_span");		
@@ -124,7 +124,7 @@ $j(document).ready(function() {
 				$j("#" + medicationRows[i].vwfrco.substring(0,c)).val() != "" ||
 				$j("#" + medicationRows[i].vwfpp.substring(0,d)).val() != "" ||
 				$j("#" + medicationRows[i].vwfMult.substring(0,e)).val() != ""
-				$j("#" + medicationRows[i].vwfgp1bm.substring(0,f)).val() != "" ||
+				$j("#" + medicationRows[i].vwfgpbm.substring(0,f)).val() != "" ||
 				$j("#" + medicationRows[i].vwfcb.substring(0,g)).val() != "" ||)
 		{
 			//Hide the add button in the previous row. 
@@ -177,7 +177,7 @@ $j(".addBtn").click(function() {
 			$j("#" + medicationRows[i+1].fviii).show();
 			$j("#" + medicationRows[i+1].vwfag).show();
 			$j("#" + medicationRows[i+1].vwfrco).show();
-			$j("#" + medicationRows[i+1].vwfgp1bm).show();
+			$j("#" + medicationRows[i+1].vwfgpbm).show();
 			$j("#" + medicationRows[i+1].vwfpp).show();
 			$j("#" + medicationRows[i+1].vwfcb).show();
 			$j("#" + medicationRows[i+1].vwfMult).show();
@@ -236,9 +236,9 @@ $j(".deleteBtn").click(function() {
 			$j("#" + medicationRows[i].vwfrco.substring(0, f)).val("");
 			$j("#" + medicationRows[i].vwfrco).hide();
 			
-			var j = medicationRows[i].vwfgp1bm.indexOf("_span");
-			$j("#" + medicationRows[i].vwfgp1bm.substring(0, j)).val("");
-			$j("#" + medicationRows[i].vwfgp1bm).hide();
+			var j = medicationRows[i].vwfgpbm.indexOf("_span");
+			$j("#" + medicationRows[i].vwfgpbm.substring(0, j)).val("");
+			$j("#" + medicationRows[i].vwfgpbm).hide();
 			
 			var g = medicationRows[i].vwfpp.indexOf("_span");
 			$j("#" + medicationRows[i].vwfpp.substring(0, g)).val("");
