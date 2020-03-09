@@ -1,5 +1,5 @@
 //********* BEGIN DATA OBJECT FUNCTIONS **********//
-
+alert("Hello 2");
 //Define Object that will hold the the ids to represent each section of a repeating row
 //Create 2 constructor methods - one is empty, the other takes in all the values as parameters.
 function medicationRow(){
