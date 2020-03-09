@@ -72,7 +72,13 @@ $j(document).ready(function() {
 		//Check if the Type dropdown has an option selected OR
 		//Check if the Brand Name has data in it
 		//If either of these are True - assume that there are values for all columns and check the next row.
-		if ($j("#" + labRows[i].fviii.substring(0, a)).val() != "")
+		if ($j("#" + labRows[i].fviii.substring(0, a)).val() != "" ||
+				$j("#" + labRows[i].vwfag.substring(0,b)).val() != "" ||
+				$j("#" + labRows[i].vwfrco.substring(0,c)).val() != "" ||
+				$j("#" + labRows[i].vwfpp.substring(0,d)).val() != "" ||
+				$j("#" + labRows[i].vwfMult.substring(0,e)).val() != "" ||
+				$j("#" + labRows[i].vwfgpbm.substring(0,f)).val() != "" ||
+				$j("#" + labRows[i].vwfcb.substring(0,g)).val() != "" ||)
 		{
 			//Hide the add button in the previous row. 
 			$j("#" + labRows[i-1].addRowBtn).hide();
@@ -95,7 +101,123 @@ $j(document).ready(function() {
 			
 		}
 	}
-	alert("Hello 5");
+	alert("Hello 6");
 
+
+//******* BEGIN ADD BUTTON LISTENER ***************//
+$j(".addBtn").click(function() {
+	var parentLabel = $j(this).parent("label");
+	var labelId = $j(parentLabel).attr("id");
+	
+	var x;
+	var i = 0;
+
+	while (!Boolean(x)) {
+		var rowName = labRows[i].addRowBtn;
+		if (rowName === labelId) {
+			x = "True";
+			//Hide the delete and add buttons in this row
+			if(i < labRows.length) {
+				if(i != (labRows.length-1)) {
+					$j("#" + labRows[i].delRowBtn).hide();
+				}
+				$j("#" + labRows[i].addRowBtn).hide();
+
+			}
+					
+			//Show all values in row where the add button was selected
+			$j("#" + labRows[i+1].sample).closest("tr").show();
+			$j("#" + labRows[i+1].sample).show();
+			$j("#" + labRows[i+1].timeHrs).show();
+			$j("#" + labRows[i+1].fviii).show();
+			$j("#" + labRows[i+1].vwfag).show();
+			$j("#" + labRows[i+1].vwfrco).show();
+			$j("#" + labRows[i+1].vwfgpbm).show();
+			$j("#" + labRows[i+1].vwfpp).show();
+			$j("#" + labRows[i+1].vwfcb).show();
+			$j("#" + labRows[i+1].vwfMult).show();
+
+			if((i+1) < (labRows.length -1)) {
+				$j("#" + labRows[i+1].addRowBtn).show();
+			}
+
+			if((i+1) === (labRows.length -1)) {
+				$j("#" + labRows[i+1].addRowBtn).hide();
+			} 			
+
+		} 
+			i++;
+		
+	}
+
+});
+
+//******* END ADD BUTTON LISTENER ***************//
+	
+//******* BEGIN DELETE BUTTON LISTENER ***************//
+
+$j(".deleteBtn").click(function() {
+
+	var parentLabelElement = $j(this).parent("label");
+	var labelId = $j(parentLabelElement).attr("id");
+	
+	var y;
+	var i = 0;
+
+	while (!Boolean(y)) {
+		var rowName = labRows[i].delRowBtn;
+		if (rowName === labelId) {
+			y = "True";
+
+			//Remove values from current row and hide the row
+			var a = labRows[i].sample.indexOf("_span");
+			$j("#" + labRows[i].sample.substring(0, a)).val("");
+			$j("#" + labRows[i].sample).hide();
+
+			var b = labRows[i].timeHrs.indexOf("_span");
+			$j("#" + labRows[i].timeHrs.substring(0, b)).val("");
+			$j("#" + labRows[i].timeHrs).hide();
+
+			var d = labRows[i].fviii.indexOf("_span");
+			$j("#" + labRows[i].fviii.substring(0, d)).val("");
+			$j("#" + labRows[i].fviii).hide();
+
+			var e = labRows[i].vwfag.indexOf("_span");
+			$j("#" + labRows[i].vwfag.substring(0, e)).val("");
+			$j("#" + labRows[i].vwfag).hide();
+
+			var f = labRows[i].vwfrco.indexOf("_span");
+			$j("#" + labRows[i].vwfrco.substring(0, f)).val("");
+			$j("#" + labRows[i].vwfrco).hide();
+			
+			var j = labRows[i].vwfgpbm.indexOf("_span");
+			$j("#" + labRows[i].vwfgpbm.substring(0, j)).val("");
+			$j("#" + labRows[i].vwfgpbm).hide();
+			
+			var g = labRows[i].vwfpp.indexOf("_span");
+			$j("#" + labRows[i].vwfpp.substring(0, g)).val("");
+			$j("#" + labRows[i].vwfpp).hide();
+			
+			var k = labRows[i].vwfcb.indexOf("_span");
+			$j("#" + labRows[i].vwfcb.substring(0, k)).val("");
+			$j("#" + labRows[i].vwfcb).hide();
+			
+			var h = labRows[i].vwfMult.indexOf("_span");
+			$j("#" + labRows[i].vwfMult.substring(0, h)).val("");
+			$j("#" + labRows[i].vwfMult).hide();
+
+			$j("#" + labRows[i].sample).closest("tr").hide();
+			
+			//show the Add and Delete Button on the previous row
+			$j("#" + labRows[i-1].addRowBtn).show();
+			if((i-1) > 0) {
+				$j("#" + labRows[i-1].delRowBtn).show();
+			}
+		}
+			i++;
+		
+	}
+
+});
 });
 
