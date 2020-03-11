@@ -216,7 +216,6 @@ $j(".deleteBtn").click(function() {
 			i++;
 		
 	}
-alert("hello");
 });
 });
 
