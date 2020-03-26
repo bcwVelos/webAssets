@@ -81,14 +81,12 @@ $j(document).ready(function() {
 		// when the form loads, check to see if there is data populated in the
 		// rows.
 		var a = glycoRows[i].drawDate.indexOf("_span");
-		var b = glycoRows[i].visit.indexOf("_span");
 		var c = glycoRows[i].vwfag.indexOf("_span");
 		
 		//Check if the Type dropdown has an option selected OR
 		//Check if the Brand Name has data in it
 		//If either of these are True - assume that there are values for all columns and check the next row.
 		if ($j("#" + glycoRows[i].drawDate.substring(0, a)).val() != "" ||
-				$j("#" + glycoRows[i].visit.substring(0,b)).val() != "Select an Option" ||
 				$j("#" + glycoRows[i].vwfag.substring(0,c)).val() != "")
 		{
 			//Hide the add button in the previous row. 
