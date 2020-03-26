@@ -74,7 +74,7 @@ $j(document).ready(function() {
 	// hide the delete Button in the first row - it should never be seen
 	$j("#" + glycoRows[0].delRowBtn).hide();
 	
-		    // Start the for loop in the second row (array # 1) because the first row
+		// Start the for loop in the second row (array # 1) because the first row
 	    // will always display.
 		for ( var i = 1; i < rowTotal; i++) {
 			
@@ -88,7 +88,7 @@ $j(document).ready(function() {
 		//Check if the Brand Name has data in it
 		//If either of these are True - assume that there are values for all columns and check the next row.
 		if ($j("#" + glycoRows[i].drawDate.substring(0, a)).val() != "" ||
-				$j("#" + glycoRows[i].visit.substring(0,b)).val() != "" ||
+				$j("#" + glycoRows[i].visit.substring(0,b)).val() != "Select an Option" ||
 				$j("#" + glycoRows[i].vwfag.substring(0,c)).val() != "")
 		{
 			//Hide the add button in the previous row. 
