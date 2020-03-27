@@ -215,85 +215,85 @@ $j(".deleteBtn").click(function() {
 			//Remove values from current row and hide the row
 			var a = glycoRows[i].drawDate.indexOf("_span");
 			$j("#" + glycoRows[i].drawDate.substring(0, a)).val("");
-			$j("#" + glycoRows[i].drawDate).hide();
+			$j("#" + glycoRows[i].drawDate).closest("tr").hide();
 
 			var b = glycoRows[i].visit.indexOf("_span");
 			$j("#" + glycoRows[i].visit.substring(0, b)).val("Select an option");
-			$j("#" + glycoRows[i].visit).hide();
+			$j("#" + glycoRows[i].visit).closest("tr").hide();
 
 			var d = glycoRows[i].vwfag.indexOf("_span");
 			$j("#" + glycoRows[i].vwfag.substring(0, d)).val("");
-			$j("#" + glycoRows[i].vwfag).hide();
+			$j("#" + glycoRows[i].vwfag).closest("tr").hide();
 
 			var e = glycoRows[i].rca.indexOf("_span");
 			$j("#" + glycoRows[i].rca.substring(0, e)).val("");
-			$j("#" + glycoRows[i].rca).hide();
+			$j("#" + glycoRows[i].rca).closest("tr").hide();
 
 			var f = glycoRows[i].eel.indexOf("_span");
 			$j("#" + glycoRows[i].eel.substring(0, f)).val("");
-			$j("#" + glycoRows[i].eel).hide();
+			$j("#" + glycoRows[i].eel).closest("tr").hide();
 			
 			var g = glycoRows[i].eca.indexOf("_span");
 			$j("#" + glycoRows[i].eca.substring(0, g)).val("");
-			$j("#" + glycoRows[i].eca).hide();
+			$j("#" + glycoRows[i].eca).closest("tr").hide();
 			
 			var h = glycoRows[i].malone.indexOf("_span");
 			$j("#" + glycoRows[i].malone.substring(0, h)).val("");
-			$j("#" + glycoRows[i].malone).hide();
+			$j("#" + glycoRows[i].malone).closest("tr").hide();
 			
 			var j = glycoRows[i].phae.indexOf("_span");
 			$j("#" + glycoRows[i].phae.substring(0, j)).val("");
-			$j("#" + glycoRows[i].phae).hide();
+			$j("#" + glycoRows[i].phae).closest("tr").hide();
 			
 			var k = glycoRows[i].phal.indexOf("_span");
 			$j("#" + glycoRows[i].phal.substring(0, k)).val("");
-			$j("#" + glycoRows[i].phal).hide();
+			$j("#" + glycoRows[i].phal).closest("tr").hide();
 			
 			var l = glycoRows[i].ptl.indexOf("_span");
 			$j("#" + glycoRows[i].ptl.substring(0, l)).val("");
-			$j("#" + glycoRows[i].ptl).hide();
+			$j("#" + glycoRows[i].ptl).closest("tr").hide();
 			
 			var m = glycoRows[i].sba.indexOf("_span");
 			$j("#" + glycoRows[i].sba.substring(0, m)).val("");
-			$j("#" + glycoRows[i].sba).hide();
+			$j("#" + glycoRows[i].sba).closest("tr").hide();
 			
 			var n = glycoRows[i].stl.indexOf("_span");
 			$j("#" + glycoRows[i].stl.substring(0, n)).val("");
-			$j("#" + glycoRows[i].stl).hide();
+			$j("#" + glycoRows[i].stl).closest("tr").hide();
 			
 			var o = glycoRows[i].wga.indexOf("_span");
 			$j("#" + glycoRows[i].wga.substring(0, o)).val("");
-			$j("#" + glycoRows[i].wga).hide();
+			$j("#" + glycoRows[i].wga).closest("tr").hide();
 			
 			var p = glycoRows[i].sna.indexOf("_span");
 			$j("#" + glycoRows[i].sna.substring(0, p)).val("");
-			$j("#" + glycoRows[i].sna).hide();
+			$j("#" + glycoRows[i].sna).closest("tr").hide();
 			
 			var q = glycoRows[i].aal.indexOf("_span");
 			$j("#" + glycoRows[i].aal.substring(0, q)).val("");
-			$j("#" + glycoRows[i].aal).hide();
+			$j("#" + glycoRows[i].aal).closest("tr").hide();
 			
 			var r = glycoRows[i].uea.indexOf("_span");
 			$j("#" + glycoRows[i].uea.substring(0, r)).val("");
-			$j("#" + glycoRows[i].uea).hide();
+			$j("#" + glycoRows[i].uea).closest("tr").hide();
 			
 			var s = glycoRows[i].psa.indexOf("_span");
 			$j("#" + glycoRows[i].psa.substring(0, s)).val("");
-			$j("#" + glycoRows[i].psa).hide();
+			$j("#" + glycoRows[i].psa).closest("tr").hide();
 			
 			var t = glycoRows[i].maltwo.indexOf("_span");
 			$j("#" + glycoRows[i].maltwo.substring(0, t)).val("");
-			$j("#" + glycoRows[i].maltwo).hide();
+			$j("#" + glycoRows[i].maltwo).closest("tr").hide();
 			
 			var u = glycoRows[i].npl.indexOf("_span");
 			$j("#" + glycoRows[i].npl.substring(0, u)).val("");
-			$j("#" + glycoRows[i].npl).hide();
+			$j("#" + glycoRows[i].npl).closest("tr").hide();
 			
 			var v = glycoRows[i].notes.indexOf("_span");
 			$j("#" + glycoRows[i].notes.substring(0, v)).val("");
-			$j("#" + glycoRows[i].notes).hide();
+			$j("#" + glycoRows[i].notes).closest("tr").hide();
 
-			$j("#" + glycoRows[i].drawDate).closest("tr").hide();
+			$j("#" + glycoRows[i].addRowBtn).closest("tr").hide();
 			
 			//show the Add and Delete Button on the previous row
 			$j("#" + glycoRows[i-1].addRowBtn).show();
