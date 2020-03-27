@@ -107,9 +107,28 @@ $j(document).ready(function() {
 			
 			//Hide this row.
 			$j("#" + glycoRows[i].drawDate).closest("tr").hide();
+			$j("#" + glycoRows[i].visit).closest("tr").hide();
+			$j("#" + glycoRows[i].vwfag).closest("tr").hide();
+			$j("#" + glycoRows[i].rca).closest("tr").hide();
+			$j("#" + glycoRows[i].eel).closest("tr").hide();
+			$j("#" + glycoRows[i].eca).closest("tr").hide();
+			$j("#" + glycoRows[i].malone).closest("tr").hide();
+			$j("#" + glycoRows[i].phae).closest("tr").hide();
+			$j("#" + glycoRows[i].phal).closest("tr").hide();
+			$j("#" + glycoRows[i].ptl).closest("tr").hide();
+			$j("#" + glycoRows[i].sba).closest("tr").hide();
+			$j("#" + glycoRows[i].stl).closest("tr").hide();
+			$j("#" + glycoRows[i].wga).closest("tr").hide();
+			$j("#" + glycoRows[i].sna).closest("tr").hide();
+			$j("#" + glycoRows[i].aal).closest("tr").hide();
+			$j("#" + glycoRows[i].uea).closest("tr").hide();
+			$j("#" + glycoRows[i].psa).closest("tr").hide();
+			$j("#" + glycoRows[i].maltwo).closest("tr").hide();
+			$j("#" + glycoRows[i].npl).closest("tr").hide();
+			$j("#" + glycoRows[i].notes).closest("tr").hide();
+			$j("#" + glycoRows[i].addRowBtn).closest("tr").hide();
 			
 		}
 	}
-
 
 });
