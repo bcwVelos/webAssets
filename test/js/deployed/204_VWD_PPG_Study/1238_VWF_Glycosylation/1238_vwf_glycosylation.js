@@ -294,6 +294,7 @@ $j(".deleteBtn").click(function() {
 			$j("#" + glycoRows[i].notes).closest("tr").hide();
 
 			$j("#" + glycoRows[i].addRowBtn).closest("tr").hide();
+			$j("#" + glycoRows[i].spaceBreak).closest("tr").hide();
 			
 			//show the Add and Delete Button on the previous row
 			$j("#" + glycoRows[i-1].addRowBtn).show();
