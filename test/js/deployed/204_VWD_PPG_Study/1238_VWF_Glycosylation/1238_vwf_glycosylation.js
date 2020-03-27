@@ -289,9 +289,9 @@ $j(".deleteBtn").click(function() {
 			$j("#" + glycoRows[i].npl.substring(0, u)).val("");
 			$j("#" + glycoRows[i].npl).closest("tr").hide();
 			
-			var v = glycoRows[i].notes.indexOf("_span");
+			var v = glycoRows[i].notes.indexOf("_id");
 			$j("#" + glycoRows[i].notes.substring(0, v)).val("");
-			$j("#" + glycoRows[i].notes).closest("table").hide();
+			$j("#" + glycoRows[i].notes).closest("tr").hide();
 
 			$j("#" + glycoRows[i].addRowBtn).closest("tr").hide();
 			
