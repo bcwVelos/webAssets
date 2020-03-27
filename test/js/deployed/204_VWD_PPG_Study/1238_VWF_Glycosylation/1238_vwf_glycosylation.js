@@ -291,7 +291,7 @@ $j(".deleteBtn").click(function() {
 			
 			var v = glycoRows[i].notes.indexOf("_span");
 			$j("#" + glycoRows[i].notes.substring(0, v)).val("");
-			$j("#" + glycoRows[i].notes).closest("tr").hide();
+			$j("#" + glycoRows[i].notes).closest("table").hide();
 
 			$j("#" + glycoRows[i].addRowBtn).closest("tr").hide();
 			
