@@ -194,6 +194,118 @@ $j(".addBtn").click(function() {
 	}
 
 });
+
+//******* END ADD BUTTON LISTENER ***************//
+	
+//******* BEGIN DELETE BUTTON LISTENER ***************//
+
+$j(".deleteBtn").click(function() {
+
+	var parentLabelElement = $j(this).parent("label");
+	var labelId = $j(parentLabelElement).attr("id");
+	
+	var y;
+	var i = 0;
+
+	while (!Boolean(y)) {
+		var rowName = glycoRows[i].delRowBtn;
+		if (rowName === labelId) {
+			y = "True";
+
+			//Remove values from current row and hide the row
+			var a = glycoRows[i].drawDate.indexOf("_span");
+			$j("#" + glycoRows[i].drawDate.substring(0, a)).val("");
+			$j("#" + glycoRows[i].drawDate).hide();
+
+			var b = glycoRows[i].visit.indexOf("_span");
+			$j("#" + glycoRows[i].visit.substring(0, b)).val("Select an option");
+			$j("#" + glycoRows[i].visit).hide();
+
+			var d = glycoRows[i].vwfag.indexOf("_span");
+			$j("#" + glycoRows[i].vwfag.substring(0, d)).val("");
+			$j("#" + glycoRows[i].vwfag).hide();
+
+			var e = glycoRows[i].rca.indexOf("_span");
+			$j("#" + glycoRows[i].rca.substring(0, e)).val("");
+			$j("#" + glycoRows[i].rca).hide();
+
+			var f = glycoRows[i].eel.indexOf("_span");
+			$j("#" + glycoRows[i].eel.substring(0, f)).val("");
+			$j("#" + glycoRows[i].eel).hide();
+			
+			var g = glycoRows[i].eca.indexOf("_span");
+			$j("#" + glycoRows[i].eca.substring(0, g)).val("");
+			$j("#" + glycoRows[i].eca).hide();
+			
+			var h = glycoRows[i].malone.indexOf("_span");
+			$j("#" + glycoRows[i].malone.substring(0, h)).val("");
+			$j("#" + glycoRows[i].malone).hide();
+			
+			var j = glycoRows[i].phae.indexOf("_span");
+			$j("#" + glycoRows[i].phae.substring(0, j)).val("");
+			$j("#" + glycoRows[i].phae).hide();
+			
+			var k = glycoRows[i].phal.indexOf("_span");
+			$j("#" + glycoRows[i].phal.substring(0, k)).val("");
+			$j("#" + glycoRows[i].phal).hide();
+			
+			var l = glycoRows[i].ptl.indexOf("_span");
+			$j("#" + glycoRows[i].ptl.substring(0, l)).val("");
+			$j("#" + glycoRows[i].ptl).hide();
+			
+			var m = glycoRows[i].sba.indexOf("_span");
+			$j("#" + glycoRows[i].sba.substring(0, m)).val("");
+			$j("#" + glycoRows[i].sba).hide();
+			
+			var n = glycoRows[i].stl.indexOf("_span");
+			$j("#" + glycoRows[i].stl.substring(0, n)).val("");
+			$j("#" + glycoRows[i].stl).hide();
+			
+			var o = glycoRows[i].wga.indexOf("_span");
+			$j("#" + glycoRows[i].wga.substring(0, o)).val("");
+			$j("#" + glycoRows[i].wga).hide();
+			
+			var p = glycoRows[i].sna.indexOf("_span");
+			$j("#" + glycoRows[i].sna.substring(0, p)).val("");
+			$j("#" + glycoRows[i].sna).hide();
+			
+			var q = glycoRows[i].aal.indexOf("_span");
+			$j("#" + glycoRows[i].aal.substring(0, q)).val("");
+			$j("#" + glycoRows[i].aal).hide();
+			
+			var r = glycoRows[i].uea.indexOf("_span");
+			$j("#" + glycoRows[i].uea.substring(0, r)).val("");
+			$j("#" + glycoRows[i].uea).hide();
+			
+			var s = glycoRows[i].psa.indexOf("_span");
+			$j("#" + glycoRows[i].psa.substring(0, s)).val("");
+			$j("#" + glycoRows[i].psa).hide();
+			
+			var t = glycoRows[i].maltwo.indexOf("_span");
+			$j("#" + glycoRows[i].maltwo.substring(0, t)).val("");
+			$j("#" + glycoRows[i].maltwo).hide();
+			
+			var u = glycoRows[i].npl.indexOf("_span");
+			$j("#" + glycoRows[i].npl.substring(0, u)).val("");
+			$j("#" + glycoRows[i].npl).hide();
+			
+			var v = glycoRows[i].notes.indexOf("_span");
+			$j("#" + glycoRows[i].notes.substring(0, v)).val("");
+			$j("#" + glycoRows[i].notes).hide();
+
+			$j("#" + glycoRows[i].drawDate).closest("tr").hide();
+			
+			//show the Add and Delete Button on the previous row
+			$j("#" + glycoRows[i-1].addRowBtn).show();
+			if((i-1) > 0) {
+				$j("#" + glycoRows[i-1].delRowBtn).show();
+			}
+		}
+			i++;
+		
+	}
+
+});
 	
 
 });
