@@ -133,5 +133,67 @@ $j(document).ready(function() {
 			
 		}
 	}
+	
+
+//******* BEGIN ADD BUTTON LISTENER ***************//
+$j(".addBtn").click(function() {
+	var parentLabel = $j(this).parent("label");
+	var labelId = $j(parentLabel).attr("id");
+	
+	var x;
+	var i = 0;
+
+	while (!Boolean(x)) {
+		var rowName = glycoRows[i].addRowBtn;
+		if (rowName === labelId) {
+			x = "True";
+			//Hide the delete and add buttons in this row
+			if(i < glycoRows.length) {
+				if(i != (glycoRows.length-1)) {
+					$j("#" + glycoRows[i].delRowBtn).hide();
+				}
+				$j("#" + glycoRows[i].addRowBtn).hide();
+
+			}
+					
+			//Show all values in row where the add button was selected
+			$j("#" + glycoRows[i+1].drawDate).closest("tr").show();
+			$j("#" + glycoRows[i+1].visit).closest("tr").show();
+			$j("#" + glycoRows[i+1].vwfag).closest("tr").show();
+			$j("#" + glycoRows[i+1].rca).closest("tr").show();
+			$j("#" + glycoRows[i+1].eel).closest("tr").show();
+			$j("#" + glycoRows[i+1].eca).closest("tr").show();
+			$j("#" + glycoRows[i+1].malone).closest("tr").show();
+			$j("#" + glycoRows[i+1].phae).closest("tr").show();
+			$j("#" + glycoRows[i+1].phal).closest("tr").show();
+			$j("#" + glycoRows[i+1].ptl).closest("tr").show();
+			$j("#" + glycoRows[i+1].sba).closest("tr").show();
+			$j("#" + glycoRows[i+1].stl).closest("tr").show();
+			$j("#" + glycoRows[i+1].wga).closest("tr").show();
+			$j("#" + glycoRows[i+1].sna).closest("tr").show();
+			$j("#" + glycoRows[i+1].aal).closest("tr").show();
+			$j("#" + glycoRows[i+1].uea).closest("tr").show();
+			$j("#" + glycoRows[i+1].psa).closest("tr").show();
+			$j("#" + glycoRows[i+1].maltwo).closest("tr").show();
+			$j("#" + glycoRows[i+1].npl).closest("tr").show();
+			$j("#" + glycoRows[i+1].notes).closest("tr").show();
+			$j("#" + glycoRows[i+1].addRowBtn).closest("tr").show();
+			$j("#" + glycoRows[i+1].spaceBreak).closest("tr").show();
+
+			if((i+1) < (glycoRows.length -1)) {
+				$j("#" + glycoRows[i+1].addRowBtn).show();
+			}
+
+			if((i+1) === (glycoRows.length -1)) {
+				$j("#" + glycoRows[i+1].addRowBtn).hide();
+			} 			
+
+		} 
+			i++;
+		
+	}
+
+});
+	
 
 });
