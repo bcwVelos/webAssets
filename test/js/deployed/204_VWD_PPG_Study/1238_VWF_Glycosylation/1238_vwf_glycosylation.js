@@ -27,7 +27,8 @@ glycoRows[0] = {
 	npl : 'fld10050_143648_148825_span',
 	notes : 'fld10050_143659_148836_id',
 	addRowBtn : 'fld10050_143736_148913_id',
-	delRowBtn : 'fld10050_143747_148924_id'
+	delRowBtn : 'fld10050_143747_148924_id',
+	spaceBreak: 'fld10050_143758_148935_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
@@ -53,7 +54,8 @@ for (var i = 1; i < totalRows; i++) {
 		npl : String(generateNextID(glycoRows[i-1].npl).concat("_span")),
 		notes : String(generateNextID(glycoRows[i-1].notes).concat("_id")),
 		addRowBtn : String(generateNextID(glycoRows[i-1].addRowBtn).concat("_id")),
-		delRowBtn : String(generateNextID(glycoRows[i-1].delRowBtn).concat("_id"))
+		delRowBtn : String(generateNextID(glycoRows[i-1].delRowBtn).concat("_id")),
+		spaceBreak : String(generateNextID(glycoRows[i-1].spaceBreak).concat("_id"))
 	}
 }
 
@@ -127,6 +129,7 @@ $j(document).ready(function() {
 			$j("#" + glycoRows[i].npl).closest("tr").hide();
 			$j("#" + glycoRows[i].notes).closest("tr").hide();
 			$j("#" + glycoRows[i].addRowBtn).closest("tr").hide();
+			$j("#" + glycoRows[i].spaceBreak).closest("tr").hide();
 			
 		}
 	}
