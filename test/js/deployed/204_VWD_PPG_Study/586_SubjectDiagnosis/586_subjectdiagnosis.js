@@ -6,11 +6,11 @@ var totalRows = 15;
 var fuDiag = new Array(totalRows);
 
 fuDiag[0] = {
-	fuDiagnosis : 'fld10050_143899_149093_span',
-	fuStudyPhase : 'fld10050_143900_149094_span',
-	fuDate : 'fld10050_143901_149095_span',
-	addRowBtn : 'fld10050_143902_149096_id',
-	delRowBtn : 'fld10050_143903_149097_id'
+	fuDiagnosis : 'fld10050_143989_149183_span',
+	fuStudyPhase : 'fld10050_144004_149198_span',
+	fuDate : 'fld10050_144019_149213_span',
+	addRowBtn : 'fld10050_144034_149228_id',
+	delRowBtn : 'fld10050_144049_149243_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
