@@ -1,4 +1,4 @@
-var str = "_"; alert("Hi");
+var str = "_";
 var nextID;
 var fieldElements = [];
 var firstIncrement, secondIncrement;
