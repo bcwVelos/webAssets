@@ -1,3 +1,5 @@
+alert("Hello World");
+
 function Init() {
   var aa= document.getElementsByTagName("input");
   for (var i =0; i < aa.length; i++){
