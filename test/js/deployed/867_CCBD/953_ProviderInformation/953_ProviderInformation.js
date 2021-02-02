@@ -1,6 +1,5 @@
-alert("Hello World");
+alert("Hello World 1");
 
-<script language="JavaScript" type="text/javascript">
 function Init() {
   var aa= document.getElementsByTagName("input");
   for (var i =0; i < aa.length; i++){
@@ -36,4 +35,3 @@ window.onload = function()
     InitIE8();
   }
 }
-</script>
