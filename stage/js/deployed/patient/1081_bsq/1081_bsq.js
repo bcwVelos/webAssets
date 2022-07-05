@@ -80,11 +80,11 @@ var formStatus = document.getElementsByName('er_def_formstat');
 
 $j(document).ready(function() {
 	
-	$j('.[class^="calculateBtn"]').click(function() {
+	$j('.[class^="calculateBtn"]').click(function(event) {
 		calcScore();
 	});
 	
-	$j('.[id^="submit_btn"]').click(function() {
+	$j('.[id^="submit_btn"]').click(function(event) {
 		calcScore();
 	});
 });
