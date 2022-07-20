@@ -6,7 +6,7 @@ calcBMIVariables = {
 	height: 'fld10050_144201_152159',
 	heightCM: 'fld10050_144213_152171',
 	weight: 'fld10050_144203_152161',
-	BMI: 'fld10050_144212_152170',
+	BMI: 'fld10050_144206_152164',
 }
 
 var formStatus = document.getElementsByName('er_def_formstat');
