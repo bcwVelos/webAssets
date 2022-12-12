@@ -207,11 +207,11 @@ var formStatus = document.getElementsByName('er_def_formstat');
 
 $j(document).ready(function() {
 	
-	$j('.[class^="calculateBtn"]').click(function(event) {
+	$j('[class^="calculateBtn"]').click(function(event) {
 		calcScore();
 	});
 	
-	$j('.[id^="eSign"]').focus(function(event) {
+	$j('[id^="eSign"]').focus(function(event) {
 		calcScore();
 	});
 });
