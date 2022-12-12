@@ -378,7 +378,7 @@ for (var s = 0; s < totalRepeatingSections; s++) {
 //******* END MAIN CODING LOGIC  ***************//
 
 //******* BEGIN ADD BUTTON LISTENER ***************//
-$j('.[class^="addBtn"]').click(function(event) {
+$j('[class^="addBtn"]').click(function(event) {
 	
 
 	var parentLabel = $j(this).parent("label");
@@ -437,7 +437,7 @@ $j('.[class^="addBtn"]').click(function(event) {
 
 
 //******* BEGIN DELETE BUTTON LISTENER ***************//
-$j('.[class^="deleteBtn"]').click(function(event) {
+$j('[class^="deleteBtn"]').click(function(event) {
 	var parentLabel = $j(this).parent("label");
 	var labelId = $j(parentLabel).attr("id");
 
@@ -480,7 +480,7 @@ $j('.[class^="deleteBtn"]').click(function(event) {
 //******* END DELETE BUTTON LISTENER ***************//	
 
 //******* BEGIN COPY BUTTON LISTENER ***************//	
-$j('.[class^="copyBtn"]').click(function(event) {
+$j('[class^="copyBtn"]').click(function(event) {
 
 	var parentLabel = $j(this).parent("label");
 	var labelId = $j(parentLabel).attr("id");
@@ -522,7 +522,7 @@ $j('.[class^="copyBtn"]').click(function(event) {
 });
 
 //******* BEGIN PASTE BUTTON LISTENER ***************//	
-$j('.[class^="pasteBtn"]').click(function(event) {
+$j('[class^="pasteBtn"]').click(function(event) {
 
 		var parentLabel = $j(this).parent("label");
 		var labelId = $j(parentLabel).attr("id");
