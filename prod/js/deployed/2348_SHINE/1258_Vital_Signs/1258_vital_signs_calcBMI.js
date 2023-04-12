@@ -13,11 +13,11 @@ var formStatus = document.getElementsByName('er_def_formstat');
 
 $j(document).ready(function() {
 	
-	$j('.[class^="convertCMBtn"]').click(function(event) {
+	$j('[class^="convertCMBtn"]').click(function(event) {
 		convertCM();
 	});
 	
-	$j('.[class^="calculateBtn"]').click(function(event) {
+	$j('[class^="calculateBtn"]').click(function(event) {
 		calcBMI();
 	});
 });
