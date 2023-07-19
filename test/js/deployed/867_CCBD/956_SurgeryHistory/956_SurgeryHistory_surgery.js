@@ -8,7 +8,7 @@ aa[i].addEventListener("CheckboxStateChange", OnChangeCheckbox,false);
 function InitIE8() {
  var aa= document.getElementsByTagName("input");
  for (var i =0; i < aa.length; i++){
-     if (aa[i].type == 'checkbox' && aa[i].id == "<Surgery Not in List") {
+     if (aa[i].type == 'checkbox' && aa[i].id == "Surgery Not in List") {
   aa[i].attachEvent("onclick",OnChangeCheckboxIE8);
        }
     }
