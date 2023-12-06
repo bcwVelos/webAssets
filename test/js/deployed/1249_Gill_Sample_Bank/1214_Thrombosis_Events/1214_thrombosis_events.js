@@ -6,9 +6,9 @@ var totalthrombosisRows = 10;
 var thrombosisRows = new Array(totalthrombosisRows);
 
 thrombosisRows[0] = {
-	location : 'fld10050_142259_147417_span',
-	AddRowBtn : 'fld10050_142269_147427_id',
-	DelRowBtn : 'fld10050_142279_147437_id'
+	location : 'fld10050_138895_145187_span',
+	AddRowBtn : 'fld10050_138905_145197_id',
+	DelRowBtn : 'fld10050_138915_145207_id'
 }
 
 for (var i = 1; i < totalthrombosisRows; i++) {

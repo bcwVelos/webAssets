@@ -3,10 +3,10 @@
  */
 
 calcBMIVariables = {
-	height: 'fld10050_141420_147833',
-	heightCM: 'fld10050_141431_147844',
-	weight: 'fld10050_141422_147835',
-	BMI: 'fld10050_141424_147837',
+	height: 'fld10050_143939_151092',
+	heightCM: 'fld10050_143950_151103',
+	weight: 'fld10050_143941_151094',
+	BMI: 'fld10050_143943_151096',
 }
 
 var formStatus = document.getElementsByName('er_def_formstat');
