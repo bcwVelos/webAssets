@@ -6,11 +6,11 @@ var totalRows = 20;
 var medRows = new Array(totalRows);
 
 medRows[0] = {
-	medName : 'fld10050_146517_153856_span',
-	dosage : 'fld10050_146597_153936_span',
-	frequency : 'fld10050_146537_153876_span',
-	addRowBtn : 'fld10050_146557_153896_id',
-	delRowBtn : 'fld10050_146577_153916_id'
+	medName : 'fld10050_146691_154051_span',
+	dosage : 'fld10050_146771_154131_span',
+	frequency : 'fld10050_146711_154071_span',
+	addRowBtn : 'fld10050_146731_154091_id',
+	delRowBtn : 'fld10050_146751_154111_id'
 }
 
 for (var i = 1; i < totalRows; i++) {
